@@ -14,7 +14,7 @@ import { ScrollToTopOnNavigate } from "@/components/scroll-to-top-on-navigate"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Aidcom  - Soluciones IT",
+  title: "Aidcom Argentina - Soluciones IT",
   description:
     "Empresa argentina líder en servicios informáticos, energías renovables y venta de equipos tecnológicos. Más de 30 años de experiencia.",
   icons: {
