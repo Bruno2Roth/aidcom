@@ -638,7 +638,7 @@ export default function HomePage() {
               },
               {
                 name: "EGMM",
-                desc: "Sistemas de Gestión - Facturación Electronica",
+                desc: "Sistemas de Gestión - Facturación Electrónica",
                 badge: "Distribuidor",
                 color: "text-amber-400",
               },
