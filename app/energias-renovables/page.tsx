@@ -176,9 +176,9 @@ export default function EnergiasRenovablesPage() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-              <span className="text-white">Energía </span>
+              <span className="text-white">Energías </span>
               <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent pb-2">
-                Solar
+                Renovables
               </span>
             </h1>
 
@@ -365,7 +365,7 @@ export default function EnergiasRenovablesPage() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Empezá a ahorrar con energía solar
+            Empezá a ahorrar con energías renovables
           </h2>
 
           <p className="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
