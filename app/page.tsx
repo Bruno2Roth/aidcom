@@ -621,7 +621,7 @@ export default function HomePage() {
               {
                 name: "Lenovo",
                 desc: "Hardware & Servidores",
-                badge: "Partner Premium",
+                badge: "Partner",
                 color: "text-red-400",
               },
               {
@@ -633,12 +633,12 @@ export default function HomePage() {
               {
                 name: "ESET",
                 desc: "Ciberseguridad",
-                badge: "Partner Gold",
+                badge: "Partner Silver",
                 color: "text-emerald-400",
               },
               {
                 name: "EGMM",
-                desc: "Energías Renovables",
+                desc: "Sistemas de Gestión - Facturación Electronica",
                 badge: "Distribuidor",
                 color: "text-amber-400",
               },
