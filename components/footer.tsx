@@ -89,7 +89,14 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               <li className="flex items-start gap-3 text-sm text-hero-foreground/70">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                <span>Paraná 552 7º 74, Buenos Aires</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Paraná+552+Buenos+Aires"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors duration-200"
+                >
+                  Paraná 552 7º 74, Buenos Aires
+                </a>
               </li>
               <li>
                 <a

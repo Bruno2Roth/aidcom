@@ -35,11 +35,11 @@ const stats = [
 ]
 
 const categories = [
-  { id: "mantenimiento", label: "Mantenimiento IT", icon: Wrench, gradient: "from-blue-500 to-cyan-500" },
+  { id: "mantenimiento", label: "Mantenimiento IT", icon: Wrench, gradient: "from-orange-500 to-amber-500" },
   { id: "redes", label: "Redes y Conexión", icon: Network, gradient: "from-orange-500 to-amber-500" },
-  { id: "servidores", label: "Servidores", icon: Server, gradient: "from-emerald-500 to-teal-500" },
-  { id: "seguridad", label: "Seguridad IT", icon: Shield, gradient: "from-rose-500 to-pink-500" },
-  { id: "backup", label: "Backup y Recuperación", icon: Database, gradient: "from-amber-500 to-orange-500" },
+  { id: "servidores", label: "Servidores", icon: Server, gradient: "from-orange-500 to-amber-500" },
+  { id: "seguridad", label: "Seguridad IT", icon: Shield, gradient: "from-orange-500 to-amber-500" },
+  { id: "backup", label: "Backup y Recuperación", icon: Database, gradient: "from-orange-500 to-amber-500" },
   { id: "consultoria", label: "Consultoría IT", icon: Users, gradient: "from-orange-500 to-amber-500" },
 ]
 
