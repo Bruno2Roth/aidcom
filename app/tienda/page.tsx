@@ -7,12 +7,9 @@ import Image from "next/image"
 import {
   ShoppingCart,
   Search,
-  Plus,
-  Minus,
   X,
   Check,
   Heart,
-  Eye,
   Filter,
   Grid3X3,
   LayoutList,
@@ -30,9 +27,7 @@ import {
   Package,
   Laptop,
   Monitor,
-  HardDrive,
   Wifi,
-  Cpu,
   Printer,
   Headphones,
   Sun,
@@ -379,44 +374,44 @@ export default function TiendaPage() {
       </section>
 
       {/* Main Content - Actualizado id para el ancla de productos */}
-      <section id="productos" ref={productsSectionRef} className="py-12 px-4 sm:px-6 lg:px-8 bg-slate-950">
+      <section id="productos" ref={productsSectionRef} className="py-8 px-4 sm:px-6 lg:px-8 bg-[#ededed]">
         {/* Toolbar */}
-        <div className="flex flex-col lg:flex-row gap-4 mb-8">
+        <div className="flex flex-col lg:flex-row gap-3 mb-6">
           <div className="relative flex-1">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#999]" />
             <input
               type="text"
               placeholder="Buscar productos..."
               value={busqueda}
               onChange={(e) => setBusqueda(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all"
+              className="w-full pl-10 pr-4 py-2.5 rounded-md bg-white border border-[#c5c5c5] text-[#333] placeholder:text-[#999] focus:outline-none focus:border-[#3483fa] focus:shadow-[0_0_0_2px_rgba(52,131,250,0.2)] transition-all text-sm"
             />
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex gap-2">
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className={`flex items-center gap-2 px-4 py-3 rounded-xl border transition-all ${
+              className={`flex items-center gap-2 px-3 py-2.5 rounded-md border text-sm transition-all ${
                 showFilters
-                  ? "bg-amber-500/20 border-amber-500/30 text-amber-400"
-                  : "bg-white/5 border-white/10 text-white/70 hover:border-white/20"
+                  ? "bg-[#3483fa]/10 border-[#3483fa] text-[#3483fa]"
+                  : "bg-white border-[#c5c5c5] text-[#666] hover:border-[#999]"
               }`}
             >
-              <Filter className="w-5 h-5" />
+              <Filter className="w-4 h-4" />
               <span className="hidden sm:inline">Filtros</span>
             </button>
 
             <div className="relative">
               <button
                 onClick={() => setShowSortMenu(!showSortMenu)}
-                className="flex items-center gap-2 px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white/70 hover:border-white/20 transition-all"
+                className="flex items-center gap-2 px-3 py-2.5 rounded-md bg-white border border-[#c5c5c5] text-[#666] hover:border-[#999] transition-all text-sm"
               >
-                <ArrowUpDown className="w-5 h-5" />
+                <ArrowUpDown className="w-4 h-4" />
                 <span className="hidden sm:inline">Ordenar</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${showSortMenu ? "rotate-180" : ""}`} />
+                <ChevronDown className={`w-3 h-3 transition-transform ${showSortMenu ? "rotate-180" : ""}`} />
               </button>
               {showSortMenu && (
-                <div className="absolute right-0 top-full mt-2 w-48 py-2 rounded-xl bg-slate-800 border border-white/10 shadow-xl z-50">
+                <div className="absolute right-0 top-full mt-1 w-48 py-1 rounded-md bg-white border border-[#e3e8ee] shadow-lg z-50">
                   {sortOptions.map((option) => (
                     <button
                       key={option.value}
@@ -424,8 +419,8 @@ export default function TiendaPage() {
                         setSortBy(option.value as SortOption)
                         setShowSortMenu(false)
                       }}
-                      className={`w-full px-4 py-2 text-left text-sm transition-colors ${
-                        sortBy === option.value ? "bg-amber-500/20 text-amber-400" : "text-white/70 hover:bg-white/5"
+                      className={`w-full px-3 py-2 text-left text-sm transition-colors ${
+                        sortBy === option.value ? "bg-[#3483fa]/10 text-[#3483fa]" : "text-[#333] hover:bg-[#f5f5f5]"
                       }`}
                     >
                       {option.label}
@@ -435,18 +430,18 @@ export default function TiendaPage() {
               )}
             </div>
 
-            <div className="flex rounded-xl border border-white/10 overflow-hidden">
+            <div className="flex rounded-md border border-[#c5c5c5] overflow-hidden">
               <button
                 onClick={() => setViewMode("grid")}
-                className={`p-3 transition-colors ${viewMode === "grid" ? "bg-amber-500/20 text-amber-400" : "bg-white/5 text-white/40 hover:text-white/70"}`}
+                className={`p-2.5 transition-colors ${viewMode === "grid" ? "bg-[#3483fa]/10 text-[#3483fa]" : "bg-white text-[#999] hover:text-[#666]"}`}
               >
-                <Grid3X3 className="w-5 h-5" />
+                <Grid3X3 className="w-4 h-4" />
               </button>
               <button
                 onClick={() => setViewMode("list")}
-                className={`p-3 transition-colors ${viewMode === "list" ? "bg-amber-500/20 text-amber-400" : "bg-white/5 text-white/40 hover:text-white/70"}`}
+                className={`p-2.5 transition-colors ${viewMode === "list" ? "bg-[#3483fa]/10 text-[#3483fa]" : "bg-white text-[#999] hover:text-[#666] border-l border-[#c5c5c5]"}`}
               >
-                <LayoutList className="w-5 h-5" />
+                <LayoutList className="w-4 h-4" />
               </button>
             </div>
           </div>
@@ -454,40 +449,40 @@ export default function TiendaPage() {
 
         {/* Filters panel */}
         {showFilters && (
-          <div className="mb-8 p-6 rounded-2xl bg-white/5 border border-white/10">
+          <div className="mb-6 p-4 rounded-md bg-white border border-[#e3e8ee]">
             <div className="flex items-center justify-between">
-              <p className="text-white/60 text-sm">Filtrar por categoría usando los botones de arriba</p>
+              <p className="text-[#666] text-sm">Filtrar por categoría usando los botones de arriba</p>
               <button
                 onClick={() => {
                   setBusqueda("")
                   setCategoriaSeleccionada("Todas")
                 }}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-colors"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-sm text-sm text-[#3483fa] hover:bg-[#3483fa]/10 transition-colors"
               >
-                <RefreshCw className="w-4 h-4" />
+                <RefreshCw className="w-3.5 h-3.5" />
                 Limpiar filtros
               </button>
             </div>
           </div>
         )}
 
-        <div className="mb-8">
+        <div className="mb-6">
           {/* Mobile: Dropdown selector */}
-          <div className="md:hidden relative mb-4">
+          <div className="md:hidden relative mb-3">
             <button
               onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}
-              className="w-full flex items-center justify-between px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white"
+              className="w-full flex items-center justify-between px-3 py-2.5 rounded-md bg-white border border-[#c5c5c5] text-[#333] text-sm"
             >
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2">
                 {categoryIcons[categoriaSeleccionada]}
                 <span className="font-medium">{categoriaSeleccionada}</span>
               </div>
               <ChevronDown
-                className={`w-5 h-5 text-white/60 transition-transform ${showCategoryDropdown ? "rotate-180" : ""}`}
+                className={`w-4 h-4 text-[#999] transition-transform ${showCategoryDropdown ? "rotate-180" : ""}`}
               />
             </button>
             {showCategoryDropdown && (
-              <div className="absolute top-full left-0 right-0 mt-2 py-2 rounded-xl bg-slate-800 border border-white/10 shadow-xl z-50 max-h-80 overflow-y-auto">
+              <div className="absolute top-full left-0 right-0 mt-1 py-1 rounded-md bg-white border border-[#e3e8ee] shadow-lg z-50 max-h-80 overflow-y-auto">
                 {["Todas", ...categoriasNombres].map((cat) => (
                   <button
                     key={cat}
@@ -495,15 +490,15 @@ export default function TiendaPage() {
                       setCategoriaSeleccionada(cat)
                       setShowCategoryDropdown(false)
                     }}
-                    className={`w-full flex items-center gap-3 px-4 py-3 text-left transition-colors ${
+                    className={`w-full flex items-center gap-2 px-3 py-2 text-left text-sm transition-colors ${
                       categoriaSeleccionada === cat
-                        ? "bg-amber-500/20 text-amber-400"
-                        : "text-white/70 hover:bg-white/5"
+                        ? "bg-[#3483fa]/10 text-[#3483fa]"
+                        : "text-[#333] hover:bg-[#f5f5f5]"
                     }`}
                   >
                     {categoryIcons[cat]}
                     <span>{cat}</span>
-                    {categoriaSeleccionada === cat && <Check className="w-4 h-4 ml-auto" />}
+                    {categoriaSeleccionada === cat && <Check className="w-3.5 h-3.5 ml-auto" />}
                   </button>
                 ))}
               </div>
@@ -515,25 +510,25 @@ export default function TiendaPage() {
             {/* Left scroll button */}
             <button
               onClick={() => scrollCategories("left")}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-slate-900/90 border border-white/10 text-white/70 hover:text-white hover:bg-slate-800 transition-all shadow-lg"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white border border-[#c5c5c5] text-[#666] hover:border-[#999] flex items-center justify-center shadow-sm"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4" />
             </button>
 
             {/* Scrollable container */}
             <div
               ref={categoryScrollRef}
-              className="flex gap-2 overflow-x-auto scrollbar-hide mx-10 py-2"
+              className="flex gap-1.5 overflow-x-auto scrollbar-hide mx-10 py-1"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               {["Todas", ...categoriasNombres].map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setCategoriaSeleccionada(cat)}
-                  className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium whitespace-nowrap transition-all ${
+                  className={`flex items-center gap-1.5 px-4 py-2 rounded-md text-sm whitespace-nowrap transition-all ${
                     categoriaSeleccionada === cat
-                      ? "bg-gradient-to-r from-amber-500 to-yellow-500 text-white shadow-lg shadow-amber-500/25"
-                      : "bg-white/5 text-white/60 hover:bg-white/10 hover:text-white border border-white/10"
+                      ? "bg-[#3483fa] text-white"
+                      : "bg-white text-[#666] hover:bg-[#f5f5f5] border border-[#c5c5c5]"
                   }`}
                 >
                   {categoryIcons[cat]}
@@ -545,22 +540,22 @@ export default function TiendaPage() {
             {/* Right scroll button */}
             <button
               onClick={() => scrollCategories("right")}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-slate-900/90 border border-white/10 text-white/70 hover:text-white hover:bg-slate-800 transition-all shadow-lg"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white border border-[#c5c5c5] text-[#666] hover:border-[#999] flex items-center justify-center shadow-sm"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4" />
             </button>
           </div>
         </div>
 
         {/* Products count */}
-        <div className="flex items-center justify-between mb-6">
-          <p className="text-white/50 text-sm">
+        <div className="flex items-center justify-between mb-4">
+          <p className="text-[#666] text-sm">
             {productosFiltrados.length} producto{productosFiltrados.length !== 1 ? "s" : ""} encontrado
             {productosFiltrados.length !== 1 ? "s" : ""}
           </p>
           {favoritos.length > 0 && (
-            <div className="flex items-center gap-2 text-sm text-amber-400">
-              <Heart className="w-4 h-4 fill-current" />
+            <div className="flex items-center gap-1.5 text-sm text-[#3483fa]">
+              <Heart className="w-3.5 h-3.5 fill-current" />
               <span>
                 {favoritos.length} favorito{favoritos.length !== 1 ? "s" : ""}
               </span>
@@ -570,110 +565,56 @@ export default function TiendaPage() {
 
         {/* Products Grid/List */}
         <div
-          // REMOVED: ref={productsRef.ref}
           className={
             viewMode === "grid"
-              ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-              : "flex flex-col gap-4"
+              ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3"
+              : "flex flex-col gap-3"
           }
         >
           {productosFiltrados.map((producto, index) => {
             const isFavorito = favoritos.includes(producto.id)
-            const cantidad = cantidades[producto.id] || 1
             const isAdded = addedToCart === producto.id
 
             if (viewMode === "list") {
               return (
                 <div
                   key={producto.id}
-                  className="group flex gap-6 p-4 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-amber-500/30 transition-all duration-500 animate-in fade-in slide-in-from-bottom-4"
-                  style={{ animationDelay: `${index * 50}ms`, animationFillMode: "backwards" }}
+                  className="group flex gap-4 p-3 bg-white rounded-md border border-[#e3e8ee] hover:border-[#3483fa] hover:shadow-[0_1px_12px_0_rgba(0,0,0,0.12)] transition-all duration-200 cursor-pointer"
+                  onClick={() => {
+                    setQuickViewProduct(producto)
+                    addToRecentlyViewed(producto)
+                  }}
                 >
-                  <div className="relative w-32 h-32 rounded-xl overflow-hidden flex-shrink-0 bg-white/5">
+                  <div className="relative w-28 h-28 flex-shrink-0 bg-white rounded-sm overflow-hidden">
                     <Image
                       src={producto.imagen || "/placeholder.svg?height=300&width=300&query=producto"}
                       alt={producto.nombre}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-contain p-2"
+                      sizes="112px"
                     />
-                    {isFavorito && (
-                      <div className="absolute top-2 left-2 w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center">
-                        <Heart className="w-3 h-3 text-red-400 fill-current" />
-                      </div>
-                    )}
                   </div>
-
-                  <div className="flex-1 flex flex-col">
-                    <div className="flex items-start justify-between">
-                      <div>
-                        {/* Usando `categoriaSeleccionada` */}
-                        <span className="text-xs text-amber-400 font-medium">{producto.categoria}</span>
-                        <h3 className="text-lg font-semibold text-white mt-1">{producto.nombre}</h3>
-                        <p className="text-white/50 text-sm mt-1 line-clamp-2">{producto.descripcion}</p>
-                      </div>
-                      <div className="flex gap-2">
-                        <button
-                          onClick={() => toggleFavorito(producto.id)}
-                          className={`p-2 rounded-lg transition-all ${
-                            isFavorito ? "bg-red-500/20 text-red-400" : "bg-white/5 text-white/40 hover:text-red-400"
-                          }`}
-                        >
-                          <Heart className={`w-5 h-5 ${isFavorito ? "fill-current" : ""}`} />
-                        </button>
-                        <button
-                          onClick={() => {
-                            setQuickViewProduct(producto)
-                            addToRecentlyViewed(producto)
-                          }}
-                          className="p-2 rounded-lg bg-white/5 text-white/40 hover:text-amber-400 transition-all"
-                        >
-                          <Eye className="w-5 h-5" />
-                        </button>
-                      </div>
+                  <div className="flex-1 flex flex-col min-w-0">
+                    <h3 className="text-sm font-normal text-[#333] line-clamp-2 leading-snug">{producto.nombre}</h3>
+                    <div className="mt-auto pt-2">
+                      <p className="text-[28px] font-light text-[#333] leading-tight">
+                        ${producto.precio.toLocaleString("es-AR")}
+                      </p>
+                      <p className="text-xs text-[#00a650] font-normal mt-0.5">Envío gratis</p>
                     </div>
-
-                    <div className="flex items-center justify-between mt-auto pt-4">
-                      <div className="flex items-center gap-3">
-                        <div className="flex items-center gap-2 bg-white/5 rounded-lg p-1">
-                          <button
-                            onClick={() =>
-                              setCantidades((prev) => ({ ...prev, [producto.id]: Math.max(1, cantidad - 1) }))
-                            }
-                            className="p-1.5 rounded-md hover:bg-white/10 text-white/60 hover:text-white transition-colors"
-                          >
-                            <Minus className="w-4 h-4" />
-                          </button>
-                          <span className="text-white font-medium w-8 text-center">{cantidad}</span>
-                          <button
-                            onClick={() => setCantidades((prev) => ({ ...prev, [producto.id]: cantidad + 1 }))}
-                            className="p-1.5 rounded-md hover:bg-white/10 text-white/60 hover:text-white transition-colors"
-                          >
-                            <Plus className="w-4 h-4" />
-                          </button>
-                        </div>
-                        <button
-                          onClick={() => handleAgregarAlCarrito(producto)}
-                          disabled={isAdded}
-                          className={`flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-all ${
-                            isAdded
-                              ? "bg-emerald-500 text-white"
-                              : "bg-gradient-to-r from-amber-500 to-yellow-500 text-white hover:opacity-90"
-                          }`}
-                        >
-                          {isAdded ? (
-                            <>
-                              <Check className="w-4 h-4" />
-                              Cotizado
-                            </>
-                          ) : (
-                            <>
-                              <ShoppingCart className="w-4 h-4" />
-                              Cotizar
-                            </>
-                          )}
-                        </button>
-                      </div>
-                    </div>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        handleAgregarAlCarrito(producto)
+                      }}
+                      className={`mt-2 self-start px-4 py-1.5 rounded-sm text-sm font-medium transition-all ${
+                        isAdded
+                          ? "bg-[#00a650] text-white"
+                          : "bg-[#3483fa] text-white hover:bg-[#2968c8]"
+                      }`}
+                    >
+                      {isAdded ? "Cotizado" : "Cotizar"}
+                    </button>
                   </div>
                 </div>
               )
@@ -682,95 +623,59 @@ export default function TiendaPage() {
             return (
               <div
                 key={producto.id}
-                className="group relative rounded-2xl bg-white/[0.02] border border-white/10 hover:border-amber-500/30 transition-all duration-500 overflow-hidden animate-in fade-in slide-in-from-bottom-4"
-                style={{ animationDelay: `${index * 50}ms`, animationFillMode: "backwards" }}
+                className="group bg-white rounded-md border border-[#e3e8ee] hover:border-[#3483fa] hover:shadow-[0_1px_12px_0_rgba(0,0,0,0.12)] transition-all duration-200 overflow-hidden cursor-pointer"
+                onClick={() => {
+                  setQuickViewProduct(producto)
+                  addToRecentlyViewed(producto)
+                }}
               >
                 {/* Image */}
-                <div className="relative aspect-square overflow-hidden bg-white/5">
+                <div className="relative aspect-square bg-white p-4 flex items-center justify-center">
                   <Image
                     src={producto.imagen || "/placeholder.svg?height=300&width=300&query=producto"}
                     alt={producto.nombre}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                   />
-                  {/* Overlay actions */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-
                   <button
                     onClick={(e) => {
                       e.stopPropagation()
                       toggleFavorito(producto.id)
                     }}
-                    className={`absolute top-3 right-3 p-2.5 rounded-full backdrop-blur-sm transition-all z-10 ${
+                    className={`absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all z-10 ${
                       isFavorito
-                        ? "bg-red-500 text-white shadow-lg shadow-red-500/30"
-                        : "bg-white/80 text-slate-500 hover:bg-red-500 hover:text-white"
+                        ? "bg-[#3483fa]/10 text-[#3483fa]"
+                        : "bg-white/80 text-[#999] hover:text-[#3483fa] shadow-sm"
                     }`}
                   >
                     <Heart className={`w-4 h-4 ${isFavorito ? "fill-current" : ""}`} />
                   </button>
-
-                  <button
-                    onClick={() => {
-                      setQuickViewProduct(producto)
-                      addToRecentlyViewed(producto)
-                    }}
-                    className="absolute top-3 right-14 p-2.5 rounded-full bg-white/80 text-slate-500 hover:bg-amber-500 hover:text-white backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 z-10"
-                  >
-                    <Eye className="w-4 h-4" />
-                  </button>
-
-                  {/* Category badge */}
-                  <div className="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-black/50 backdrop-blur-sm">
-                    <span className="text-xs font-medium text-white">{producto.categoria}</span>
-                  </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-4">
-                  <h3 className="font-semibold text-white line-clamp-1 group-hover:text-amber-400 transition-colors">
+                <div className="px-3 pb-3 pt-0">
+                  <p className="text-[13px] font-normal text-[#333] line-clamp-2 leading-snug min-h-[2.5rem]">
                     {producto.nombre}
-                  </h3>
-                  <p className="text-white/50 text-sm mt-1 line-clamp-2">{producto.descripcion}</p>
-
-                  <div className="mt-4 flex items-center justify-between">
-                    <div className="flex items-center gap-2 bg-white/5 rounded-lg p-1">
-                      <button
-                        onClick={() => setCantidades((prev) => ({ ...prev, [producto.id]: Math.max(1, cantidad - 1) }))}
-                        className="p-1 rounded-md hover:bg-white/10 text-white/60 hover:text-white transition-colors"
-                      >
-                        <Minus className="w-4 h-4" />
-                      </button>
-                      <span className="text-white font-medium w-6 text-center text-sm">{cantidad}</span>
-                      <button
-                        onClick={() => setCantidades((prev) => ({ ...prev, [producto.id]: cantidad + 1 }))}
-                        className="p-1 rounded-md hover:bg-white/10 text-white/60 hover:text-white transition-colors"
-                      >
-                        <Plus className="w-4 h-4" />
-                      </button>
-                    </div>
+                  </p>
+                  <div className="mt-1.5">
+                    <p className="text-[22px] font-light text-[#333] leading-tight">
+                      ${producto.precio.toLocaleString("es-AR")}
+                    </p>
                   </div>
-
+                  <p className="text-xs text-[#00a650] font-normal mt-0.5">Envío gratis</p>
                   <button
-                    onClick={() => handleAgregarAlCarrito(producto)}
-                    disabled={isAdded}
-                    className={`w-full mt-4 flex items-center justify-center gap-2 py-2.5 rounded-xl font-medium transition-all ${
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      handleAgregarAlCarrito(producto)
+                    }}
+                    className={`w-full mt-2.5 py-1.5 rounded-sm text-sm font-medium transition-all ${
                       isAdded
-                        ? "bg-emerald-500 text-white"
-                        : "bg-gradient-to-r from-amber-500 to-yellow-500 text-white hover:opacity-90"
+                        ? "bg-[#00a650] text-white"
+                        : "bg-[#3483fa] text-white hover:bg-[#2968c8]"
                     }`}
                   >
-                    {isAdded ? (
-                      <>
-                        <Check className="w-4 h-4" />
-                        Cotizar
-                      </>
-                    ) : (
-                      <>
-                        <ShoppingCart className="w-4 h-4" />
-                        Cotizar
-                      </>
-                    )}
+                    {isAdded ? "Cotizado" : "Cotizar"}
                   </button>
                 </div>
               </div>
@@ -781,37 +686,37 @@ export default function TiendaPage() {
         {/* No products found */}
         {productosFiltrados.length === 0 && (
           <div className="text-center py-16">
-            <div className="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center mx-auto mb-4">
-              <Search className="w-8 h-8 text-white/30" />
+            <div className="w-16 h-16 rounded-full bg-[#f5f5f5] border border-[#e3e8ee] flex items-center justify-center mx-auto mb-4">
+              <Search className="w-6 h-6 text-[#999]" />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-2">No se encontraron productos</h3>
-            <p className="text-white/50">ProbÃ¡ con otros filtros o tÃ©rminos de bÃºsqueda</p>
+            <h3 className="text-lg font-normal text-[#333] mb-1">No se encontraron productos</h3>
+            <p className="text-sm text-[#999]">Probá con otros filtros o términos de búsqueda</p>
           </div>
         )}
 
         {/* Recently viewed */}
         {recentlyViewed.length > 0 && (
           <div className="mt-16">
-            <h2 className="text-2xl font-bold text-white mb-6">Vistos recientemente</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            <h2 className="text-xl font-normal text-[#333] mb-4">Vistos recientemente</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
               {recentlyViewed.map((producto) => (
                 <div
                   key={producto.id}
                   onClick={() => setQuickViewProduct(producto)}
-                  className="cursor-pointer group rounded-xl bg-white/[0.02] border border-white/10 hover:border-amber-500/30 transition-all overflow-hidden"
+                  className="cursor-pointer bg-white rounded-md border border-[#e3e8ee] hover:border-[#3483fa] hover:shadow-[0_1px_12px_0_rgba(0,0,0,0.12)] transition-all overflow-hidden"
                 >
-                  <div className="relative aspect-square bg-white/5">
+                  <div className="relative aspect-square bg-white p-2 flex items-center justify-center">
                     <Image
                       src={producto.imagen || "/placeholder.svg?height=150&width=150&query=producto"}
                       alt={producto.nombre}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-contain p-1"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
                     />
                   </div>
-                  <div className="p-3">
-                    <h4 className="text-sm font-medium text-white line-clamp-1 group-hover:text-amber-400 transition-colors">
-                      {producto.nombre}
-                    </h4>
+                  <div className="px-2 pb-2">
+                    <h4 className="text-xs font-normal text-[#333] line-clamp-2 leading-snug">{producto.nombre}</h4>
+                    <p className="text-sm font-light text-[#333] mt-1">${producto.precio.toLocaleString("es-AR")}</p>
                   </div>
                 </div>
               ))}
@@ -822,107 +727,82 @@ export default function TiendaPage() {
 
       {/* Quick View Modal */}
       {quickViewProduct && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="relative w-full max-w-4xl max-h-[90vh] overflow-auto rounded-2xl bg-slate-900 border border-white/10">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div className="relative w-full max-w-4xl max-h-[90vh] overflow-auto rounded-md bg-white shadow-2xl">
             <button
               onClick={() => setQuickViewProduct(null)}
-              className="absolute top-4 right-4 p-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors z-10"
+              className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 text-[#333] hover:bg-[#3483fa] hover:text-white flex items-center justify-center transition-all z-10 shadow-sm"
             >
-              <X className="w-5 h-5" />
+              <X className="w-4 h-4" />
             </button>
 
-            <div className="grid md:grid-cols-2 gap-8 p-8">
-              <div className="relative aspect-square rounded-xl overflow-hidden bg-white/5">
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="relative aspect-square bg-white p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-[#e3e8ee]">
                 <Image
                   src={quickViewProduct.imagen || "/placeholder.svg?height=500&width=500&query=producto"}
                   alt={quickViewProduct.nombre}
                   fill
-                  className="object-cover"
+                  className="object-contain p-4"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
 
-              <div className="flex flex-col">
-                {/* Usando `categoriaSeleccionada` */}
-                <span className="text-sm text-amber-400 font-medium">{quickViewProduct.categoria}</span>
-                <h2 className="text-2xl font-bold text-white mt-2">{quickViewProduct.nombre}</h2>
-                <p className="text-white/60 mt-4">{quickViewProduct.descripcion}</p>
+              <div className="flex flex-col p-6">
+                <span className="text-xs text-[#3483fa] font-normal">{quickViewProduct.categoria}</span>
+                <h2 className="text-xl font-normal text-[#333] mt-1 leading-snug">{quickViewProduct.nombre}</h2>
 
-                <div className="mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
-                  <div className="flex items-center gap-2 text-emerald-400 text-sm mb-2">
+                <div className="mt-4">
+                  <p className="text-[32px] font-light text-[#333] leading-tight">
+                    ${quickViewProduct.precio.toLocaleString("es-AR")}
+                  </p>
+                  <p className="text-sm text-[#00a650] font-normal mt-1">Envío gratis a todo el país</p>
+                </div>
+
+                <div className="mt-4 p-3 rounded-sm bg-[#f5f5f5] border border-[#e3e8ee]">
+                  <div className="flex items-center gap-2 text-[#00a650] text-sm">
                     <Check className="w-4 h-4" />
                     <span>Stock disponible</span>
                   </div>
-                  <div className="flex items-center gap-2 text-white/60 text-sm">
+                  <div className="flex items-center gap-2 text-[#666] text-sm mt-1.5">
                     <Truck className="w-4 h-4" />
-                    <span>Envío gratis a todo el pais</span>
+                    <span>Llega en 24 a 48 horas</span>
                   </div>
                 </div>
 
-                <div className="mt-auto pt-6">
-                  <div className="flex items-center gap-4 mt-4">
-                    <div className="flex items-center gap-2 bg-white/5 rounded-lg p-1">
-                      <button
-                        onClick={() =>
-                          setCantidades((prev) => ({
-                            ...prev,
-                            [quickViewProduct.id]: Math.max(1, (prev[quickViewProduct.id] || 1) - 1),
-                          }))
-                        }
-                        className="p-2 rounded-md hover:bg-white/10 text-white/60 hover:text-white transition-colors"
-                      >
-                        <Minus className="w-4 h-4" />
-                      </button>
-                      <span className="text-white font-medium w-10 text-center">
-                        {cantidades[quickViewProduct.id] || 1}
-                      </span>
-                      <button
-                        onClick={() =>
-                          setCantidades((prev) => ({
-                            ...prev,
-                            [quickViewProduct.id]: (prev[quickViewProduct.id] || 1) + 1,
-                          }))
-                        }
-                        className="p-2 rounded-md hover:bg-white/10 text-white/60 hover:text-white transition-colors"
-                      >
-                        <Plus className="w-4 h-4" />
-                      </button>
-                    </div>
+                <div className="mt-auto pt-6 flex gap-2">
+                  <button
+                    onClick={() => {
+                      handleAgregarAlCarrito(quickViewProduct)
+                    }}
+                    className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-sm font-medium text-sm transition-all ${
+                      addedToCart === quickViewProduct.id
+                        ? "bg-[#00a650] text-white"
+                        : "bg-[#3483fa] text-white hover:bg-[#2968c8]"
+                    }`}
+                  >
+                    {addedToCart === quickViewProduct.id ? (
+                      <>
+                        <Check className="w-4 h-4" />
+                        Cotizado
+                      </>
+                    ) : (
+                      <>
+                        <ShoppingCart className="w-4 h-4" />
+                        Cotizar
+                      </>
+                    )}
+                  </button>
 
-                    <button
-                      onClick={() => {
-                        handleAgregarAlCarrito(quickViewProduct)
-                      }}
-                      disabled={addedToCart === quickViewProduct.id}
-                      className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all ${
-                        addedToCart === quickViewProduct.id
-                          ? "bg-emerald-500 text-white"
-                          : "bg-gradient-to-r from-amber-500 to-yellow-500 text-white hover:opacity-90"
-                      }`}
-                    >
-                      {addedToCart === quickViewProduct.id ? (
-                        <>
-                          <Check className="w-5 h-5" />
-                          Cotizado
-                        </>
-                      ) : (
-                        <>
-                          <ShoppingCart className="w-5 h-5" />
-                          Cotizar
-                        </>
-                      )}
-                    </button>
-
-                    <button
-                      onClick={() => toggleFavorito(quickViewProduct.id)}
-                      className={`p-3 rounded-xl transition-all ${
-                        favoritos.includes(quickViewProduct.id)
-                          ? "bg-red-500/20 text-red-400"
-                          : "bg-white/5 text-white/40 hover:text-red-400"
-                      }`}
-                    >
-                      <Heart className={`w-5 h-5 ${favoritos.includes(quickViewProduct.id) ? "fill-current" : ""}`} />
-                    </button>
-                  </div>
+                  <button
+                    onClick={() => toggleFavorito(quickViewProduct.id)}
+                    className={`px-4 py-3 rounded-sm transition-all border ${
+                      favoritos.includes(quickViewProduct.id)
+                        ? "border-[#3483fa] bg-[#3483fa]/10 text-[#3483fa]"
+                        : "border-[#e3e8ee] bg-white text-[#666] hover:border-[#3483fa] hover:text-[#3483fa]"
+                    }`}
+                  >
+                    <Heart className={`w-5 h-5 ${favoritos.includes(quickViewProduct.id) ? "fill-current" : ""}`} />
+                  </button>
                 </div>
               </div>
             </div>
