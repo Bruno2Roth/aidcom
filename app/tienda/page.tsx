@@ -46,7 +46,7 @@ import Link from "next/link"
 
 // REMOVED: useInView hook - products will show immediately with simpler animation
 
-type SortOption = "relevancia" | "precio-asc" | "precio-desc" | "nombre" | "nuevo"
+type SortOption = "relevancia" | "nombre"
 type ViewMode = "grid" | "list"
 
 export default function TiendaPage() {
@@ -72,7 +72,6 @@ export default function TiendaPage() {
   }, [productosFromStore])
 
   const [addedToCart, setAddedToCart] = useState<number | null>(null)
-  const [cotizacionItems, setCotizacionItems] = useState<{ producto: Producto; cantidad: number }[]>([])
   const [showCotizacionPanel, setShowCotizacionPanel] = useState(false)
 
   const [favoritos, setFavoritos] = useState<number[]>([])
@@ -81,7 +80,6 @@ export default function TiendaPage() {
   const [showSortMenu, setShowSortMenu] = useState(false)
   const [quickViewProduct, setQuickViewProduct] = useState<Producto | null>(null)
   const [showFilters, setShowFilters] = useState(false)
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000000])
   const [recentlyViewed, setRecentlyViewed] = useState<Producto[]>([])
   const [showPromo, setShowPromo] = useState(true)
 
@@ -165,18 +163,8 @@ export default function TiendaPage() {
 
   const handleAgregarAlCarrito = (producto: Producto) => {
     const cantidad = cantidades[producto.id] || 1
-    setCotizacionItems((prev) => {
-      const existing = prev.find((item) => item.producto.id === producto.id)
-      if (existing) {
-        return prev.map((item) =>
-          item.producto.id === producto.id ? { ...item, cantidad: item.cantidad + cantidad } : item,
-        )
-      }
-      return [...prev, { producto, cantidad }]
-    })
-
-    setAddedToCart(producto.id)
-    setTimeout(() => setAddedToCart(null), 1500)
+    const texto = encodeURIComponent(`Hola, quiero cotizar: ${producto.nombre} x${cantidad}`)
+    window.open(`https://wa.me/5491149988089?text=${texto}`, "_blank")
   }
 
   // Filtrado de productos
@@ -188,8 +176,7 @@ export default function TiendaPage() {
           producto.descripcion.toLowerCase().includes(busqueda.toLowerCase())
         // Usando `categoriaSeleccionada`
         const matchesCategory = categoriaSeleccionada === "Todas" || producto.categoria === categoriaSeleccionada
-        const matchesPrice = producto.precio >= priceRange[0] && producto.precio <= priceRange[1]
-        return matchesSearch && matchesCategory && matchesPrice
+        return matchesSearch && matchesCategory
       })
       .sort((a, b) => {
         const aFav = favoritos.includes(a.id) ? 0 : 1
@@ -197,22 +184,16 @@ export default function TiendaPage() {
         if (aFav !== bFav) return aFav - bFav
 
         switch (sortBy) {
-          case "precio-asc":
-            return a.precio - b.precio
-          case "precio-desc":
-            return b.precio - a.precio
           case "nombre":
             return a.nombre.localeCompare(b.nombre)
           default:
             return 0
         }
       })
-  }, [productos, busqueda, categoriaSeleccionada, priceRange, sortBy, favoritos])
+  }, [productos, busqueda, categoriaSeleccionada, sortBy, favoritos])
 
   const sortOptions = [
     { value: "relevancia", label: "Relevancia" },
-    { value: "precio-asc", label: "Menor precio" },
-    { value: "precio-desc", label: "Mayor precio" },
     { value: "nombre", label: "Nombre A-Z" },
   ]
 
@@ -474,41 +455,18 @@ export default function TiendaPage() {
         {/* Filters panel */}
         {showFilters && (
           <div className="mb-8 p-6 rounded-2xl bg-white/5 border border-white/10">
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex-1">
-                <label className="block text-sm font-medium text-white/70 mb-3">Rango de precio</label>
-                <div className="flex items-center gap-4">
-                  <input
-                    type="number"
-                    placeholder="Min"
-                    value={priceRange[0] || ""}
-                    onChange={(e) => setPriceRange([Number(e.target.value), priceRange[1]])}
-                    className="flex-1 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-amber-500/50"
-                  />
-                  <span className="text-white/40">-</span>
-                  <input
-                    type="number"
-                    placeholder="Max"
-                    value={priceRange[1] === 10000000 ? "" : priceRange[1]}
-                    onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value) || 10000000])}
-                    className="flex-1 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-amber-500/50"
-                  />
-                </div>
-              </div>
-              <div className="flex items-end">
-                <button
-                  onClick={() => {
-                    setBusqueda("")
-                    // Usando `setCategoriaSeleccionada`
-                    setCategoriaSeleccionada("Todas")
-                    setPriceRange([0, 10000000])
-                  }}
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-colors"
-                >
-                  <RefreshCw className="w-4 h-4" />
-                  Limpiar filtros
-                </button>
-              </div>
+            <div className="flex items-center justify-between">
+              <p className="text-white/60 text-sm">Filtrar por categoría usando los botones de arriba</p>
+              <button
+                onClick={() => {
+                  setBusqueda("")
+                  setCategoriaSeleccionada("Todas")
+                }}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg text-white/60 hover:text-white hover:bg-white/5 transition-colors"
+              >
+                <RefreshCw className="w-4 h-4" />
+                Limpiar filtros
+              </button>
             </div>
           </div>
         )}
@@ -675,7 +633,6 @@ export default function TiendaPage() {
                     </div>
 
                     <div className="flex items-center justify-between mt-auto pt-4">
-                      <span className="text-2xl font-bold text-white">${producto.precio.toLocaleString("es-AR")}</span>
                       <div className="flex items-center gap-3">
                         <div className="flex items-center gap-2 bg-white/5 rounded-lg p-1">
                           <button
@@ -777,7 +734,6 @@ export default function TiendaPage() {
                   <p className="text-white/50 text-sm mt-1 line-clamp-2">{producto.descripcion}</p>
 
                   <div className="mt-4 flex items-center justify-between">
-                    <span className="text-xl font-bold text-white">${producto.precio.toLocaleString("es-AR")}</span>
                     <div className="flex items-center gap-2 bg-white/5 rounded-lg p-1">
                       <button
                         onClick={() => setCantidades((prev) => ({ ...prev, [producto.id]: Math.max(1, cantidad - 1) }))}
@@ -856,9 +812,6 @@ export default function TiendaPage() {
                     <h4 className="text-sm font-medium text-white line-clamp-1 group-hover:text-amber-400 transition-colors">
                       {producto.nombre}
                     </h4>
-                    <p className="text-sm text-amber-400 font-semibold mt-1">
-                      ${producto.precio.toLocaleString("es-AR")}
-                    </p>
                   </div>
                 </div>
               ))}
@@ -906,10 +859,6 @@ export default function TiendaPage() {
                 </div>
 
                 <div className="mt-auto pt-6">
-                  <span className="text-3xl font-bold text-white">
-                    ${quickViewProduct.precio.toLocaleString("es-AR")}
-                  </span>
-
                   <div className="flex items-center gap-4 mt-4">
                     <div className="flex items-center gap-2 bg-white/5 rounded-lg p-1">
                       <button

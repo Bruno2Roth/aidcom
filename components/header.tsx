@@ -310,6 +310,18 @@ export function Header() {
                   </div>
                 </div>
               </li>
+
+              <li>
+                <Link
+                  href="/tienda"
+                  onClick={handleNavClick}
+                  className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground ${
+                    pathname === "/tienda" ? "text-foreground bg-muted/50" : "text-foreground/70"
+                  }`}
+                >
+                  Catálogo
+                </Link>
+              </li>
             </ul>
 
             <div className="hidden lg:flex items-center gap-3">
@@ -516,7 +528,7 @@ export function Header() {
                       <Store className="h-5 w-5 text-emerald-500" />
                     </div>
                     <div>
-                      <div className="font-medium">Tienda Online</div>
+                      <div className="font-medium">Catálogo</div>
                       {totalItems > 0 && (
                         <span className="text-xs text-emerald-500 font-medium">{totalItems} items en carrito</span>
                       )}
