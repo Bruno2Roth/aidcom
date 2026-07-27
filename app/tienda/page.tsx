@@ -250,11 +250,11 @@ export default function TiendaPage() {
           <div className="max-w-7xl mx-auto flex items-center justify-center gap-6 text-sm font-medium relative">
             <div className="flex items-center gap-2">
               <Truck className="w-4 h-4" />
-              <span>EnvÃ­o gratis en compras +$100.000</span>
+              <span>Envío gratis en compras +$100.000</span>
             </div>
             <div className="hidden md:flex items-center gap-2">
               <CreditCard className="w-4 h-4" />
-              <span>Hasta 12 cuotas sin interÃ©s</span>
+              <span>Hasta 12 cuotas sin interes</span>
             </div>
             <button
               onClick={() => setShowPromo(false)}
@@ -330,7 +330,7 @@ export default function TiendaPage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-            <span className="text-white">TecnologÃ­a para</span>
+            <span className="text-white">Tecnología para</span>
             <span className="block mt-1 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
               tu Negocio
             </span>
@@ -360,7 +360,7 @@ export default function TiendaPage() {
               href="/contacto"
               className="group relative px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl font-semibold text-white hover:bg-white/10 hover:border-white/20 transition-all flex items-center justify-center gap-2"
             >
-              Solicitar cotizaci\u00f3n
+              Solicitar Cotización
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -371,7 +371,7 @@ export default function TiendaPage() {
                 <Truck className="w-5 h-5 text-amber-400" />
               </div>
               <div className="text-left">
-                <p className="text-xs text-white/50">EnvÃ­o gratis</p>
+                <p className="text-xs text-white/50">Envío gratis</p>
                 <p className="text-sm font-semibold text-white/90">Compras +$100.000</p>
               </div>
             </div>
@@ -380,7 +380,7 @@ export default function TiendaPage() {
                 <Shield className="w-5 h-5 text-amber-400" />
               </div>
               <div className="text-left">
-                <p className="text-xs text-white/50">GarantÃ­a oficial</p>
+                <p className="text-xs text-white/50">Garantía oficial</p>
                 <p className="text-sm font-semibold text-white/90">Todos los productos</p>
               </div>
             </div>
@@ -390,7 +390,7 @@ export default function TiendaPage() {
               </div>
               <div className="text-left">
                 <p className="text-xs text-white/50">Hasta 12 cuotas</p>
-                <p className="text-sm font-semibold text-white/90">Sin interÃ©s</p>
+                <p className="text-sm font-semibold text-white/90">Sin interes</p>
               </div>
             </div>
           </div>
@@ -901,7 +901,7 @@ export default function TiendaPage() {
                   </div>
                   <div className="flex items-center gap-2 text-white/60 text-sm">
                     <Truck className="w-4 h-4" />
-                    <span>EnvÃ­o gratis a todo el paÃ­s</span>
+                    <span>Envío gratis a todo el paÃ­s</span>
                   </div>
                 </div>
 
