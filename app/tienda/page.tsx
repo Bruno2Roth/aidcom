@@ -686,7 +686,7 @@ export default function TiendaPage() {
                 style={{ animationDelay: `${index * 50}ms`, animationFillMode: "backwards" }}
               >
                 {/* Image */}
-                <div className="relative aspect-square overflow-hidden bg-white/5">
+                <div className="relative h-40 overflow-hidden bg-white/5 rounded-t-2xl">
                   <Image
                     src={producto.imagen || "/placeholder.svg?height=300&width=300&query=producto"}
                     alt={producto.nombre}
@@ -800,7 +800,7 @@ export default function TiendaPage() {
                   onClick={() => setQuickViewProduct(producto)}
                   className="cursor-pointer group rounded-xl bg-white/[0.02] border border-white/10 hover:border-amber-500/30 transition-all overflow-hidden"
                 >
-                  <div className="relative aspect-square bg-white/5">
+                  <div className="relative h-32 bg-white/5 overflow-hidden rounded-t-xl">
                     <Image
                       src={producto.imagen || "/placeholder.svg?height=150&width=150&query=producto"}
                       alt={producto.nombre}
