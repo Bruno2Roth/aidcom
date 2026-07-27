@@ -6,7 +6,7 @@ export const productos: Producto[] = [
     nombre: "Botella De Tinta Canon Para Imageprograf Tc-20 (70 Ml) Tinta Negro",
     descripcion: "Botella de tinta original Canon para plotter ImagePROGRAF TC-20. Color negro, 70 ml de capacidad. Fórmula a base de tintes para producir impresiones de alta calidad con durabilidad excepcional.",
     precio: 148000,
-    imagen: "/canon-gi16-tinta-negro.png",
+    imagen: "/productos/Botella De Tinta Canon Para Imageprograf Tc-20 (70 Ml) Tinta Negro.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -14,7 +14,7 @@ export const productos: Producto[] = [
     nombre: "Impresora multifunción a color Canon MAXIFY GX3010 con wifi",
     descripcion: "Impresora multifunción a color Canon MAXIFY GX3010 con conectividad WiFi. Ideal para oficinas y hogares que necesitan impresiones de alta calidad con bajo costo operativo.",
     precio: 833750,
-    imagen: "/it-services.jpg",
+    imagen: "/productos/Impresora multifunción a color Canon MAXIFY GX3010 con wifi.webp",
     categoria: "Impresoras",
   },
   {
@@ -22,7 +22,7 @@ export const productos: Producto[] = [
     nombre: "Tinta Negra 55ml Pfi 030mbk Canon Imageprograf Ta-20 Ta-30",
     descripcion: "Cartucho de tinta negra original Canon PFI-030MBK de 55 ml. Compatible con plotter ImagePROGRAF TA-20 y TA-30. Color negro mate para impresiones profesionales.",
     precio: 144100,
-    imagen: "/canon-gi16-tinta-negro.png",
+    imagen: "/productos/Tinta Negra 55ml Pfi 030mbk Canon Imageprograf Ta-20 Ta-30.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -30,7 +30,7 @@ export const productos: Producto[] = [
     nombre: "Cartucho Tinta Canon Pfi 031m Magenta 55ml Tm 240 340 Wis",
     descripcion: "Cartucho de tinta magenta original Canon PFI-031M de 55 ml. Compatible con impresoras TM-240 y TM-340. Color magenta vibrante para impresiones de alta calidad.",
     precio: 144100,
-    imagen: "/it-management-dashboard-software-screens-monitorin.jpg",
+    imagen: "/productos/Cartucho Tinta Canon Pfi 031m Magenta 55ml Tm 240 340 Wis.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -38,7 +38,7 @@ export const productos: Producto[] = [
     nombre: "Botella De Tinta Canon Pfi-050 Para Plotter Tc-20 Tinta Amarillo",
     descripcion: "Botella de tinta amarilla original Canon PFI-050 para plotter TC-20. Color amarillo brillante para impresiones profesionales con calidad excepcional.",
     precio: 189000,
-    imagen: "/energy-savings.jpg",
+    imagen: "/productos/Botella De Tinta Canon Pfi-050 Para Plotter Tc-20 Tinta Amarillo.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -46,7 +46,7 @@ export const productos: Producto[] = [
     nombre: "Cartucho De Tinta Plotter Cian Canon Pfi 030 C",
     descripcion: "Cartucho de tinta cian original Canon PFI-030 para plotter. Color cian de 55 ml para impresiones profesionales con calidad fotográfica.",
     precio: 144100,
-    imagen: "/abstract-technology-circuits-blue-digital-network-.jpg",
+    imagen: "/productos/Cartucho De Tinta Plotter Cian Canon Pfi 030 C.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -54,7 +54,7 @@ export const productos: Producto[] = [
     nombre: "Cartucho De Tinta Canon Pfi-030 Amarillo 3492c001aa 55ml",
     descripcion: "Cartucho de tinta amarilla original Canon PFI-030 de 55 ml. Ideal para plotter y equipos de impresión profesional. Color amarillo de alta intensidad.",
     precio: 144100,
-    imagen: "/hero-tech.jpg",
+    imagen: "/productos/Cartucho De Tinta Canon Pfi-030 Amarillo 3492c001aa 55ml vc.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -62,7 +62,7 @@ export const productos: Producto[] = [
     nombre: "Tanque De Tinta Canon Pfi-030bk Negro 55ml Ta-20 Ta-30 Image",
     descripcion: "Tanque de tinta negra original Canon PFI-030BK de 55 ml. Compatible con plotter ImagePROGRAF TA-20 y TA-30. Tinta negra de alta calidad para impresiones nítidas.",
     precio: 144100,
-    imagen: "/it-services-hero.jpg",
+    imagen: "/productos/Tanque De Tinta Canon Pfi-030bk Negro 55ml Ta-20 Ta-30 Image.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -70,7 +70,7 @@ export const productos: Producto[] = [
     nombre: "Toner Toshiba T2822u Original - Distribuidor Oficial Negro",
     descripcion: "Toner original Toshiba T2822U color negro. Distribuidor oficial. Compatible con impresoras Toshiba. Alto rendimiento para impresiones nítidas y duraderas.",
     precio: 179900,
-    imagen: "/it-services.jpg",
+    imagen: "/productos/Toner Toshiba T2822u Original - Distribuidor Oficial.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -78,7 +78,7 @@ export const productos: Producto[] = [
     nombre: "Botella De Tinta Canon Pfi-050 Para Plotter Tc-20 Original",
     descripcion: "Botella de tinta original Canon PFI-050 para plotter TC-20. Tinta de alta calidad para impresiones profesionales con resultados excepcionales.",
     precio: 189000,
-    imagen: "/canon-gi16-tinta-negro.png",
+    imagen: "/productos/Botella De Tinta Canon Pfi-050 Para Plotter Tc-20 Original.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -86,7 +86,7 @@ export const productos: Producto[] = [
     nombre: "10 Cintas Impresora Epson Lx350 - Gtc",
     descripcion: "Pack de 10 cintas de repuesto GTC para impresora matricial Epson LX-350. Cinta negra multicopiable, vida útil de hasta 4 millones de caracteres. Ideal para entornos de oficina que requieren impresión continua de facturas, remitos y documentos.",
     precio: 79900,
-    imagen: "/it-management-dashboard-software-screens-monitorin.jpg",
+    imagen: "/productos/10 Cintas Impresora Epson Lx350 - Gtc.webp",
     categoria: "Impresoras",
   },
   {
@@ -94,7 +94,7 @@ export const productos: Producto[] = [
     nombre: "Rollo De Papel Termico 57 X 17 Metros X 10 Unidades",
     descripcion: "Pack de 10 rollos de papel térmico de 57mm de ancho por 17 metros de largo. Compatibles con impresoras térmicas de ticketes, impresoras fiscales y facturadoras. Papel de alta sensibilidad para impresiones nítidas y duraderas.",
     precio: 4790,
-    imagen: "/hero-tech.jpg",
+    imagen: "/productos/Rollo De Papel Termico 57 X 17 Metros X 10 Unidades.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -102,7 +102,7 @@ export const productos: Producto[] = [
     nombre: "Cintas Impresora Epson Lx350 - Gtc",
     descripcion: "Cinta de repuesto GTC para impresora matricial Epson LX-350. Cinta negra multicopiable con vida útil de hasta 4 millones de caracteres. Reemplazo directo sin necesidad de ajustes.",
     precio: 7990,
-    imagen: "/it-services-hero.jpg",
+    imagen: "/productos/Cintas Impresora Epson Lx350 - Gtc.webp",
     categoria: "Impresoras",
   },
   {
@@ -110,7 +110,7 @@ export const productos: Producto[] = [
     nombre: "Toner Alternativo Para Samsung 111s Mlt D111s M2070fw M2070",
     descripcion: "Toner alternativo de alta compatibilidad con cartucho Samsung MLT-D111S. Funciona con impresoras Samsung Xpress M2070FW, M2070, M2020 y SCX-3400. Rendimiento de hasta 1.000 páginas a 5% de cobertura.",
     precio: 12990,
-    imagen: "/it-services.jpg",
+    imagen: "/productos/Toner Alternativo Para Samsung 111s Mlt D111s M2070fw M2070.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -118,7 +118,7 @@ export const productos: Producto[] = [
     nombre: "Toner Alternativo 1105a Compatible 107w 135w 137w S/chip",
     descripcion: "Toner alternativo compatible con cartucho HP 1105A (W1105A). Diseñado para impresoras HP Laser MFP 107w, 135w y 137w. Versión sin chip, para equipos que no requieren reconocimiento. Rendimiento de hasta 975 páginas.",
     precio: 12990,
-    imagen: "/it-services-hero.jpg",
+    imagen: "/productos/Toner Alternativo 1105a Compatible 107w 135w 137w Schip.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -126,7 +126,7 @@ export const productos: Producto[] = [
     nombre: "Toner Alternativo Para Tn 1060 1100 1200 1212w 1617w",
     descripcion: "Toner alternativo compatible con cartucho Brother TN-1060. Funciona con impresoras Brother HL-1100, HL-1200, HL-1210W, DCP-1510, DCP-1610W, DCP-1612W y MFC-1810. Rendimiento de hasta 1.000 páginas.",
     precio: 6990,
-    imagen: "/hero-tech.jpg",
+    imagen: "/productos/Toner Alternativo Para Tn 1060 1100 1200 1212w 1617w.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -134,7 +134,7 @@ export const productos: Producto[] = [
     nombre: "Rollo De Papel Termico 80 X 30 Metros Paq X 10 Unidades",
     descripcion: "Pack de 10 rollos de papel térmico de 80mm de ancho por 30 metros de largo. Compatibles con impresoras térmicas de ticketes de alto volumen, impresoras fiscales y POS. Papel de primera calidad con acabado blanco brillante.",
     precio: 9200,
-    imagen: "/abstract-technology-circuits-blue-digital-network-.jpg",
+    imagen: "/productos/Rollo De Papel Termico 80 X 30 Metros Paq X 10 Unidades.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -142,7 +142,7 @@ export const productos: Producto[] = [
     nombre: "Toner Alternativo 17a 217a Compatible M102w 130w 130f C/chip",
     descripcion: "Toner alternativo compatible con cartuchos HP 17A (CF217A) y 217A (W2170A). Funciona con impresoras HP Laser MFP M102w, M130w, M130fn y M130f. Incluye chip para reconocimiento automático del cartucho. Rendimiento de hasta 1.600 páginas.",
     precio: 8990,
-    imagen: "/it-management-dashboard-software-screens-monitorin.jpg",
+    imagen: "/productos/Toner Alternativo 17a 217a Compatible M102w 130w 130f Cchip.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -150,7 +150,7 @@ export const productos: Producto[] = [
     nombre: "Toner 12a Compatible Con Impresora Q2612a 1319a Oferta!!",
     descripcion: "Toner alternativo compatible con cartucho HP 12A (Q2612A). Funciona con impresoras HP LaserJet 1020, 1022, 3015, 3020, 3030, 3050, 3052, 3055 y M1319f. Rendimiento de hasta 2.000 páginas a 5% de cobertura.",
     precio: 14290,
-    imagen: "/it-services.jpg",
+    imagen: "/productos/Toner 12a Compatible Con Impresora Q2612a 1319a Oferta!!.webp",
     categoria: "Tintas y Consumibles",
   },
   {
@@ -158,7 +158,7 @@ export const productos: Producto[] = [
     nombre: "Sistema De Facturacion Electronica Y Gestion Comercial Egmm",
     descripcion: "Software de facturación electrónica y gestión comercial EGMM. Emisión de facturas A, B, C, notas de crédito y débito según AFIP. Control de stock, gestión de clientes y proveedores, reportes de ventas y utilidades. Soporte técnico incluido.",
     precio: 793006,
-    imagen: "/it-management-dashboard-software-screens-monitorin.jpg",
+    imagen: "/productos/Sistema De Facturacion Electronica Y Gestion Comercial Egmm.webp",
     categoria: "Accesorios IT",
   },
   {
@@ -166,7 +166,7 @@ export const productos: Producto[] = [
     nombre: "Impresora Fiscal Epson Tmt900fa + 8 Rollos De Papel",
     descripcion: "Impresora fiscal Epson TM-T900FA con interfaz USB y compatible con interface Ethernet (opcional). Incluye 8 rollos de papel térmico de regalo. Velocidad de impresión de 350mm/seg, autocorte automático. Resolución de 180x180 dpi. Ideal para gastronomía, retail y locales comerciales. Compatible con sistemas de facturación electrónica AFIP.",
     precio: 895000,
-    imagen: "/it-services.jpg",
+    imagen: "/productos/Impresora Fiscal Epson Tmt900fa + 8 Rollos De Papel.webp",
     categoria: "Impresoras",
   },
 ]
