@@ -8,6 +8,7 @@ export const productos: Producto[] = [
     precio: 148000,
     imagen: "/productos/Botella De Tinta Canon Para Imageprograf Tc-20 (70 Ml) Tinta Negro.webp",
     categoria: "Tintas y Consumibles",
+    pocoStock: true,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const productos: Producto[] = [
     precio: 833750,
     imagen: "/productos/Impresora multifunción a color Canon MAXIFY GX3010 con wifi.webp",
     categoria: "Impresoras",
+    pocoStock: true,
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ export const productos: Producto[] = [
     precio: 144100,
     imagen: "/productos/Tinta Negra 55ml Pfi 030mbk Canon Imageprograf Ta-20 Ta-30.webp",
     categoria: "Tintas y Consumibles",
+    pocoStock: true,
   },
   {
     id: 4,
@@ -32,6 +35,7 @@ export const productos: Producto[] = [
     precio: 144100,
     imagen: "/productos/Cartucho Tinta Canon Pfi 031m Magenta 55ml Tm 240 340 Wis.webp",
     categoria: "Tintas y Consumibles",
+    pocoStock: true,
   },
   {
     id: 5,
@@ -40,6 +44,7 @@ export const productos: Producto[] = [
     precio: 189000,
     imagen: "/productos/Botella De Tinta Canon Pfi-050 Para Plotter Tc-20 Tinta Amarillo.webp",
     categoria: "Tintas y Consumibles",
+    pocoStock: true,
   },
   {
     id: 6,
@@ -48,6 +53,7 @@ export const productos: Producto[] = [
     precio: 144100,
     imagen: "/productos/Cartucho De Tinta Plotter Cian Canon Pfi 030 C.webp",
     categoria: "Tintas y Consumibles",
+    pocoStock: true,
   },
   {
     id: 7,
@@ -56,6 +62,7 @@ export const productos: Producto[] = [
     precio: 144100,
     imagen: "/productos/Cartucho De Tinta Canon Pfi-030 Amarillo 3492c001aa 55ml vc.webp",
     categoria: "Tintas y Consumibles",
+    pocoStock: true,
   },
   {
     id: 8,
@@ -64,6 +71,7 @@ export const productos: Producto[] = [
     precio: 144100,
     imagen: "/productos/Tanque De Tinta Canon Pfi-030bk Negro 55ml Ta-20 Ta-30 Image.webp",
     categoria: "Tintas y Consumibles",
+    pocoStock: true,
   },
   {
     id: 9,
@@ -72,6 +80,7 @@ export const productos: Producto[] = [
     precio: 179900,
     imagen: "/productos/Toner Toshiba T2822u Original - Distribuidor Oficial.webp",
     categoria: "Tintas y Consumibles",
+    pocoStock: true,
   },
   {
     id: 10,
@@ -80,6 +89,7 @@ export const productos: Producto[] = [
     precio: 189000,
     imagen: "/productos/Botella De Tinta Canon Pfi-050 Para Plotter Tc-20 Original.webp",
     categoria: "Tintas y Consumibles",
+    pocoStock: true,
   },
   {
     id: 11,
@@ -88,6 +98,7 @@ export const productos: Producto[] = [
     precio: 79900,
     imagen: "/productos/10 Cintas Impresora Epson Lx350 - Gtc.webp",
     categoria: "Impresoras",
+    pocoStock: true,
   },
   {
     id: 12,
