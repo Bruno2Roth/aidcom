@@ -376,6 +376,39 @@ export default function TiendaPage() {
 
       {/* Main Content - Actualizado id para el ancla de productos */}
       <section id="productos" ref={productsSectionRef} className="py-8 px-4 sm:px-6 lg:px-8 bg-[#ededed]">
+
+        {/* Recently viewed */}
+        {recentlyViewed.length > 0 && (
+          <div className="mb-8">
+            <h2 className="text-sm font-semibold text-[#333] uppercase tracking-wider mb-3">Vistos recientemente</h2>
+            <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+              {recentlyViewed.map((producto) => (
+                <div
+                  key={producto.id}
+                  onClick={() => {
+                    setQuickViewProduct(producto)
+                    addToRecentlyViewed(producto)
+                  }}
+                  className="flex-shrink-0 w-36 cursor-pointer bg-white rounded-lg border border-[#e3e8ee] hover:border-[#3483fa]/60 hover:shadow-[0_2px_16px_-2px_rgba(52,131,250,0.15),0_1px_4px_-1px_rgba(0,0,0,0.06)] transition-all duration-200 overflow-hidden"
+                >
+                  <div className="relative aspect-square bg-[#fafafa] p-2 flex items-center justify-center">
+                    <Image
+                      src={producto.imagen || "/placeholder.svg?height=150&width=150&query=producto"}
+                      alt={producto.nombre}
+                      fill
+                      className="object-contain p-1"
+                      sizes="144px"
+                    />
+                  </div>
+                  <div className="px-2 pb-2 pt-1">
+                    <h4 className="text-[11px] font-normal text-[#333] line-clamp-2 leading-snug">{producto.nombre}</h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Toolbar */}
         <div className="flex flex-col lg:flex-row gap-3 mb-6">
           <div className="relative flex-1">
@@ -683,35 +716,6 @@ export default function TiendaPage() {
             </div>
             <h3 className="text-lg font-normal text-[#333] mb-1">No se encontraron productos</h3>
             <p className="text-sm text-[#999]">Probá con otros filtros o términos de búsqueda</p>
-          </div>
-        )}
-
-        {/* Recently viewed */}
-        {recentlyViewed.length > 0 && (
-          <div className="mt-16">
-            <h2 className="text-xl font-normal text-[#333] mb-4">Vistos recientemente</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-              {recentlyViewed.map((producto) => (
-                <div
-                  key={producto.id}
-                  onClick={() => setQuickViewProduct(producto)}
-                  className="cursor-pointer bg-white rounded-lg border border-[#e3e8ee] hover:border-[#3483fa]/60 hover:shadow-[0_2px_16px_-2px_rgba(52,131,250,0.15),0_1px_4px_-1px_rgba(0,0,0,0.06)] transition-all duration-200 overflow-hidden"
-                >
-                  <div className="relative aspect-square bg-[#fafafa] p-2 flex items-center justify-center">
-                    <Image
-                      src={producto.imagen || "/placeholder.svg?height=150&width=150&query=producto"}
-                      alt={producto.nombre}
-                      fill
-                      className="object-contain p-1"
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
-                    />
-                  </div>
-                  <div className="px-2 pb-2">
-                    <h4 className="text-xs font-normal text-[#333] line-clamp-2 leading-snug">{producto.nombre}</h4>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         )}
       </section>
