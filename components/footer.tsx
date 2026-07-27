@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { MapPin, Phone, Mail, Cpu, Sun, Shield, Settings, ExternalLink, Clock } from "lucide-react"
+import { MapPin, Phone, Mail, Cpu, Sun, Shield, Settings, Clock } from "lucide-react"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -24,13 +24,10 @@ export function Footer() {
 
             <div className="mt-6">
               <a
-                href="https://www.mercadolibre.com.ar/pagina/aidcom"
-                target="_blank"
-                rel="noreferrer"
+                href="/tienda"
                 className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80"
               >
                 Visitar Tienda Online
-                <ExternalLink className="h-3 w-3" />
               </a>
             </div>
           </div>

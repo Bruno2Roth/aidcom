@@ -359,7 +359,7 @@ export default function HogarOficinaComercioPage() {
 
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="https://www.mercadolibre.com.ar/pagina/aidcom"
+                  href="/tienda"
                   onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
                   className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-sky-500 to-blue-500 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-sky-500/25"
                 >
@@ -476,7 +476,7 @@ export default function HogarOficinaComercioPage() {
                       ))}
                     </ul>
                     <Link
-                      href="https://www.mercadolibre.com.ar/pagina/aidcom"
+                      href="/tienda"
                       className="mt-6 inline-flex items-center gap-2 text-sky-400 font-semibold hover:text-sky-300 transition-colors group/link"
                     >
                       Ver productos

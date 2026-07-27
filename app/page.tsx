@@ -179,7 +179,7 @@ export default function HomePage() {
     {
       icon: ShoppingCart,
       title: "Tienda Online",
-      href: "https://www.mercadolibre.com.ar/pagina/aidcom",
+      href: "/tienda",
       description: "Hardware, software y accesorios tecnológicos",
       gradient: "from-amber-500 to-orange-600",
       borderColor: "border-amber-500/30",

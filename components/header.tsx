@@ -508,7 +508,7 @@ export function Header() {
 
                 <li>
                   <Link
-                    href="https://www.mercadolibre.com.ar/pagina/aidcom"
+                    href="/tienda"
                     onClick={handleNavClick}
                     className="flex items-center gap-3 rounded-xl px-4 py-3 text-foreground/80 transition-all duration-200 hover:bg-muted"
                   >
