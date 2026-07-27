@@ -9,7 +9,6 @@ export interface Producto {
   precio: number
   imagen: string
   categoria: string
-  sinStock?: boolean
   pocoStock?: boolean
 }
 

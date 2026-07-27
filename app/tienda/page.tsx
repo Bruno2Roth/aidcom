@@ -178,10 +178,6 @@ export default function TiendaPage() {
         const bFav = favoritos.includes(b.id) ? 0 : 1
         if (aFav !== bFav) return aFav - bFav
 
-        const aStock = a.sinStock ? 1 : 0
-        const bStock = b.sinStock ? 1 : 0
-        if (aStock !== bStock) return aStock - bStock
-
         switch (sortBy) {
           case "nombre":
             return a.nombre.localeCompare(b.nombre)
@@ -579,17 +575,11 @@ export default function TiendaPage() {
           {productosFiltrados.map((producto, index) => {
             const isFavorito = favoritos.includes(producto.id)
             const isAdded = addedToCart === producto.id
-            const isOutOfStock = producto.sinStock === true
-
             if (viewMode === "list") {
               return (
                 <div
                   key={producto.id}
-                  className={`group flex gap-4 p-3 bg-white rounded-lg border transition-all duration-200 cursor-pointer ${
-                    isOutOfStock
-                      ? "border-[#e3e8ee]/80 opacity-70"
-                      : "border-[#e3e8ee] hover:border-[#3483fa]/60 hover:shadow-[0_2px_16px_-2px_rgba(52,131,250,0.15),0_1px_4px_-1px_rgba(0,0,0,0.06)]"
-                  }`}
+                  className="group flex gap-4 p-3 bg-white rounded-lg border border-[#e3e8ee] transition-all duration-200 cursor-pointer hover:border-[#3483fa]/60 hover:shadow-[0_2px_16px_-2px_rgba(52,131,250,0.15),0_1px_4px_-1px_rgba(0,0,0,0.06)]"
                   onClick={() => {
                     setQuickViewProduct(producto)
                     addToRecentlyViewed(producto)
@@ -600,39 +590,27 @@ export default function TiendaPage() {
                       src={producto.imagen || "/placeholder.svg?height=300&width=300&query=producto"}
                       alt={producto.nombre}
                       fill
-                      className={`object-contain p-2 ${isOutOfStock ? "grayscale" : ""}`}
+                      className="object-contain p-2"
                       sizes="112px"
                     />
-                    {isOutOfStock && (
-                      <div className="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-[#333] text-white text-[9px] font-semibold uppercase tracking-wider z-10">
-                        Sin stock
-                      </div>
-                    )}
                   </div>
                   <div className="flex-1 flex flex-col min-w-0">
-                    <h3 className={`text-sm font-normal line-clamp-2 leading-snug ${isOutOfStock ? "text-[#999]" : "text-[#333]"}`}>{producto.nombre}</h3>
+                    <h3 className="text-sm font-normal line-clamp-2 leading-snug text-[#333]">{producto.nombre}</h3>
                     <div className="mt-auto pt-2">
-                      {isOutOfStock ? (
-                        <p className="text-xs text-[#999] font-normal">No disponible</p>
-                      ) : (
-                        <p className="text-xs text-[#00a650] font-medium">Envío</p>
-                      )}
+                      <p className="text-xs text-[#00a650] font-medium">Envío</p>
                     </div>
                     <button
-                      disabled={isOutOfStock}
                       onClick={(e) => {
                         e.stopPropagation()
-                        if (!isOutOfStock) handleAgregarAlCarrito(producto)
+                        handleAgregarAlCarrito(producto)
                       }}
                       className={`mt-2 self-start px-4 py-1.5 rounded-md text-sm font-medium transition-all duration-200 ${
-                        isOutOfStock
-                          ? "bg-[#f0f2f5] text-[#aaa] cursor-not-allowed"
-                          : isAdded
-                            ? "bg-[#00a650] text-white shadow-sm shadow-[#00a650]/20"
-                            : "bg-[#3483fa] text-white hover:bg-[#2968c8] shadow-sm shadow-[#3483fa]/20 hover:shadow-md hover:shadow-[#3483fa]/25"
+                        isAdded
+                          ? "bg-[#00a650] text-white shadow-sm shadow-[#00a650]/20"
+                          : "bg-[#3483fa] text-white hover:bg-[#2968c8] shadow-sm shadow-[#3483fa]/20 hover:shadow-md hover:shadow-[#3483fa]/25"
                       }`}
                     >
-                      {isOutOfStock ? "Sin stock" : isAdded ? "Cotizado" : "Cotizar"}
+                      {isAdded ? "Cotizado" : "Cotizar"}
                     </button>
                   </div>
                 </div>
@@ -642,11 +620,7 @@ export default function TiendaPage() {
             return (
               <div
                 key={producto.id}
-                className={`group bg-white rounded-lg border transition-all duration-200 overflow-hidden cursor-pointer ${
-                  isOutOfStock
-                    ? "border-[#e3e8ee]/80 opacity-70"
-                    : "border-[#e3e8ee] hover:border-[#3483fa]/60 hover:shadow-[0_2px_16px_-2px_rgba(52,131,250,0.15),0_1px_4px_-1px_rgba(0,0,0,0.06)]"
-                }`}
+                className="group bg-white rounded-lg border border-[#e3e8ee] transition-all duration-200 overflow-hidden cursor-pointer hover:border-[#3483fa]/60 hover:shadow-[0_2px_16px_-2px_rgba(52,131,250,0.15),0_1px_4px_-1px_rgba(0,0,0,0.06)]"
                 onClick={() => {
                   setQuickViewProduct(producto)
                   addToRecentlyViewed(producto)
@@ -658,56 +632,42 @@ export default function TiendaPage() {
                     src={producto.imagen || "/placeholder.svg?height=300&width=300&query=producto"}
                     alt={producto.nombre}
                     fill
-                    className={`object-contain ${isOutOfStock ? " grayscale" : ""}`}
+                    className="object-contain"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                   />
-                  {isOutOfStock && (
-                    <div className="absolute top-3 left-3 px-2 py-0.5 rounded bg-[#333] text-white text-[10px] font-semibold uppercase tracking-wider z-10">
-                      Sin stock
-                    </div>
-                  )}
-                  {!isOutOfStock && (
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        toggleFavorito(producto.id)
-                      }}
-                      className={`absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 z-10 ${
-                        isFavorito
-                          ? "bg-[#3483fa]/10 text-[#3483fa] shadow-sm"
-                          : "bg-white/90 text-[#bbb] hover:text-[#3483fa] hover:bg-white shadow-sm"
-                      }`}
-                    >
-                      <Heart className={`w-4 h-4 ${isFavorito ? "fill-current" : ""}`} />
-                    </button>
-                  )}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      toggleFavorito(producto.id)
+                    }}
+                    className={`absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 z-10 ${
+                      isFavorito
+                        ? "bg-[#3483fa]/10 text-[#3483fa] shadow-sm"
+                        : "bg-white/90 text-[#bbb] hover:text-[#3483fa] hover:bg-white shadow-sm"
+                    }`}
+                  >
+                    <Heart className={`w-4 h-4 ${isFavorito ? "fill-current" : ""}`} />
+                  </button>
                 </div>
 
                 {/* Content */}
                 <div className="px-3 pb-3 pt-0">
-                  <p className={`text-[13px] font-normal line-clamp-2 leading-snug min-h-[2.5rem] ${isOutOfStock ? "text-[#999]" : "text-[#333]"}`}>
+                  <p className="text-[13px] font-normal line-clamp-2 leading-snug min-h-[2.5rem] text-[#333]">
                     {producto.nombre}
                   </p>
-                  {isOutOfStock ? (
-                    <p className="text-xs text-[#999] font-normal mt-1">No disponible</p>
-                  ) : (
-                    <p className="text-xs text-[#00a650] font-medium mt-1">Envío</p>
-                  )}
+                  <p className="text-xs text-[#00a650] font-medium mt-1">Envío</p>
                   <button
-                    disabled={isOutOfStock}
                     onClick={(e) => {
                       e.stopPropagation()
-                      if (!isOutOfStock) handleAgregarAlCarrito(producto)
+                      handleAgregarAlCarrito(producto)
                     }}
                     className={`w-full mt-2.5 py-1.5 rounded-md text-sm font-medium transition-all duration-200 ${
-                      isOutOfStock
-                        ? "bg-[#f0f2f5] text-[#aaa] cursor-not-allowed"
-                        : isAdded
-                          ? "bg-[#00a650] text-white shadow-sm shadow-[#00a650]/20"
-                          : "bg-[#3483fa] text-white hover:bg-[#2968c8] shadow-sm shadow-[#3483fa]/20 hover:shadow-md hover:shadow-[#3483fa]/25"
+                      isAdded
+                        ? "bg-[#00a650] text-white shadow-sm shadow-[#00a650]/20"
+                        : "bg-[#3483fa] text-white hover:bg-[#2968c8] shadow-sm shadow-[#3483fa]/20 hover:shadow-md hover:shadow-[#3483fa]/25"
                     }`}
                   >
-                    {isOutOfStock ? "Sin stock" : isAdded ? "Cotizado" : "Cotizar"}
+                    {isAdded ? "Cotizado" : "Cotizar"}
                   </button>
                 </div>
               </div>
@@ -773,61 +733,38 @@ export default function TiendaPage() {
                   src={quickViewProduct.imagen || "/placeholder.svg?height=500&width=500&query=producto"}
                   alt={quickViewProduct.nombre}
                   fill
-                  className={`object-contain p-4 ${quickViewProduct.sinStock ? "grayscale" : ""}`}
+                  className="object-contain p-4"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                {quickViewProduct.sinStock && (
-                  <div className="absolute top-4 left-4 px-2.5 py-1 rounded bg-[#333] text-white text-xs font-semibold uppercase tracking-wider z-10">
-                    Sin stock
-                  </div>
-                )}
               </div>
 
               <div className="flex flex-col p-6">
                 <span className="text-xs text-[#3483fa] font-medium">{quickViewProduct.categoria}</span>
-                <h2 className={`text-xl font-normal mt-1 leading-snug ${quickViewProduct.sinStock ? "text-[#999]" : "text-[#333]"}`}>{quickViewProduct.nombre}</h2>
+                <h2 className="text-xl font-normal mt-1 leading-snug text-[#333]">{quickViewProduct.nombre}</h2>
 
                 <div className="mt-4">
-                  {quickViewProduct.sinStock ? (
-                    <p className="text-sm text-[#999] font-normal">No disponible</p>
-                  ) : (
-                    <p className="text-sm text-[#00a650] font-medium">Envío a todo el país</p>
-                  )}
+                  <p className="text-sm text-[#00a650] font-medium">Envío a todo el país</p>
                 </div>
 
                 <div className="mt-4 p-3 rounded-lg bg-[#f8f9fb] border border-[#e3e8ee]">
-                  {quickViewProduct.sinStock ? (
-                    <div className="flex items-center gap-2 text-[#999] text-sm">
-                      <X className="w-4 h-4" />
-                      <span>Sin stock actualmente</span>
-                    </div>
-                  ) : (
-                    <>
-                      <div className="flex items-center gap-2 text-[#666] text-sm">
-                        <Truck className="w-4 h-4" />
-                        <span>Llega en 24 a 48 horas</span>
-                      </div>
-                    </>
-                  )}
+                  <div className="flex items-center gap-2 text-[#666] text-sm">
+                    <Truck className="w-4 h-4" />
+                    <span>Llega en 24 a 48 horas</span>
+                  </div>
                 </div>
 
                 <div className="mt-auto pt-6 flex gap-2">
                   <button
-                    disabled={quickViewProduct.sinStock}
                     onClick={() => {
-                      if (!quickViewProduct.sinStock) handleAgregarAlCarrito(quickViewProduct)
+                      handleAgregarAlCarrito(quickViewProduct)
                     }}
                     className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-lg font-medium text-sm transition-all duration-200 ${
-                      quickViewProduct.sinStock
-                        ? "bg-[#f0f2f5] text-[#aaa] cursor-not-allowed"
-                        : addedToCart === quickViewProduct.id
-                          ? "bg-[#00a650] text-white shadow-sm shadow-[#00a650]/20"
-                          : "bg-[#3483fa] text-white hover:bg-[#2968c8] shadow-sm shadow-[#3483fa]/20 hover:shadow-md hover:shadow-[#3483fa]/25"
+                      addedToCart === quickViewProduct.id
+                        ? "bg-[#00a650] text-white shadow-sm shadow-[#00a650]/20"
+                        : "bg-[#3483fa] text-white hover:bg-[#2968c8] shadow-sm shadow-[#3483fa]/20 hover:shadow-md hover:shadow-[#3483fa]/25"
                     }`}
                   >
-                    {quickViewProduct.sinStock ? (
-                      "Sin stock"
-                    ) : addedToCart === quickViewProduct.id ? (
+                    {addedToCart === quickViewProduct.id ? (
                       <>
                         <Check className="w-4 h-4" />
                         Cotizado

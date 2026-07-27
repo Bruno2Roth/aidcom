@@ -315,7 +315,7 @@ export const productos: Producto[] = [
     precio: 5107999,
     imagen: "/productos/IMPRESORA 3D CREALITY SERMOON-D3.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
   {
     id: 39,
@@ -324,7 +324,7 @@ export const productos: Producto[] = [
     precio: 511999,
     imagen: "/productos/IMPRESORA 3D CREALITY ENDER-3 V3 KE.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
   {
     id: 40,
@@ -333,7 +333,7 @@ export const productos: Producto[] = [
     precio: 955000,
     imagen: "/productos/IMPRESORA 3D CREALITY K1C.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
   {
     id: 41,
@@ -342,7 +342,7 @@ export const productos: Producto[] = [
     precio: 549900,
     imagen: "/productos/ELEGOO Impresora 3D Neptune-4 FDM firmware Klipper extrusora directa (225X225X265)mm.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
   {
     id: 42,
@@ -351,7 +351,7 @@ export const productos: Producto[] = [
     precio: 651900,
     imagen: "/productos/ELEGOO Impresora 3D Neptune-4PRO FDM firmware Klipper extrusora directa (225X225X265)mm.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
   {
     id: 43,
@@ -360,7 +360,7 @@ export const productos: Producto[] = [
     precio: 921799,
     imagen: "/productos/IMPRESORA 3D CREALITY ENDER-3 V3PLUS.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
   {
     id: 44,
@@ -369,7 +369,7 @@ export const productos: Producto[] = [
     precio: 1363990,
     imagen: "/productos/BAMBULAB IMPRESORA 3D A1-COMBO.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
   {
     id: 45,
@@ -378,7 +378,7 @@ export const productos: Producto[] = [
     precio: 558080,
     imagen: "/productos/BAMBULAB IMPRESORA 3D A1-MINI.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
   {
     id: 46,
@@ -387,7 +387,7 @@ export const productos: Producto[] = [
     precio: 986290,
     imagen: "/productos/BAMBULAB IMPRESORA 3D A1-MINI-COMBO.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
   {
     id: 47,
@@ -396,7 +396,7 @@ export const productos: Producto[] = [
     precio: 1499990,
     imagen: "/productos/BAMBULAB IMPRESORA 3D P1S.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
   {
     id: 48,
@@ -405,7 +405,7 @@ export const productos: Producto[] = [
     precio: 579900,
     imagen: "/productos/IMPRESORA 3D FLASHFORGE ADVENTURER-5M.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
   {
     id: 49,
@@ -414,7 +414,7 @@ export const productos: Producto[] = [
     precio: 4697900,
     imagen: "/productos/PRUSA CORE ONE L.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
   {
     id: 50,
@@ -423,7 +423,7 @@ export const productos: Producto[] = [
     precio: 2659900,
     imagen: "/productos/PRUSA CORE ONE + KIT DIY.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
   {
     id: 51,
@@ -432,7 +432,7 @@ export const productos: Producto[] = [
     precio: 9169900,
     imagen: "/productos/ORIGINAL PRUSA XL- 5 CABEZAL.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
   {
     id: 52,
@@ -441,7 +441,7 @@ export const productos: Producto[] = [
     precio: 3552990,
     imagen: "/productos/BAMBULAB IMPRESORA 3D X2D COMBO.png",
     categoria: "Impresión 3D",
-    sinStock: true,
+
   },
 ]
 
