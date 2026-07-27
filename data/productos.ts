@@ -289,7 +289,7 @@ export const productos: Producto[] = [
     nombre: "ELEGOO Centauri Carbon 2 Combo FDM 3D Printer",
     descripcion: "Impresora 3D ELEGOO Centauri Carbon 2 Combo con estructura de carbono. Incluye accesorios, filamento y herramientas. Impresión silenciosa y de alta calidad para todos los niveles.",
     precio: 1355900,
-    imagen: "/productos/ELEGOO Centauri Carbon 2 Combo FDM 3D Printer.png",
+    imagen: "/productos/CENTAURI CARBON 2 COMBO FDM 3D PRINTER - AR PLUG.png",
     categoria: "Impresión 3D",
   },
   {
