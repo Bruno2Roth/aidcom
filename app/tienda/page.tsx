@@ -382,23 +382,23 @@ export default function TiendaPage() {
         {/* Toolbar */}
         <div className="flex flex-col lg:flex-row gap-3 mb-6">
           <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#999]" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#aaa]" />
             <input
               type="text"
               placeholder="Buscar productos..."
               value={busqueda}
               onChange={(e) => setBusqueda(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 rounded-md bg-white border border-[#c5c5c5] text-[#333] placeholder:text-[#999] focus:outline-none focus:border-[#3483fa] focus:shadow-[0_0_0_2px_rgba(52,131,250,0.2)] transition-all text-sm"
+              className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-white border border-[#ddd] text-[#333] placeholder:text-[#aaa] focus:outline-none focus:border-[#3483fa] focus:shadow-[0_0_0_3px_rgba(52,131,250,0.12)] transition-all text-sm"
             />
           </div>
 
           <div className="flex gap-2">
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className={`flex items-center gap-2 px-3 py-2.5 rounded-md border text-sm transition-all ${
+              className={`flex items-center gap-2 px-3 py-2.5 rounded-lg border text-sm transition-all duration-200 ${
                 showFilters
-                  ? "bg-[#3483fa]/10 border-[#3483fa] text-[#3483fa]"
-                  : "bg-white border-[#c5c5c5] text-[#666] hover:border-[#999]"
+                  ? "bg-[#3483fa]/10 border-[#3483fa]/40 text-[#3483fa]"
+                  : "bg-white border-[#ddd] text-[#666] hover:border-[#bbb] hover:text-[#444]"
               }`}
             >
               <Filter className="w-4 h-4" />
@@ -408,14 +408,14 @@ export default function TiendaPage() {
             <div className="relative">
               <button
                 onClick={() => setShowSortMenu(!showSortMenu)}
-                className="flex items-center gap-2 px-3 py-2.5 rounded-md bg-white border border-[#c5c5c5] text-[#666] hover:border-[#999] transition-all text-sm"
+                className="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-white border border-[#ddd] text-[#666] hover:border-[#bbb] hover:text-[#444] transition-all duration-200 text-sm"
               >
                 <ArrowUpDown className="w-4 h-4" />
                 <span className="hidden sm:inline">Ordenar</span>
-                <ChevronDown className={`w-3 h-3 transition-transform ${showSortMenu ? "rotate-180" : ""}`} />
+                <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${showSortMenu ? "rotate-180" : ""}`} />
               </button>
               {showSortMenu && (
-                <div className="absolute right-0 top-full mt-1 w-48 py-1 rounded-md bg-white border border-[#e3e8ee] shadow-lg z-50">
+                <div className="absolute right-0 top-full mt-1 w-48 py-1 rounded-lg bg-white border border-[#e3e8ee] shadow-lg shadow-black/8 z-50">
                   {sortOptions.map((option) => (
                     <button
                       key={option.value}
@@ -434,16 +434,16 @@ export default function TiendaPage() {
               )}
             </div>
 
-            <div className="flex rounded-md border border-[#c5c5c5] overflow-hidden">
+            <div className="flex rounded-lg border border-[#ddd] overflow-hidden">
               <button
                 onClick={() => setViewMode("grid")}
-                className={`p-2.5 transition-colors ${viewMode === "grid" ? "bg-[#3483fa]/10 text-[#3483fa]" : "bg-white text-[#999] hover:text-[#666]"}`}
+                className={`p-2.5 transition-all duration-200 ${viewMode === "grid" ? "bg-[#3483fa]/10 text-[#3483fa]" : "bg-white text-[#aaa] hover:text-[#666] hover:bg-[#f8f9fb]"}`}
               >
                 <Grid3X3 className="w-4 h-4" />
               </button>
               <button
                 onClick={() => setViewMode("list")}
-                className={`p-2.5 transition-colors ${viewMode === "list" ? "bg-[#3483fa]/10 text-[#3483fa]" : "bg-white text-[#999] hover:text-[#666] border-l border-[#c5c5c5]"}`}
+                className={`p-2.5 transition-all duration-200 ${viewMode === "list" ? "bg-[#3483fa]/10 text-[#3483fa]" : "bg-white text-[#aaa] hover:text-[#666] hover:bg-[#f8f9fb] border-l border-[#ddd]"}`}
               >
                 <LayoutList className="w-4 h-4" />
               </button>
@@ -585,17 +585,17 @@ export default function TiendaPage() {
               return (
                 <div
                   key={producto.id}
-                  className={`group flex gap-4 p-3 bg-white rounded-md border transition-all duration-200 cursor-pointer ${
+                  className={`group flex gap-4 p-3 bg-white rounded-lg border transition-all duration-200 cursor-pointer ${
                     isOutOfStock
-                      ? "border-[#e3e8ee] opacity-70"
-                      : "border-[#e3e8ee] hover:border-[#3483fa] hover:shadow-[0_1px_12px_0_rgba(0,0,0,0.12)]"
+                      ? "border-[#e3e8ee]/80 opacity-70"
+                      : "border-[#e3e8ee] hover:border-[#3483fa]/60 hover:shadow-[0_2px_16px_-2px_rgba(52,131,250,0.15),0_1px_4px_-1px_rgba(0,0,0,0.06)]"
                   }`}
                   onClick={() => {
                     setQuickViewProduct(producto)
                     addToRecentlyViewed(producto)
                   }}
                 >
-                  <div className="relative w-28 h-28 flex-shrink-0 bg-white rounded-sm overflow-hidden">
+                  <div className="relative w-28 h-28 flex-shrink-0 bg-[#fafafa] rounded-lg overflow-hidden">
                     <Image
                       src={producto.imagen || "/placeholder.svg?height=300&width=300&query=producto"}
                       alt={producto.nombre}
@@ -604,12 +604,12 @@ export default function TiendaPage() {
                       sizes="112px"
                     />
                     {isOutOfStock && (
-                      <div className="absolute top-1 left-1 px-1.5 py-0.5 rounded-sm bg-[#333] text-white text-[9px] font-medium uppercase tracking-wide z-10">
+                      <div className="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-[#333] text-white text-[9px] font-semibold uppercase tracking-wider z-10">
                         Sin stock
                       </div>
                     )}
                     {isLowStock && (
-                      <div className="absolute top-1 left-1 px-1.5 py-0.5 rounded-sm bg-[#f5a623] text-white text-[9px] font-medium uppercase tracking-wide z-10">
+                      <div className="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-[#f5a623] text-white text-[9px] font-semibold uppercase tracking-wider z-10">
                         Poco stock
                       </div>
                     )}
@@ -620,9 +620,9 @@ export default function TiendaPage() {
                       {isOutOfStock ? (
                         <p className="text-xs text-[#999] font-normal">No disponible</p>
                       ) : isLowStock ? (
-                        <p className="text-xs text-[#f5a623] font-normal">Queda poco stock</p>
+                        <p className="text-xs text-[#f5a623] font-medium">Queda poco stock</p>
                       ) : (
-                        <p className="text-xs text-[#00a650] font-normal">Envío</p>
+                        <p className="text-xs text-[#00a650] font-medium">Envío</p>
                       )}
                     </div>
                     <button
@@ -631,12 +631,12 @@ export default function TiendaPage() {
                         e.stopPropagation()
                         if (!isOutOfStock) handleAgregarAlCarrito(producto)
                       }}
-                      className={`mt-2 self-start px-4 py-1.5 rounded-sm text-sm font-medium transition-all ${
+                      className={`mt-2 self-start px-4 py-1.5 rounded-md text-sm font-medium transition-all duration-200 ${
                         isOutOfStock
-                          ? "bg-[#e3e8ee] text-[#999] cursor-not-allowed"
+                          ? "bg-[#f0f2f5] text-[#aaa] cursor-not-allowed"
                           : isAdded
-                            ? "bg-[#00a650] text-white"
-                            : "bg-[#3483fa] text-white hover:bg-[#2968c8]"
+                            ? "bg-[#00a650] text-white shadow-sm shadow-[#00a650]/20"
+                            : "bg-[#3483fa] text-white hover:bg-[#2968c8] shadow-sm shadow-[#3483fa]/20 hover:shadow-md hover:shadow-[#3483fa]/25"
                       }`}
                     >
                       {isOutOfStock ? "Sin stock" : isAdded ? "Cotizado" : "Cotizar"}
@@ -649,10 +649,10 @@ export default function TiendaPage() {
             return (
               <div
                 key={producto.id}
-                className={`group bg-white rounded-md border transition-all duration-200 overflow-hidden cursor-pointer ${
+                className={`group bg-white rounded-lg border transition-all duration-200 overflow-hidden cursor-pointer ${
                   isOutOfStock
-                    ? "border-[#e3e8ee] opacity-70"
-                    : "border-[#e3e8ee] hover:border-[#3483fa] hover:shadow-[0_1px_12px_0_rgba(0,0,0,0.12)]"
+                    ? "border-[#e3e8ee]/80 opacity-70"
+                    : "border-[#e3e8ee] hover:border-[#3483fa]/60 hover:shadow-[0_2px_16px_-2px_rgba(52,131,250,0.15),0_1px_4px_-1px_rgba(0,0,0,0.06)]"
                 }`}
                 onClick={() => {
                   setQuickViewProduct(producto)
@@ -660,7 +660,7 @@ export default function TiendaPage() {
                 }}
               >
                 {/* Image */}
-                <div className="relative aspect-square bg-white p-4 flex items-center justify-center">
+                <div className="relative aspect-square bg-[#fafafa] p-4 flex items-center justify-center">
                   <Image
                     src={producto.imagen || "/placeholder.svg?height=300&width=300&query=producto"}
                     alt={producto.nombre}
@@ -669,12 +669,12 @@ export default function TiendaPage() {
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                   />
                   {isOutOfStock && (
-                    <div className="absolute top-3 left-3 px-2 py-0.5 rounded-sm bg-[#333] text-white text-[10px] font-medium uppercase tracking-wide z-10">
+                    <div className="absolute top-3 left-3 px-2 py-0.5 rounded bg-[#333] text-white text-[10px] font-semibold uppercase tracking-wider z-10">
                       Sin stock
                     </div>
                   )}
                   {isLowStock && (
-                    <div className="absolute top-3 left-3 px-2 py-0.5 rounded-sm bg-[#f5a623] text-white text-[10px] font-medium uppercase tracking-wide z-10">
+                    <div className="absolute top-3 left-3 px-2 py-0.5 rounded bg-[#f5a623] text-white text-[10px] font-semibold uppercase tracking-wider z-10">
                       Poco stock
                     </div>
                   )}
@@ -684,10 +684,10 @@ export default function TiendaPage() {
                         e.stopPropagation()
                         toggleFavorito(producto.id)
                       }}
-                      className={`absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all z-10 ${
+                      className={`absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 z-10 ${
                         isFavorito
-                          ? "bg-[#3483fa]/10 text-[#3483fa]"
-                          : "bg-white/80 text-[#999] hover:text-[#3483fa] shadow-sm"
+                          ? "bg-[#3483fa]/10 text-[#3483fa] shadow-sm"
+                          : "bg-white/90 text-[#bbb] hover:text-[#3483fa] hover:bg-white shadow-sm"
                       }`}
                     >
                       <Heart className={`w-4 h-4 ${isFavorito ? "fill-current" : ""}`} />
@@ -703,9 +703,9 @@ export default function TiendaPage() {
                   {isOutOfStock ? (
                     <p className="text-xs text-[#999] font-normal mt-1">No disponible</p>
                   ) : isLowStock ? (
-                    <p className="text-xs text-[#f5a623] font-normal mt-1">Queda poco stock</p>
+                    <p className="text-xs text-[#f5a623] font-medium mt-1">Queda poco stock</p>
                   ) : (
-                    <p className="text-xs text-[#00a650] font-normal mt-1">Envío</p>
+                    <p className="text-xs text-[#00a650] font-medium mt-1">Envío</p>
                   )}
                   <button
                     disabled={isOutOfStock}
@@ -713,12 +713,12 @@ export default function TiendaPage() {
                       e.stopPropagation()
                       if (!isOutOfStock) handleAgregarAlCarrito(producto)
                     }}
-                    className={`w-full mt-2.5 py-1.5 rounded-sm text-sm font-medium transition-all ${
+                    className={`w-full mt-2.5 py-1.5 rounded-md text-sm font-medium transition-all duration-200 ${
                       isOutOfStock
-                        ? "bg-[#e3e8ee] text-[#999] cursor-not-allowed"
+                        ? "bg-[#f0f2f5] text-[#aaa] cursor-not-allowed"
                         : isAdded
-                          ? "bg-[#00a650] text-white"
-                          : "bg-[#3483fa] text-white hover:bg-[#2968c8]"
+                          ? "bg-[#00a650] text-white shadow-sm shadow-[#00a650]/20"
+                          : "bg-[#3483fa] text-white hover:bg-[#2968c8] shadow-sm shadow-[#3483fa]/20 hover:shadow-md hover:shadow-[#3483fa]/25"
                     }`}
                   >
                     {isOutOfStock ? "Sin stock" : isAdded ? "Cotizado" : "Cotizar"}
@@ -732,7 +732,7 @@ export default function TiendaPage() {
         {/* No products found */}
         {productosFiltrados.length === 0 && (
           <div className="text-center py-16">
-            <div className="w-16 h-16 rounded-full bg-[#f5f5f5] border border-[#e3e8ee] flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 rounded-2xl bg-[#f5f5f5] border border-[#e3e8ee] flex items-center justify-center mx-auto mb-4">
               <Search className="w-6 h-6 text-[#999]" />
             </div>
             <h3 className="text-lg font-normal text-[#333] mb-1">No se encontraron productos</h3>
@@ -749,9 +749,9 @@ export default function TiendaPage() {
                 <div
                   key={producto.id}
                   onClick={() => setQuickViewProduct(producto)}
-                  className="cursor-pointer bg-white rounded-md border border-[#e3e8ee] hover:border-[#3483fa] hover:shadow-[0_1px_12px_0_rgba(0,0,0,0.12)] transition-all overflow-hidden"
+                  className="cursor-pointer bg-white rounded-lg border border-[#e3e8ee] hover:border-[#3483fa]/60 hover:shadow-[0_2px_16px_-2px_rgba(52,131,250,0.15),0_1px_4px_-1px_rgba(0,0,0,0.06)] transition-all duration-200 overflow-hidden"
                 >
-                  <div className="relative aspect-square bg-white p-2 flex items-center justify-center">
+                  <div className="relative aspect-square bg-[#fafafa] p-2 flex items-center justify-center">
                     <Image
                       src={producto.imagen || "/placeholder.svg?height=150&width=150&query=producto"}
                       alt={producto.nombre}
@@ -773,16 +773,16 @@ export default function TiendaPage() {
       {/* Quick View Modal */}
       {quickViewProduct && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="relative w-full max-w-4xl max-h-[90vh] overflow-auto rounded-md bg-white shadow-2xl">
+          <div className="relative w-full max-w-4xl max-h-[90vh] overflow-auto rounded-xl bg-white shadow-[0_25px_60px_-12px_rgba(0,0,0,0.25)]">
             <button
               onClick={() => setQuickViewProduct(null)}
-              className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 text-[#333] hover:bg-[#3483fa] hover:text-white flex items-center justify-center transition-all z-10 shadow-sm"
+              className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/95 text-[#666] hover:bg-[#3483fa] hover:text-white flex items-center justify-center transition-all duration-200 z-10 shadow-sm"
             >
               <X className="w-4 h-4" />
             </button>
 
             <div className="grid md:grid-cols-2 gap-0">
-              <div className="relative aspect-square bg-white p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-[#e3e8ee]">
+              <div className="relative aspect-square bg-[#fafafa] p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-[#e3e8ee]">
                 <Image
                   src={quickViewProduct.imagen || "/placeholder.svg?height=500&width=500&query=producto"}
                   alt={quickViewProduct.nombre}
@@ -791,32 +791,32 @@ export default function TiendaPage() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 {quickViewProduct.sinStock && (
-                  <div className="absolute top-4 left-4 px-2.5 py-1 rounded-sm bg-[#333] text-white text-xs font-medium uppercase tracking-wide z-10">
+                  <div className="absolute top-4 left-4 px-2.5 py-1 rounded bg-[#333] text-white text-xs font-semibold uppercase tracking-wider z-10">
                     Sin stock
                   </div>
                 )}
                 {quickViewProduct.pocoStock && !quickViewProduct.sinStock && (
-                  <div className="absolute top-4 left-4 px-2.5 py-1 rounded-sm bg-[#f5a623] text-white text-xs font-medium uppercase tracking-wide z-10">
+                  <div className="absolute top-4 left-4 px-2.5 py-1 rounded bg-[#f5a623] text-white text-xs font-semibold uppercase tracking-wider z-10">
                     Poco stock
                   </div>
                 )}
               </div>
 
               <div className="flex flex-col p-6">
-                <span className="text-xs text-[#3483fa] font-normal">{quickViewProduct.categoria}</span>
+                <span className="text-xs text-[#3483fa] font-medium">{quickViewProduct.categoria}</span>
                 <h2 className={`text-xl font-normal mt-1 leading-snug ${quickViewProduct.sinStock ? "text-[#999]" : "text-[#333]"}`}>{quickViewProduct.nombre}</h2>
 
                 <div className="mt-4">
                   {quickViewProduct.sinStock ? (
                     <p className="text-sm text-[#999] font-normal">No disponible</p>
                   ) : quickViewProduct.pocoStock ? (
-                    <p className="text-sm text-[#f5a623] font-normal">Queda poco stock</p>
+                    <p className="text-sm text-[#f5a623] font-medium">Queda poco stock</p>
                   ) : (
-                    <p className="text-sm text-[#00a650] font-normal">Envío a todo el país</p>
+                    <p className="text-sm text-[#00a650] font-medium">Envío a todo el país</p>
                   )}
                 </div>
 
-                <div className="mt-4 p-3 rounded-sm bg-[#f5f5f5] border border-[#e3e8ee]">
+                <div className="mt-4 p-3 rounded-lg bg-[#f8f9fb] border border-[#e3e8ee]">
                   {quickViewProduct.sinStock ? (
                     <div className="flex items-center gap-2 text-[#999] text-sm">
                       <X className="w-4 h-4" />
@@ -824,7 +824,7 @@ export default function TiendaPage() {
                     </div>
                   ) : quickViewProduct.pocoStock ? (
                     <>
-                      <div className="flex items-center gap-2 text-[#f5a623] text-sm">
+                      <div className="flex items-center gap-2 text-[#f5a623] text-sm font-medium">
                         <Check className="w-4 h-4" />
                         <span>Quedan pocas unidades</span>
                       </div>
@@ -835,7 +835,7 @@ export default function TiendaPage() {
                     </>
                   ) : (
                     <>
-                      <div className="flex items-center gap-2 text-[#00a650] text-sm">
+                      <div className="flex items-center gap-2 text-[#00a650] text-sm font-medium">
                         <Check className="w-4 h-4" />
                         <span>Stock disponible</span>
                       </div>
@@ -853,12 +853,12 @@ export default function TiendaPage() {
                     onClick={() => {
                       if (!quickViewProduct.sinStock) handleAgregarAlCarrito(quickViewProduct)
                     }}
-                    className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-sm font-medium text-sm transition-all ${
+                    className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-lg font-medium text-sm transition-all duration-200 ${
                       quickViewProduct.sinStock
-                        ? "bg-[#e3e8ee] text-[#999] cursor-not-allowed"
+                        ? "bg-[#f0f2f5] text-[#aaa] cursor-not-allowed"
                         : addedToCart === quickViewProduct.id
-                          ? "bg-[#00a650] text-white"
-                          : "bg-[#3483fa] text-white hover:bg-[#2968c8]"
+                          ? "bg-[#00a650] text-white shadow-sm shadow-[#00a650]/20"
+                          : "bg-[#3483fa] text-white hover:bg-[#2968c8] shadow-sm shadow-[#3483fa]/20 hover:shadow-md hover:shadow-[#3483fa]/25"
                     }`}
                   >
                     {quickViewProduct.sinStock ? (
@@ -878,10 +878,10 @@ export default function TiendaPage() {
 
                   <button
                     onClick={() => toggleFavorito(quickViewProduct.id)}
-                    className={`px-4 py-3 rounded-sm transition-all border ${
+                    className={`px-4 py-3 rounded-lg transition-all duration-200 border ${
                       favoritos.includes(quickViewProduct.id)
-                        ? "border-[#3483fa] bg-[#3483fa]/10 text-[#3483fa]"
-                        : "border-[#e3e8ee] bg-white text-[#666] hover:border-[#3483fa] hover:text-[#3483fa]"
+                        ? "border-[#3483fa]/40 bg-[#3483fa]/10 text-[#3483fa] shadow-sm shadow-[#3483fa]/10"
+                        : "border-[#e3e8ee] bg-white text-[#888] hover:border-[#3483fa]/40 hover:text-[#3483fa] hover:bg-[#3483fa]/5"
                     }`}
                   >
                     <Heart className={`w-5 h-5 ${favoritos.includes(quickViewProduct.id) ? "fill-current" : ""}`} />
