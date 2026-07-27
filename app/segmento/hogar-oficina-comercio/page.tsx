@@ -248,7 +248,7 @@ export default function HogarOficinaComercioPage() {
       icon: MessageCircle,
     },
     { step: "03", title: "Pagá", desc: "Hasta 12 cuotas sin interés con todas las tarjetas", icon: CreditCard },
-    { step: "04", title: "Recibí", desc: "Envío gratis en 24-48hs o retirá en nuestro local", icon: Truck },
+    { step: "04", title: "Recibí", desc: "Envío en 24-48hs o retirá en nuestro local", icon: Truck },
   ]
 
   const productosDestacados: {
@@ -408,7 +408,7 @@ export default function HogarOficinaComercioPage() {
                     <Zap className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-white font-semibold text-sm">Envío Gratis</p>
+                    <p className="text-white font-semibold text-sm">Envío</p>
                     <p className="text-white/60 text-xs">Compras +$100.000</p>
                   </div>
                 </div>

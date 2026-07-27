@@ -226,7 +226,7 @@ export default function TiendaPage() {
           <div className="max-w-7xl mx-auto flex items-center justify-center gap-6 text-sm font-medium relative">
             <div className="flex items-center gap-2">
               <Truck className="w-4 h-4" />
-              <span>Envío gratis en compras +$100.000</span>
+              <span>Envío en compras +$100.000</span>
             </div>
             <div className="hidden md:flex items-center gap-2">
               <CreditCard className="w-4 h-4" />
@@ -347,7 +347,7 @@ export default function TiendaPage() {
                 <Truck className="w-5 h-5 text-amber-400" />
               </div>
               <div className="text-left">
-                <p className="text-xs text-white/50">Envío gratis</p>
+                <p className="text-xs text-white/50">Envío</p>
                 <p className="text-sm font-semibold text-white/90">Compras +$100.000</p>
               </div>
             </div>
@@ -600,7 +600,7 @@ export default function TiendaPage() {
                       <p className="text-[28px] font-light text-[#333] leading-tight">
                         ${producto.precio.toLocaleString("es-AR")}
                       </p>
-                      <p className="text-xs text-[#00a650] font-normal mt-0.5">Envío gratis</p>
+                      <p className="text-xs text-[#00a650] font-normal mt-0.5">Envío</p>
                     </div>
                     <button
                       onClick={(e) => {
@@ -663,7 +663,7 @@ export default function TiendaPage() {
                       ${producto.precio.toLocaleString("es-AR")}
                     </p>
                   </div>
-                  <p className="text-xs text-[#00a650] font-normal mt-0.5">Envío gratis</p>
+                  <p className="text-xs text-[#00a650] font-normal mt-0.5">Envío</p>
                   <button
                     onClick={(e) => {
                       e.stopPropagation()
@@ -755,7 +755,7 @@ export default function TiendaPage() {
                   <p className="text-[32px] font-light text-[#333] leading-tight">
                     ${quickViewProduct.precio.toLocaleString("es-AR")}
                   </p>
-                  <p className="text-sm text-[#00a650] font-normal mt-1">Envío gratis a todo el país</p>
+                  <p className="text-sm text-[#00a650] font-normal mt-1">Envío a todo el país</p>
                 </div>
 
                 <div className="mt-4 p-3 rounded-sm bg-[#f5f5f5] border border-[#e3e8ee]">
