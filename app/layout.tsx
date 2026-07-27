@@ -32,6 +32,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{})})}`,
+          }}
+        />
+      </head>
       <body className={`${inter.className} font-sans antialiased bg-[#030712]`}>
         <ScrollToTopOnNavigate />
         <AuthProvider>

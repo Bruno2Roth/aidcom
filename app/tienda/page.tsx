@@ -597,10 +597,7 @@ export default function TiendaPage() {
                   <div className="flex-1 flex flex-col min-w-0">
                     <h3 className="text-sm font-normal text-[#333] line-clamp-2 leading-snug">{producto.nombre}</h3>
                     <div className="mt-auto pt-2">
-                      <p className="text-[28px] font-light text-[#333] leading-tight">
-                        ${producto.precio.toLocaleString("es-AR")}
-                      </p>
-                      <p className="text-xs text-[#00a650] font-normal mt-0.5">Envío</p>
+                      <p className="text-xs text-[#00a650] font-normal">Envío</p>
                     </div>
                     <button
                       onClick={(e) => {
@@ -658,12 +655,7 @@ export default function TiendaPage() {
                   <p className="text-[13px] font-normal text-[#333] line-clamp-2 leading-snug min-h-[2.5rem]">
                     {producto.nombre}
                   </p>
-                  <div className="mt-1.5">
-                    <p className="text-[22px] font-light text-[#333] leading-tight">
-                      ${producto.precio.toLocaleString("es-AR")}
-                    </p>
-                  </div>
-                  <p className="text-xs text-[#00a650] font-normal mt-0.5">Envío</p>
+                  <p className="text-xs text-[#00a650] font-normal mt-1">Envío</p>
                   <button
                     onClick={(e) => {
                       e.stopPropagation()
@@ -716,7 +708,6 @@ export default function TiendaPage() {
                   </div>
                   <div className="px-2 pb-2">
                     <h4 className="text-xs font-normal text-[#333] line-clamp-2 leading-snug">{producto.nombre}</h4>
-                    <p className="text-sm font-light text-[#333] mt-1">${producto.precio.toLocaleString("es-AR")}</p>
                   </div>
                 </div>
               ))}
@@ -752,10 +743,7 @@ export default function TiendaPage() {
                 <h2 className="text-xl font-normal text-[#333] mt-1 leading-snug">{quickViewProduct.nombre}</h2>
 
                 <div className="mt-4">
-                  <p className="text-[32px] font-light text-[#333] leading-tight">
-                    ${quickViewProduct.precio.toLocaleString("es-AR")}
-                  </p>
-                  <p className="text-sm text-[#00a650] font-normal mt-1">Envío a todo el país</p>
+                  <p className="text-sm text-[#00a650] font-normal">Envío a todo el país</p>
                 </div>
 
                 <div className="mt-4 p-3 rounded-sm bg-[#f5f5f5] border border-[#e3e8ee]">
