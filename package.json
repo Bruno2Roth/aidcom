@@ -6,7 +6,10 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "next start",
+    "stats": "node update-stats.js",
+    "stats:add": "node update-stats.js add",
+    "stats:show": "node update-stats.js show"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",

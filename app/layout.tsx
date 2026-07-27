@@ -10,6 +10,7 @@ import { AuthProvider } from "@/context/auth-context"
 import { ClienteProvider } from "@/context/cliente-context"
 import { StoreProvider } from "@/context/store-context"
 import { ScrollToTopOnNavigate } from "@/components/scroll-to-top-on-navigate"
+import { StatsCounter } from "@/components/stats-counter"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -41,6 +42,7 @@ export default function RootLayout({
                 <main className="min-h-screen">{children}</main>
                 <Footer />
                 <WhatsAppButton />
+                <StatsCounter />
               </CartProvider>
             </StoreProvider>
           </ClienteProvider>
