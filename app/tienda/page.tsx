@@ -254,7 +254,7 @@ export default function TiendaPage() {
       >
         {/* Background effects */}
         <div className="absolute inset-0">
-          {/* Mouse-following orb - mÃ¡s sutil */}
+          {/* Mouse-following orb - mas sutil */}
           <div
             className="absolute w-[600px] h-[600px] rounded-full blur-[120px] opacity-20 transition-all duration-700 ease-out pointer-events-none"
             style={{
@@ -266,7 +266,7 @@ export default function TiendaPage() {
             }}
           />
 
-          {/* Grid pattern - mÃ¡s sutil */}
+          {/* Grid pattern - mas sutil */}
           <div
             className="absolute inset-0 opacity-[0.02]"
             style={{
@@ -275,7 +275,7 @@ export default function TiendaPage() {
             }}
           />
 
-          {/* Orbs estÃ¡ticos - reducidos y mÃ¡s sutiles */}
+          {/* Orbs estÃ¡ticos - reducidos y mas sutiles */}
           <div
             className="absolute top-1/4 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-[100px] animate-pulse"
             style={{ animationDuration: "8s" }}
@@ -318,12 +318,12 @@ export default function TiendaPage() {
           </h1>
 
           <p className="text-lg text-white/80 mb-2 max-w-3xl mx-auto leading-relaxed">
-            Hardware, software y soluciones tecnolÃ³gicas para impulsar tu empresa
+            Hardware, software y soluciones tecnologícas para impulsar tu empresa
           </p>
           <p className="text-base text-white/60 mb-6 max-w-2xl mx-auto">
-            Notebooks, computadoras, servidores, equipamiento de red, perifÃ©ricos y energÃ­a solar.
+            Notebooks, computadoras, servidores, equipamiento de red, perifericos y energia solar.
             <br />
-            <span className="text-amber-400 font-semibold">MÃ¡s de 500 productos</span> con entrega en 24hs y garantÃ­a
+            <span className="text-amber-400 font-semibold">Mas de 500 productos</span> con entrega en 24hs y garantía
             oficial.
           </p>
 
