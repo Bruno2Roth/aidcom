@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import type React from "react"
 import { useState, useEffect, useRef, useMemo } from "react"
@@ -72,6 +72,8 @@ export default function TiendaPage() {
   }, [productosFromStore])
 
   const [addedToCart, setAddedToCart] = useState<number | null>(null)
+  const [cotizacionItems, setCotizacionItems] = useState<{ producto: Producto; cantidad: number }[]>([])
+  const [showCotizacionPanel, setShowCotizacionPanel] = useState(false)
 
   const [favoritos, setFavoritos] = useState<number[]>([])
   const [viewMode, setViewMode] = useState<ViewMode>("grid")
@@ -130,7 +132,7 @@ export default function TiendaPage() {
   }, [favoritos])
 
   // Moved map to top and updated useEffect for categoryFromUrl
-  // Mapa de categorías desde URL
+  // Mapa de categorÃ­as desde URL
   const categoryMap: Record<string, string> = {
     componentes: "Componentes",
     impresoras: "Impresoras",
@@ -163,7 +165,16 @@ export default function TiendaPage() {
 
   const handleAgregarAlCarrito = (producto: Producto) => {
     const cantidad = cantidades[producto.id] || 1
-    agregarAlCarrito(producto, cantidad)
+    setCotizacionItems((prev) => {
+      const existing = prev.find((item) => item.producto.id === producto.id)
+      if (existing) {
+        return prev.map((item) =>
+          item.producto.id === producto.id ? { ...item, cantidad: item.cantidad + cantidad } : item,
+        )
+      }
+      return [...prev, { producto, cantidad }]
+    })
+
     setAddedToCart(producto.id)
     setTimeout(() => setAddedToCart(null), 1500)
   }
@@ -239,11 +250,11 @@ export default function TiendaPage() {
           <div className="max-w-7xl mx-auto flex items-center justify-center gap-6 text-sm font-medium relative">
             <div className="flex items-center gap-2">
               <Truck className="w-4 h-4" />
-              <span>Envío gratis en compras +$100.000</span>
+              <span>EnvÃ­o gratis en compras +$100.000</span>
             </div>
             <div className="hidden md:flex items-center gap-2">
               <CreditCard className="w-4 h-4" />
-              <span>Hasta 12 cuotas sin interés</span>
+              <span>Hasta 12 cuotas sin interÃ©s</span>
             </div>
             <button
               onClick={() => setShowPromo(false)}
@@ -255,14 +266,14 @@ export default function TiendaPage() {
         </div>
       )}
 
-      {/* Hero Section - Rediseñado con fondo limpio y armonizado */}
+      {/* Hero Section - RediseÃ±ado con fondo limpio y armonizado */}
       <section
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950 py-12"
       >
         {/* Background effects */}
         <div className="absolute inset-0">
-          {/* Mouse-following orb - más sutil */}
+          {/* Mouse-following orb - mÃ¡s sutil */}
           <div
             className="absolute w-[600px] h-[600px] rounded-full blur-[120px] opacity-20 transition-all duration-700 ease-out pointer-events-none"
             style={{
@@ -274,7 +285,7 @@ export default function TiendaPage() {
             }}
           />
 
-          {/* Grid pattern - más sutil */}
+          {/* Grid pattern - mÃ¡s sutil */}
           <div
             className="absolute inset-0 opacity-[0.02]"
             style={{
@@ -283,7 +294,7 @@ export default function TiendaPage() {
             }}
           />
 
-          {/* Orbs estáticos - reducidos y más sutiles */}
+          {/* Orbs estÃ¡ticos - reducidos y mÃ¡s sutiles */}
           <div
             className="absolute top-1/4 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-[100px] animate-pulse"
             style={{ animationDuration: "8s" }}
@@ -319,19 +330,19 @@ export default function TiendaPage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-            <span className="text-white">Tecnología para</span>
+            <span className="text-white">TecnologÃ­a para</span>
             <span className="block mt-1 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
               tu Negocio
             </span>
           </h1>
 
           <p className="text-lg text-white/80 mb-2 max-w-3xl mx-auto leading-relaxed">
-            Hardware, software y soluciones tecnológicas para impulsar tu empresa
+            Hardware, software y soluciones tecnolÃ³gicas para impulsar tu empresa
           </p>
           <p className="text-base text-white/60 mb-6 max-w-2xl mx-auto">
-            Notebooks, computadoras, servidores, equipamiento de red, periféricos y energía solar.
+            Notebooks, computadoras, servidores, equipamiento de red, perifÃ©ricos y energÃ­a solar.
             <br />
-            <span className="text-amber-400 font-semibold">Más de 500 productos</span> con entrega en 24hs y garantía
+            <span className="text-amber-400 font-semibold">MÃ¡s de 500 productos</span> con entrega en 24hs y garantÃ­a
             oficial.
           </p>
 
@@ -349,7 +360,7 @@ export default function TiendaPage() {
               href="/contacto"
               className="group relative px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl font-semibold text-white hover:bg-white/10 hover:border-white/20 transition-all flex items-center justify-center gap-2"
             >
-              Consultar Precios
+              Solicitar cotizaci\u00f3n
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -360,7 +371,7 @@ export default function TiendaPage() {
                 <Truck className="w-5 h-5 text-amber-400" />
               </div>
               <div className="text-left">
-                <p className="text-xs text-white/50">Envío gratis</p>
+                <p className="text-xs text-white/50">EnvÃ­o gratis</p>
                 <p className="text-sm font-semibold text-white/90">Compras +$100.000</p>
               </div>
             </div>
@@ -369,7 +380,7 @@ export default function TiendaPage() {
                 <Shield className="w-5 h-5 text-amber-400" />
               </div>
               <div className="text-left">
-                <p className="text-xs text-white/50">Garantía oficial</p>
+                <p className="text-xs text-white/50">GarantÃ­a oficial</p>
                 <p className="text-sm font-semibold text-white/90">Todos los productos</p>
               </div>
             </div>
@@ -379,7 +390,7 @@ export default function TiendaPage() {
               </div>
               <div className="text-left">
                 <p className="text-xs text-white/50">Hasta 12 cuotas</p>
-                <p className="text-sm font-semibold text-white/90">Sin interés</p>
+                <p className="text-sm font-semibold text-white/90">Sin interÃ©s</p>
               </div>
             </div>
           </div>
@@ -695,12 +706,12 @@ export default function TiendaPage() {
                           {isAdded ? (
                             <>
                               <Check className="w-4 h-4" />
-                              Agregado
+                              Cotizado
                             </>
                           ) : (
                             <>
                               <ShoppingCart className="w-4 h-4" />
-                              Agregar
+                              Cotizar
                             </>
                           )}
                         </button>
@@ -796,12 +807,12 @@ export default function TiendaPage() {
                     {isAdded ? (
                       <>
                         <Check className="w-4 h-4" />
-                        Agregar al carrito
+                        Cotizar
                       </>
                     ) : (
                       <>
                         <ShoppingCart className="w-4 h-4" />
-                        Agregar al carrito
+                        Cotizar
                       </>
                     )}
                   </button>
@@ -818,7 +829,7 @@ export default function TiendaPage() {
               <Search className="w-8 h-8 text-white/30" />
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">No se encontraron productos</h3>
-            <p className="text-white/50">Probá con otros filtros o términos de búsqueda</p>
+            <p className="text-white/50">ProbÃ¡ con otros filtros o tÃ©rminos de bÃºsqueda</p>
           </div>
         )}
 
@@ -890,7 +901,7 @@ export default function TiendaPage() {
                   </div>
                   <div className="flex items-center gap-2 text-white/60 text-sm">
                     <Truck className="w-4 h-4" />
-                    <span>Envío gratis a todo el país</span>
+                    <span>EnvÃ­o gratis a todo el paÃ­s</span>
                   </div>
                 </div>
 
@@ -942,12 +953,12 @@ export default function TiendaPage() {
                       {addedToCart === quickViewProduct.id ? (
                         <>
                           <Check className="w-5 h-5" />
-                          Agregado al carrito
+                          Cotizado
                         </>
                       ) : (
                         <>
                           <ShoppingCart className="w-5 h-5" />
-                          Agregar al carrito
+                          Cotizar
                         </>
                       )}
                     </button>
@@ -973,3 +984,5 @@ export default function TiendaPage() {
     </>
   )
 }
+
+

@@ -1,12 +1,84 @@
-import type { Producto } from "@/context/cart-context"
+﻿import type { Producto } from "@/context/cart-context"
 
 export const productos: Producto[] = [
   {
     id: 1,
-    nombre: "Botella De Tinta Canon Modelo Gi-16 Maxify Gx6010 701 Pcreg Tinta Negro",
-    descripcion: "La botella de tinta Canon GI-16 contiene una fórmula a base de tintes para producir hermosos colores. Todos sus trabajos quedarán con una calidad excepcional y adicional tendrás durabilidad asombrosa.",
-    precio: 81990,
-    imagen: "/canon-gi16-tinta-negro.png",
+    nombre: "Botella De Tinta Canon Para Imageprograf Tc-20 (70 Ml) Tinta Negro",
+    descripcion: "Botella de tinta original Canon para plotter ImagePROGRAF TC-20. Color negro, 70 ml de capacidad. FÃ³rmula a base de tintes para producir impresiones de alta calidad con durabilidad excepcional.",
+    precio: 148000,
+    imagen: "/ml-tinta-canon-tc20-negro.webp",
+    categoria: "Tintas y Consumibles",
+  },
+  {
+    id: 2,
+    nombre: "Impresora multifunciÃ³n a color Canon MAXIFY GX3010 con wifi",
+    descripcion: "Impresora multifunciÃ³n a color Canon MAXIFY GX3010 con conectividad WiFi. Ideal para oficinas y hogares que necesitan impresiones de alta calidad con bajo costo operativo.",
+    precio: 833750,
+    imagen: "/ml-impresora-canon-gx3010.webp",
+    categoria: "Impresoras",
+  },
+  {
+    id: 3,
+    nombre: "Tinta Negra 55ml Pfi 030mbk Canon Imageprograf Ta-20 Ta-30",
+    descripcion: "Cartucho de tinta negra original Canon PFI-030MBK de 55 ml. Compatible con plotter ImagePROGRAF TA-20 y TA-30. Color negro mate para impresiones profesionales.",
+    precio: 144100,
+    imagen: "/ml-tinta-canon-pfi030mbk.webp",
+    categoria: "Tintas y Consumibles",
+  },
+  {
+    id: 4,
+    nombre: "Cartucho Tinta Canon Pfi 031m Magenta 55ml Tm 240 340 Wis",
+    descripcion: "Cartucho de tinta magenta original Canon PFI-031M de 55 ml. Compatible con impresoras TM-240 y TM-340. Color magenta vibrante para impresiones de alta calidad.",
+    precio: 144100,
+    imagen: "/ml-cartucho-canon-pfi031m.webp",
+    categoria: "Tintas y Consumibles",
+  },
+  {
+    id: 5,
+    nombre: "Botella De Tinta Canon Pfi-050 Para Plotter Tc-20 Tinta Amarillo",
+    descripcion: "Botella de tinta amarilla original Canon PFI-050 para plotter TC-20. Color amarillo brillante para impresiones profesionales con calidad excepcional.",
+    precio: 189000,
+    imagen: "/ml-tinta-canon-pfi050-amarillo.webp",
+    categoria: "Tintas y Consumibles",
+  },
+  {
+    id: 6,
+    nombre: "Cartucho De Tinta Plotter Cian Canon Pfi 030 C",
+    descripcion: "Cartucho de tinta cian original Canon PFI-030 para plotter. Color cian de 55 ml para impresiones profesionales con calidad fotogrÃ¡fica.",
+    precio: 144100,
+    imagen: "/ml-cartucho-cian-canon-pfi030.webp",
+    categoria: "Tintas y Consumibles",
+  },
+  {
+    id: 7,
+    nombre: "Cartucho De Tinta Canon Pfi-030 Amarillo 3492c001aa 55ml",
+    descripcion: "Cartucho de tinta amarilla original Canon PFI-030 de 55 ml. Ideal para plotter y equipos de impresiÃ³n profesional. Color amarillo de alta intensidad.",
+    precio: 144100,
+    imagen: "/ml-cartucho-canon-pfi030-amarillo.webp",
+    categoria: "Tintas y Consumibles",
+  },
+  {
+    id: 8,
+    nombre: "Tanque De Tinta Canon Pfi-030bk Negro 55ml Ta-20 Ta-30 Image",
+    descripcion: "Tanque de tinta negra original Canon PFI-030BK de 55 ml. Compatible con plotter ImagePROGRAF TA-20 y TA-30. Tinta negra de alta calidad para impresiones nÃ­tidas.",
+    precio: 144100,
+    imagen: "/ml-tanque-canon-pfi030bk.webp",
+    categoria: "Tintas y Consumibles",
+  },
+  {
+    id: 9,
+    nombre: "Toner Toshiba T2822u Original - Distribuidor Oficial Negro",
+    descripcion: "Toner original Toshiba T2822U color negro. Distribuidor oficial. Compatible con impresoras Toshiba. Alto rendimiento para impresiones nÃ­tidas y duraderas.",
+    precio: 179900,
+    imagen: "/ml-toner-toshiba-t2822u.webp",
+    categoria: "Tintas y Consumibles",
+  },
+  {
+    id: 10,
+    nombre: "Botella De Tinta Canon Pfi-050 Para Plotter Tc-20 Original",
+    descripcion: "Botella de tinta original Canon PFI-050 para plotter TC-20. Tinta de alta calidad para impresiones profesionales con resultados excepcionales.",
+    precio: 189000,
+    imagen: "/ml-tinta-canon-pfi050-original.webp",
     categoria: "Tintas y Consumibles",
   },
 ]
@@ -20,3 +92,4 @@ export const categorias = [
   "Accesorios IT",
   "Tintas y Consumibles",
 ]
+
