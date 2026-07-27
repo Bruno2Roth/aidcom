@@ -32,6 +32,7 @@ const categoriasIniciales: Categoria[] = [
   { id: "pcs-desktop", nombre: "PCs Desktop", icono: "Monitor" },
   { id: "monitores", nombre: "Monitores", icono: "Monitor" },
   { id: "impresoras", nombre: "Impresoras", icono: "Printer" },
+  { id: "impresion-3d", nombre: "Impresión 3D", icono: "Printer" },
   { id: "redes", nombre: "Redes", icono: "Wifi" },
   { id: "accesorios-it", nombre: "Accesorios IT", icono: "Mouse" },
   { id: "tintas-y-consumibles", nombre: "Tintas y Consumibles", icono: "Droplet" },

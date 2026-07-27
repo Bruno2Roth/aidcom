@@ -216,6 +216,7 @@ export default function TiendaPage() {
     "PCs Desktop": <Monitor className="w-4 h-4" />,
     Monitores: <Monitor className="w-4 h-4" />,
     Impresoras: <Printer className="w-4 h-4" />,
+    "Impresión 3D": <Printer className="w-4 h-4" />,
     Redes: <Wifi className="w-4 h-4" />,
     "Accesorios IT": <Headphones className="w-4 h-4" />,
     "Tintas y Consumibles": <Droplet className="w-4 h-4" />,
@@ -579,7 +580,6 @@ export default function TiendaPage() {
             const isFavorito = favoritos.includes(producto.id)
             const isAdded = addedToCart === producto.id
             const isOutOfStock = producto.sinStock === true
-            const isLowStock = !isOutOfStock && producto.pocoStock === true
 
             if (viewMode === "list") {
               return (
@@ -608,19 +608,12 @@ export default function TiendaPage() {
                         Sin stock
                       </div>
                     )}
-                    {isLowStock && (
-                      <div className="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-[#f5a623] text-white text-[9px] font-semibold uppercase tracking-wider z-10">
-                        Poco stock
-                      </div>
-                    )}
                   </div>
                   <div className="flex-1 flex flex-col min-w-0">
                     <h3 className={`text-sm font-normal line-clamp-2 leading-snug ${isOutOfStock ? "text-[#999]" : "text-[#333]"}`}>{producto.nombre}</h3>
                     <div className="mt-auto pt-2">
                       {isOutOfStock ? (
                         <p className="text-xs text-[#999] font-normal">No disponible</p>
-                      ) : isLowStock ? (
-                        <p className="text-xs text-[#f5a623] font-medium">Queda poco stock</p>
                       ) : (
                         <p className="text-xs text-[#00a650] font-medium">Envío</p>
                       )}
@@ -673,11 +666,6 @@ export default function TiendaPage() {
                       Sin stock
                     </div>
                   )}
-                  {isLowStock && (
-                    <div className="absolute top-3 left-3 px-2 py-0.5 rounded bg-[#f5a623] text-white text-[10px] font-semibold uppercase tracking-wider z-10">
-                      Poco stock
-                    </div>
-                  )}
                   {!isOutOfStock && (
                     <button
                       onClick={(e) => {
@@ -702,8 +690,6 @@ export default function TiendaPage() {
                   </p>
                   {isOutOfStock ? (
                     <p className="text-xs text-[#999] font-normal mt-1">No disponible</p>
-                  ) : isLowStock ? (
-                    <p className="text-xs text-[#f5a623] font-medium mt-1">Queda poco stock</p>
                   ) : (
                     <p className="text-xs text-[#00a650] font-medium mt-1">Envío</p>
                   )}
@@ -795,11 +781,6 @@ export default function TiendaPage() {
                     Sin stock
                   </div>
                 )}
-                {quickViewProduct.pocoStock && !quickViewProduct.sinStock && (
-                  <div className="absolute top-4 left-4 px-2.5 py-1 rounded bg-[#f5a623] text-white text-xs font-semibold uppercase tracking-wider z-10">
-                    Poco stock
-                  </div>
-                )}
               </div>
 
               <div className="flex flex-col p-6">
@@ -809,8 +790,6 @@ export default function TiendaPage() {
                 <div className="mt-4">
                   {quickViewProduct.sinStock ? (
                     <p className="text-sm text-[#999] font-normal">No disponible</p>
-                  ) : quickViewProduct.pocoStock ? (
-                    <p className="text-sm text-[#f5a623] font-medium">Queda poco stock</p>
                   ) : (
                     <p className="text-sm text-[#00a650] font-medium">Envío a todo el país</p>
                   )}
@@ -822,24 +801,9 @@ export default function TiendaPage() {
                       <X className="w-4 h-4" />
                       <span>Sin stock actualmente</span>
                     </div>
-                  ) : quickViewProduct.pocoStock ? (
-                    <>
-                      <div className="flex items-center gap-2 text-[#f5a623] text-sm font-medium">
-                        <Check className="w-4 h-4" />
-                        <span>Quedan pocas unidades</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-[#666] text-sm mt-1.5">
-                        <Truck className="w-4 h-4" />
-                        <span>Llega en 24 a 48 horas</span>
-                      </div>
-                    </>
                   ) : (
                     <>
-                      <div className="flex items-center gap-2 text-[#00a650] text-sm font-medium">
-                        <Check className="w-4 h-4" />
-                        <span>Stock disponible</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-[#666] text-sm mt-1.5">
+                      <div className="flex items-center gap-2 text-[#666] text-sm">
                         <Truck className="w-4 h-4" />
                         <span>Llega en 24 a 48 horas</span>
                       </div>
