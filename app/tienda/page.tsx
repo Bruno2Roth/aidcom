@@ -594,7 +594,7 @@ export default function TiendaPage() {
                       src={producto.imagen || "/placeholder.svg?height=300&width=300&query=producto"}
                       alt={producto.nombre}
                       fill
-                      className="object-cover scale-100 group-hover:scale-110 transition-transform duration-500"
+                      className="object-cover scale-75 group-hover:scale-85 transition-transform duration-500"
                     />
                     {isFavorito && (
                       <div className="absolute top-2 left-2 w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center">
@@ -686,12 +686,12 @@ export default function TiendaPage() {
                 style={{ animationDelay: `${index * 50}ms`, animationFillMode: "backwards" }}
               >
                 {/* Image */}
-                <div className="relative h-40 overflow-hidden bg-white/5 rounded-t-2xl">
+                <div className="relative aspect-square overflow-hidden bg-white/5">
                   <Image
                     src={producto.imagen || "/placeholder.svg?height=300&width=300&query=producto"}
                     alt={producto.nombre}
                     fill
-                    className="object-cover scale-100 group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover scale-75 group-hover:scale-85 transition-transform duration-500"
                   />
                   {/* Overlay actions */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -800,12 +800,12 @@ export default function TiendaPage() {
                   onClick={() => setQuickViewProduct(producto)}
                   className="cursor-pointer group rounded-xl bg-white/[0.02] border border-white/10 hover:border-amber-500/30 transition-all overflow-hidden"
                 >
-                  <div className="relative h-32 bg-white/5 overflow-hidden rounded-t-xl">
+                  <div className="relative aspect-square bg-white/5">
                     <Image
                       src={producto.imagen || "/placeholder.svg?height=150&width=150&query=producto"}
                       alt={producto.nombre}
                       fill
-                      className="object-cover scale-100 group-hover:scale-110 transition-transform duration-500"
+                      className="object-cover scale-75 group-hover:scale-85 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-3">
