@@ -594,7 +594,7 @@ export default function TiendaPage() {
                       src={producto.imagen || "/placeholder.svg?height=300&width=300&query=producto"}
                       alt={producto.nombre}
                       fill
-                      className="object-cover"
+                      className="object-cover scale-110 group-hover:scale-125 transition-transform duration-500"
                     />
                     {isFavorito && (
                       <div className="absolute top-2 left-2 w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center">
@@ -691,7 +691,7 @@ export default function TiendaPage() {
                     src={producto.imagen || "/placeholder.svg?height=300&width=300&query=producto"}
                     alt={producto.nombre}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover scale-110 group-hover:scale-125 transition-transform duration-500"
                   />
                   {/* Overlay actions */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -805,7 +805,7 @@ export default function TiendaPage() {
                       src={producto.imagen || "/placeholder.svg?height=150&width=150&query=producto"}
                       alt={producto.nombre}
                       fill
-                      className="object-cover"
+                      className="object-cover scale-110 group-hover:scale-125 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-3">
@@ -837,7 +837,7 @@ export default function TiendaPage() {
                   src={quickViewProduct.imagen || "/placeholder.svg?height=500&width=500&query=producto"}
                   alt={quickViewProduct.nombre}
                   fill
-                  className="object-cover"
+                  className="object-cover scale-110"
                 />
               </div>
 
@@ -854,7 +854,7 @@ export default function TiendaPage() {
                   </div>
                   <div className="flex items-center gap-2 text-white/60 text-sm">
                     <Truck className="w-4 h-4" />
-                    <span>Envío gratis a todo el paÃ­s</span>
+                    <span>Envío gratis a todo el pais</span>
                   </div>
                 </div>
 
