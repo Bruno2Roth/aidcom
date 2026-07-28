@@ -227,7 +227,7 @@ export default function TiendaPage() {
           <div className="max-w-7xl mx-auto flex items-center justify-center gap-6 text-sm font-medium relative">
             <div className="flex items-center gap-2">
               <Truck className="w-4 h-4" />
-              <span>Envío en compras +$100.000</span>
+              <span>Envío en compras a todo el país</span>
             </div>
             <div className="hidden md:flex items-center gap-2">
               <CreditCard className="w-4 h-4" />
@@ -349,7 +349,7 @@ export default function TiendaPage() {
               </div>
               <div className="text-left">
                 <p className="text-xs text-white/50">Envío</p>
-                <p className="text-sm font-semibold text-white/90">Compras +$100.000</p>
+                <p className="text-sm font-semibold text-white/90">A todo el país</p>
               </div>
             </div>
             <div className="group flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-amber-500/30 transition-all">
