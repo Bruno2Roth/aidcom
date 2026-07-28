@@ -367,7 +367,7 @@ export default function TiendaPage() {
               </div>
               <div className="text-left">
                 <p className="text-xs text-white/50">Medios de pago</p>
-                <p className="text-sm font-semibold text-white/90">Sin interes</p>
+                <p className="text-sm font-semibold text-white/90">Todas las tarjetas</p>
               </div>
             </div>
           </div>
