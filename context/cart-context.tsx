@@ -6,7 +6,7 @@ export interface Producto {
   id: number
   nombre: string
   descripcion: string
-  precio: number
+  precio?: number
   imagen: string
   categoria: string
   pocoStock?: boolean

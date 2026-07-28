@@ -5,8 +5,7 @@ export const productos: Producto[] = [
     id: 52,
     nombre: "CURADORA CREALITY UW-01",
     descripcion: "La Creality UW-01 simplifica el proceso de lavado y curado de impresiones 3D en resina, permitiendo obtener piezas limpias y completamente curadas de forma rápida y sencilla. Su funcionamiento intuitivo la convierte en el complemento ideal para cualquier impresora de resina.",
-    precio: 0,
-    imagen: "/productos/CURADORA CREALITY UW-01.webp",
+    imagen: "/productos/CURADORA CREALITY UW-01.png",
     categoria: "Impresión 3D",
     caracteristicas: [
       "Función de lavado y curado 2 en 1",
@@ -21,7 +20,7 @@ export const productos: Producto[] = [
     nombre: "ELEGOO Impresora 3D de resina Mars-4 LCD mono de 7 «9K Fuente de luz UV COB Impresión (153X77X165)mm",
     descripcion: "La impresora 3D Mars 4 cuenta con un volumen de construcción de 153 x 77 x 175 mm³, lo que permite la creación de modelos con gran detalle en un espacio compacto. Su precisión XY de 18 μm garantiza resultados extremadamente precisos, ideales para proyectos que requieren alta definición. Equipada con una potente fuente de luz COB, ofrece una exposición uniforme y eficiente. Dispone de una pantalla LCD monocromática de 9K y 7 pulgadas, con una impresionante resolución de 8520 x 4320 píxeles, lo que mejora notablemente la calidad de impresión. Además, incluye el software VoxelDance Tango Slicer, diseñado para brindar una experiencia de corte optimizada y fácil de usar.",
     precio: 536900,
-    imagen: "/productos/ELEGOO MARS-4.webp",
+    imagen: "/productos/ELEGOO Impresora 3D de resina Mars-4 LCD mono de 7 «9K Fuente de luz UV COB Impresi\u00F3n (153X77X165)mm.png",
     categoria: "Impresión 3D",
     caracteristicas: [
       "Gran volumen de construcción de 153.36 x 77.76 x 175 mm³",
@@ -35,8 +34,7 @@ export const productos: Producto[] = [
     id: 54,
     nombre: "ELEGOO MERCURY XS BUNDLE WASH AND CURING MACHINE – AR PLUG",
     descripcion: "La ELEGOO Mercury XS Bundle simplifica el proceso de lavado y curado de impresiones 3D en resina, ofreciendo resultados uniformes y un flujo de trabajo más eficiente. Gracias a sus estaciones independientes y sus funciones avanzadas, permite obtener acabados de calidad profesional de forma rápida y sencilla.",
-    precio: 0,
-    imagen: "/productos/ELEGOO MERCURY XS BUNDLE.webp",
+    imagen: "/productos/ELEGOO MERCURY XS BUNDLE WASH AND CURING MACHINE \u2013 AR PLUG.png",
     categoria: "Impresión 3D",
     caracteristicas: [
       "Estaciones independientes de lavado y curado",
@@ -50,8 +48,7 @@ export const productos: Producto[] = [
     id: 55,
     nombre: "ELEGOO Mercury 3.0 PLUS LAVADORA-CURADORA",
     descripcion: "Lava y cura 2 en 1 con mayor capacidad. Cuenta con opciones de limpieza duales, curado integral a 360° y cubierta anti-UV. Fácil de usar y diseñada para un flujo de trabajo eficiente con impresiones 3D de resina.",
-    precio: 0,
-    imagen: "/productos/ELEGOO Mercury 3.0 PLUS.webp",
+    imagen: "/productos/ELEGOO Mercury 3.0 PLUS LAVADORA-CURADORA.png",
     categoria: "Impresión 3D",
     caracteristicas: [
       "Lava y cura 2 en 1",
@@ -66,8 +63,7 @@ export const productos: Producto[] = [
     id: 56,
     nombre: "ELEGOO Impresora 3D de resina Saturn-4ULTRA MSLA 16K LCD mono 10″ Wi-Fi impresión (218x122x220)mm",
     descripcion: "La ELEGOO Saturn 4 Ultra 16K ofrece resultados impresionantes con un esfuerzo mínimo. Con una combinación inigualable de tecnología de punta, diseño sofisticado y funcionamiento intuitivo, esta impresora satisface las necesidades tanto de profesionales como de creativos.",
-    precio: 0,
-    imagen: "/productos/ELEGOO SATURN-4ULTRA.webp",
+    imagen: "/productos/ELEGOO Impresora 3D de resina Saturn-4ULTRA MSLA 16K LCD mono 10\u2033 Wi-Fi impresi\u00F3n (218x122x220)mm.png",
     categoria: "Impresión 3D",
     caracteristicas: [
       "Pantalla LCD monocromática de 16K",
@@ -81,8 +77,7 @@ export const productos: Producto[] = [
     id: 57,
     nombre: "IMPRESORA 3D CREALITY HALOT-ONE PRO",
     descripcion: "Impresora 3D de resina Creality HALOT-ONE Pro con pantalla LCD monocromática 3K de 7 pulgadas y precisión de impresión ultra. Tamaño de impresión 130 x 122 x 160 mm. Ideal para quienes buscan alta calidad y detalle en impresión 3D de resina.",
-    precio: 0,
-    imagen: "/productos/CREALITY HALOT-ONE PRO.webp",
+    imagen: "/productos/IMPRESORA 3D CREALITY HALOT-ONE PRO.png",
     categoria: "Impresión 3D",
     caracteristicas: [
       "Aplicación Creality Cloud",
@@ -97,8 +92,7 @@ export const productos: Producto[] = [
     id: 58,
     nombre: "ELEGOO Impresora 3D de resina Saturn-3 MSLA 12K LCD mono de 10″ impresión (218x122x250)mm",
     descripcion: "La ELEGOO Saturn 3 ofrece impresiones de alta precisión con su pantalla LCD monocromática de 12K y 10 pulgadas, ideal para quienes buscan calidad profesional en cada pieza. Su amplio volumen de construcción y su potente fuente de luz COB garantizan resultados consistentes y detallados en proyectos de gran escala.",
-    precio: 0,
-    imagen: "/productos/ELEGOO SATURN-3.webp",
+    imagen: "/productos/ELEGOO Impresora 3D de resina Saturn-3 MSLA 12K LCD mono de 10\u2033 impresi\u00F3n (218x122x250)mm.png",
     categoria: "Impresión 3D",
     caracteristicas: [
       "LCD mono de 10 pulgadas de 12K",
@@ -112,8 +106,7 @@ export const productos: Producto[] = [
     id: 59,
     nombre: "ELEGOO Impresora 3D resina MARS-5 6,6″ 4K (143.43 x 89.6 x 150 mm)",
     descripcion: "La ELEGOO Mars 5 ofrece impresiones de alta precisión con una configuración simple y un funcionamiento intuitivo. Gracias a sus funciones inteligentes y su nivelación automática, es una excelente opción para quienes buscan calidad y facilidad de uso en impresión 3D de resina.",
-    precio: 0,
-    imagen: "/productos/ELEGOO MARS-5.webp",
+    imagen: "/productos/ELEGOO Impresora 3D resina MARS-5 6,6\u2033 4K (143.43 x 89.6 x 150 mm).png",
     categoria: "Impresión 3D",
     caracteristicas: [
       "Pantalla LCD monocromática 4K de 6,6″",
@@ -127,8 +120,7 @@ export const productos: Producto[] = [
     id: 60,
     nombre: "ELEGOO Impresora 3D resina MARS-5ULTRA 7″ 9K (153.36 x 77.76 x 165 mm)",
     descripcion: "La ELEGOO Mars 5 Ultra combina una resolución excepcional con una alta velocidad de impresión para obtener resultados profesionales en cada proyecto. Su tecnología avanzada y funciones inteligentes permiten imprimir con mayor precisión, eficiencia y comodidad.",
-    precio: 0,
-    imagen: "/productos/ELEGOO MARS-5ULTRA.webp",
+    imagen: "/productos/ELEGOO Impresora 3D resina MARS-5ULTRA 7\u2033 9K (153.36 x 77.76 x 165 mm).png",
     categoria: "Impresión 3D",
     caracteristicas: [
       "Pantalla LCD monocromática 9K de 7″",
