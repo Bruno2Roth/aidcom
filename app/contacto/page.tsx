@@ -81,6 +81,17 @@ export default function ContactoPage() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
+    const texto = `*Nuevo mensaje desde el sitio web*
+
+*Nombre:* ${formData.nombre}
+*Email:* ${formData.email}
+*Empresa:* ${formData.empresa || "No especificada"}
+
+*Mensaje:*
+${formData.mensaje}`
+
+    const url = `https://api.whatsapp.com/send/?phone=5491149988089&text=${encodeURIComponent(texto)}&type=phone_number&app_absent=0`
+    window.open(url, "_blank", "noopener,noreferrer")
     setSubmitted(true)
   }
 
@@ -111,7 +122,7 @@ export default function ContactoPage() {
     {
       icon: Mail,
       title: "Email",
-      description: "General: ventas@aidcom.com.ar | Soporte: soporte@aidcom.com.ar",
+      description: "General: ventas@aidcom.com.ar | Servicios: servicios@aidcom.com.ar",
       gradient: "from-purple-500 to-pink-500",
     },
   ]
