@@ -629,6 +629,7 @@ export default function TiendaPage() {
                   </div>
                   <div className="flex-1 flex flex-col min-w-0">
                     <h3 className="text-sm font-normal line-clamp-2 leading-snug text-[#333]">{producto.nombre}</h3>
+                    <p className="text-xs text-[#666] line-clamp-2 mt-1 leading-relaxed">{producto.descripcion}</p>
                     <div className="mt-auto pt-2">
                       <p className="text-xs text-[#00a650] font-medium">Envío</p>
                     </div>
@@ -688,6 +689,7 @@ export default function TiendaPage() {
                   <p className="text-[13px] font-normal line-clamp-2 leading-snug min-h-[2.5rem] text-[#333]">
                     {producto.nombre}
                   </p>
+                  <p className="text-xs text-[#666] line-clamp-2 mt-1 leading-relaxed">{producto.descripcion}</p>
                   <p className="text-xs text-[#00a650] font-medium mt-1">Envío</p>
                   <button
                     onClick={(e) => {
@@ -745,6 +747,7 @@ export default function TiendaPage() {
               <div className="flex flex-col p-6">
                 <span className="text-xs text-[#3483fa] font-medium">{quickViewProduct.categoria}</span>
                 <h2 className="text-xl font-normal mt-1 leading-snug text-[#333]">{quickViewProduct.nombre}</h2>
+                <p className="text-sm text-[#666] mt-3 leading-relaxed">{quickViewProduct.descripcion}</p>
 
                 <div className="mt-4">
                   <p className="text-sm text-[#00a650] font-medium">Envío a todo el país</p>
