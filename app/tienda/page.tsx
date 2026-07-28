@@ -231,7 +231,7 @@ export default function TiendaPage() {
             </div>
             <div className="hidden md:flex items-center gap-2">
               <CreditCard className="w-4 h-4" />
-              <span>Hasta 12 cuotas</span>
+              <span>Medios de pago</span>
             </div>
             <button
               onClick={() => setShowPromo(false)}
@@ -366,7 +366,7 @@ export default function TiendaPage() {
                 <CreditCard className="w-5 h-5 text-amber-400" />
               </div>
               <div className="text-left">
-                <p className="text-xs text-white/50">Hasta 12 cuotas</p>
+                <p className="text-xs text-white/50">Medios de pago</p>
                 <p className="text-sm font-semibold text-white/90">Sin interes</p>
               </div>
             </div>

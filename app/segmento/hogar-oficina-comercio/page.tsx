@@ -247,7 +247,7 @@ export default function HogarOficinaComercioPage() {
       desc: "Nuestros asesores te ayudan a elegir la mejor opción",
       icon: MessageCircle,
     },
-    { step: "03", title: "Pagá", desc: "Hasta 12 cuotas sin interés con todas las tarjetas", icon: CreditCard },
+    { step: "03", title: "Pagá", desc: "Medios de pago", icon: CreditCard },
     { step: "04", title: "Recibí", desc: "Envío en 24-48hs o retirá en nuestro local", icon: Truck },
   ]
 

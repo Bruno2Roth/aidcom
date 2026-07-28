@@ -172,7 +172,7 @@ export default function HogarOficinaComercioPage() {
                 { value: "100%", label: "Ahorro posible" },
                 { value: "25 años", label: "Garantía" },
                 { value: "3-7 días", label: "Instalación" },
-                { value: "12 cuotas", label: "Financiación" },
+                { value: "Medios de pago", label: "Financiación" },
               ].map((stat, i) => (
                 <AnimatedSection key={i} delay={i * 150}>
                   <div className="text-center p-4 rounded-xl bg-slate-900/50 border border-emerald-500/20">
