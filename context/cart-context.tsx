@@ -10,6 +10,7 @@ export interface Producto {
   imagen: string
   categoria: string
   pocoStock?: boolean
+  caracteristicas?: string[]
 }
 
 export interface ItemCarrito {

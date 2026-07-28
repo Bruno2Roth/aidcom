@@ -749,6 +749,20 @@ export default function TiendaPage() {
                 <h2 className="text-xl font-normal mt-1 leading-snug text-[#333]">{quickViewProduct.nombre}</h2>
                 <p className="text-sm text-[#666] mt-3 leading-relaxed">{quickViewProduct.descripcion}</p>
 
+                {quickViewProduct.caracteristicas && quickViewProduct.caracteristicas.length > 0 && (
+                  <div className="mt-4">
+                    <h3 className="text-sm font-semibold text-[#333] mb-2">Características:</h3>
+                    <ul className="space-y-1.5">
+                      {quickViewProduct.caracteristicas.map((car, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-[#666]">
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#3483fa]" />
+                          {car}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 <div className="mt-4">
                   <p className="text-sm text-[#00a650] font-medium">Envío a todo el país</p>
                 </div>
