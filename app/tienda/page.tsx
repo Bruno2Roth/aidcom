@@ -231,7 +231,7 @@ export default function TiendaPage() {
             </div>
             <div className="hidden md:flex items-center gap-2">
               <CreditCard className="w-4 h-4" />
-              <span>Hasta 12 cuotas sin interes</span>
+              <span>Hasta 12 cuotas</span>
             </div>
             <button
               onClick={() => setShowPromo(false)}
