@@ -295,7 +295,7 @@ export const productos: Producto[] = [
   {
     id: 36,
     nombre: "Bambulab Impresora 3D A2L Combo",
-    descripcion: "Impresora 3D Bambu Lab A2L Combo con sistema AMS de múltiples materiales. Diseño compacto, autoleveling y conectividad WiFi. Paquete completo para impresión multimaterial.",
+    descripcion: "La Bambu Lab A2L Combo ofrece un gran volumen de impresión junto con la posibilidad de imprimir en múltiples colores gracias al AMS 2 Pro incluido. Es una solución ideal para quienes buscan productividad, precisión y máxima versatilidad.",
     precio: 1619990,
     imagen: "/productos/BAMBULAB IMPRESORA 3D A2L COMBO.png",
     categoria: "Impresión 3D",
