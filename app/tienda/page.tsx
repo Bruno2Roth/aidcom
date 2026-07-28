@@ -686,7 +686,7 @@ export default function TiendaPage() {
 
                 {/* Content */}
                 <div className="px-3 pb-3 pt-0">
-                  <p className="text-[13px] font-normal line-clamp-2 leading-snug min-h-[2.5rem] text-[#333]">
+                  <p className="text-[13px] font-normal line-clamp-2 leading-snug text-[#333]">
                     {producto.nombre}
                   </p>
                   <p className="text-xs text-[#666] line-clamp-2 mt-1 leading-relaxed">{producto.descripcion}</p>
