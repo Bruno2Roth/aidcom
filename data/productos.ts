@@ -17,9 +17,8 @@ export const productos: Producto[] = [
   },
   {
     id: 53,
-    nombre: "ELEGOO Impresora 3D de resina Mars-4 LCD mono de 7 «9K Fuente de luz UV COB Impresión (153X77X165)mm",
+    nombre: "ELEGOO Mars-4 Impresora 3D de resina 9K (153x77x165)mm",
     descripcion: "La impresora 3D Mars 4 cuenta con un volumen de construcción de 153 x 77 x 175 mm³, lo que permite la creación de modelos con gran detalle en un espacio compacto. Su precisión XY de 18 μm garantiza resultados extremadamente precisos, ideales para proyectos que requieren alta definición. Equipada con una potente fuente de luz COB, ofrece una exposición uniforme y eficiente. Dispone de una pantalla LCD monocromática de 9K y 7 pulgadas, con una impresionante resolución de 8520 x 4320 píxeles, lo que mejora notablemente la calidad de impresión. Además, incluye el software VoxelDance Tango Slicer, diseñado para brindar una experiencia de corte optimizada y fácil de usar.",
-    precio: 536900,
     imagen: "/productos/ELEGOO Impresora 3D de resina Mars-4 LCD mono de 7 «9K Fuente de luz UV COB Impresi\u00F3n (153X77X165)mm.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -134,7 +133,6 @@ export const productos: Producto[] = [
     id: 1,
     nombre: "Botella De Tinta Canon Para Imageprograf Tc-20 (70 Ml) Tinta Negro",
     descripcion: "Botella de tinta original Canon para plotter ImagePROGRAF TC-20. Color negro, 70 ml de capacidad. Fórmula a base de tintes para producir impresiones de alta calidad con durabilidad excepcional.",
-    precio: 148000,
     imagen: "/productos/Botella De Tinta Canon Para Imageprograf Tc-20 (70 Ml) Tinta Negro.webp",
     categoria: "Tintas y Consumibles",
     pocoStock: true,
@@ -149,7 +147,6 @@ export const productos: Producto[] = [
     id: 2,
     nombre: "Impresora multifunción a color Canon MAXIFY GX3010 con wifi",
     descripcion: "Impresora multifunción a color Canon MAXIFY GX3010 con conectividad WiFi. Ideal para oficinas y hogares que necesitan impresiones de alta calidad con bajo costo operativo.",
-    precio: 833750,
     imagen: "/productos/Impresora multifunción a color Canon MAXIFY GX3010 con wifi.webp",
     categoria: "Impresoras",
     pocoStock: true,
@@ -165,7 +162,6 @@ export const productos: Producto[] = [
     id: 3,
     nombre: "Tinta Negra 55ml Pfi 030mbk Canon Imageprograf Ta-20 Ta-30",
     descripcion: "Cartucho de tinta negra original Canon PFI-030MBK de 55 ml. Compatible con plotter ImagePROGRAF TA-20 y TA-30. Color negro mate para impresiones profesionales.",
-    precio: 144100,
     imagen: "/productos/Tinta Negra 55ml Pfi 030mbk Canon Imageprograf Ta-20 Ta-30.webp",
     categoria: "Tintas y Consumibles",
     pocoStock: true,
@@ -180,7 +176,6 @@ export const productos: Producto[] = [
     id: 4,
     nombre: "Cartucho Tinta Canon Pfi 031m Magenta 55ml Tm 240 340 Wis",
     descripcion: "Cartucho de tinta magenta original Canon PFI-031M de 55 ml. Compatible con impresoras TM-240 y TM-340. Color magenta vibrante para impresiones de alta calidad.",
-    precio: 144100,
     imagen: "/productos/Cartucho Tinta Canon Pfi 031m Magenta 55ml Tm 240 340 Wis.webp",
     categoria: "Tintas y Consumibles",
     pocoStock: true,
@@ -195,7 +190,6 @@ export const productos: Producto[] = [
     id: 5,
     nombre: "Botella De Tinta Canon Pfi-050 Para Plotter Tc-20 Tinta Amarillo",
     descripcion: "Botella de tinta amarilla original Canon PFI-050 para plotter TC-20. Color amarillo brillante para impresiones profesionales con calidad excepcional.",
-    precio: 189000,
     imagen: "/productos/Botella De Tinta Canon Pfi-050 Para Plotter Tc-20 Tinta Amarillo.webp",
     categoria: "Tintas y Consumibles",
     pocoStock: true,
@@ -210,7 +204,6 @@ export const productos: Producto[] = [
     id: 6,
     nombre: "Cartucho De Tinta Plotter Cian Canon Pfi 030 C",
     descripcion: "Cartucho de tinta cian original Canon PFI-030 para plotter. Color cian de 55 ml para impresiones profesionales con calidad fotográfica.",
-    precio: 144100,
     imagen: "/productos/Cartucho De Tinta Plotter Cian Canon Pfi 030 C.webp",
     categoria: "Tintas y Consumibles",
     pocoStock: true,
@@ -225,7 +218,6 @@ export const productos: Producto[] = [
     id: 7,
     nombre: "Cartucho De Tinta Canon Pfi-030 Amarillo 3492c001aa 55ml",
     descripcion: "Cartucho de tinta amarilla original Canon PFI-030 de 55 ml. Ideal para plotter y equipos de impresión profesional. Color amarillo de alta intensidad.",
-    precio: 144100,
     imagen: "/productos/Cartucho De Tinta Canon Pfi-030 Amarillo 3492c001aa 55ml vc.webp",
     categoria: "Tintas y Consumibles",
     pocoStock: true,
@@ -240,7 +232,6 @@ export const productos: Producto[] = [
     id: 8,
     nombre: "Tanque De Tinta Canon Pfi-030bk Negro 55ml Ta-20 Ta-30 Image",
     descripcion: "Tanque de tinta negra original Canon PFI-030BK de 55 ml. Compatible con plotter ImagePROGRAF TA-20 y TA-30. Tinta negra de alta calidad para impresiones nítidas.",
-    precio: 144100,
     imagen: "/productos/Tanque De Tinta Canon Pfi-030bk Negro 55ml Ta-20 Ta-30 Image.webp",
     categoria: "Tintas y Consumibles",
     pocoStock: true,
@@ -255,7 +246,6 @@ export const productos: Producto[] = [
     id: 9,
     nombre: "Toner Toshiba T2822u Original - Distribuidor Oficial Negro",
     descripcion: "Toner original Toshiba T2822U color negro. Distribuidor oficial. Compatible con impresoras Toshiba. Alto rendimiento para impresiones nítidas y duraderas.",
-    precio: 179900,
     imagen: "/productos/Toner Toshiba T2822u Original - Distribuidor Oficial.webp",
     categoria: "Tintas y Consumibles",
     pocoStock: true,
@@ -270,7 +260,6 @@ export const productos: Producto[] = [
     id: 10,
     nombre: "Botella De Tinta Canon Pfi-050 Para Plotter Tc-20 Original",
     descripcion: "Botella de tinta original Canon PFI-050 para plotter TC-20. Tinta de alta calidad para impresiones profesionales con resultados excepcionales.",
-    precio: 189000,
     imagen: "/productos/Botella De Tinta Canon Pfi-050 Para Plotter Tc-20 Original.webp",
     categoria: "Tintas y Consumibles",
     pocoStock: true,
@@ -285,7 +274,6 @@ export const productos: Producto[] = [
     id: 11,
     nombre: "10 Cintas Impresora Epson Lx350 - Gtc",
     descripcion: "Pack de 10 cintas de repuesto GTC para impresora matricial Epson LX-350. Cinta negra multicopiable, vida útil de hasta 4 millones de caracteres. Ideal para entornos de oficina que requieren impresión continua de facturas, remitos y documentos.",
-    precio: 79900,
     imagen: "/productos/10 Cintas Impresora Epson Lx350 - Gtc.webp",
     categoria: "Impresoras",
     pocoStock: true,
@@ -300,7 +288,6 @@ export const productos: Producto[] = [
     id: 12,
     nombre: "Rollo De Papel Termico 57 X 17 Metros X 10 Unidades",
     descripcion: "Pack de 10 rollos de papel térmico de 57mm de ancho por 17 metros de largo. Compatibles con impresoras térmicas de ticketes, impresoras fiscales y facturadoras. Papel de alta sensibilidad para impresiones nítidas y duraderas.",
-    precio: 4790,
     imagen: "/productos/Rollo De Papel Termico 57 X 17 Metros X 10 Unidades.webp",
     categoria: "Tintas y Consumibles",
     caracteristicas: [
@@ -314,7 +301,6 @@ export const productos: Producto[] = [
     id: 13,
     nombre: "Cintas Impresora Epson Lx350 - Gtc",
     descripcion: "Cinta de repuesto GTC para impresora matricial Epson LX-350. Cinta negra multicopiable con vida útil de hasta 4 millones de caracteres. Reemplazo directo sin necesidad de ajustes.",
-    precio: 7990,
     imagen: "/productos/Cintas Impresora Epson Lx350 - Gtc.webp",
     categoria: "Impresoras",
     caracteristicas: [
@@ -328,7 +314,6 @@ export const productos: Producto[] = [
     id: 14,
     nombre: "Toner Alternativo Para Samsung 111s Mlt D111s M2070fw M2070",
     descripcion: "Toner alternativo de alta compatibilidad con cartucho Samsung MLT-D111S. Funciona con impresoras Samsung Xpress M2070FW, M2070, M2020 y SCX-3400. Rendimiento de hasta 1.000 páginas a 5% de cobertura.",
-    precio: 12990,
     imagen: "/productos/Toner Alternativo Para Samsung 111s Mlt D111s M2070fw M2070.webp",
     categoria: "Tintas y Consumibles",
     caracteristicas: [
@@ -342,7 +327,6 @@ export const productos: Producto[] = [
     id: 15,
     nombre: "Toner Alternativo 1105a Compatible 107w 135w 137w S/chip",
     descripcion: "Toner alternativo compatible con cartucho HP 1105A (W1105A). Diseñado para impresoras HP Laser MFP 107w, 135w y 137w. Versión sin chip, para equipos que no requieren reconocimiento. Rendimiento de hasta 975 páginas.",
-    precio: 12990,
     imagen: "/productos/Toner Alternativo 1105a Compatible 107w 135w 137w Schip.webp",
     categoria: "Tintas y Consumibles",
     caracteristicas: [
@@ -356,7 +340,6 @@ export const productos: Producto[] = [
     id: 16,
     nombre: "Toner Alternativo Para Tn 1060 1100 1200 1212w 1617w",
     descripcion: "Toner alternativo compatible con cartucho Brother TN-1060. Funciona con impresoras Brother HL-1100, HL-1200, HL-1210W, DCP-1510, DCP-1610W, DCP-1612W y MFC-1810. Rendimiento de hasta 1.000 páginas.",
-    precio: 6990,
     imagen: "/productos/Toner Alternativo Para Tn 1060 1100 1200 1212w 1617w.webp",
     categoria: "Tintas y Consumibles",
     caracteristicas: [
@@ -370,7 +353,6 @@ export const productos: Producto[] = [
     id: 17,
     nombre: "Rollo De Papel Termico 80 X 30 Metros Paq X 10 Unidades",
     descripcion: "Pack de 10 rollos de papel térmico de 80mm de ancho por 30 metros de largo. Compatibles con impresoras térmicas de ticketes de alto volumen, impresoras fiscales y POS. Papel de primera calidad con acabado blanco brillante.",
-    precio: 9200,
     imagen: "/productos/Rollo De Papel Termico 80 X 30 Metros Paq X 10 Unidades.webp",
     categoria: "Tintas y Consumibles",
     caracteristicas: [
@@ -384,7 +366,6 @@ export const productos: Producto[] = [
     id: 18,
     nombre: "Toner Alternativo 17a 217a Compatible M102w 130w 130f C/chip",
     descripcion: "Toner alternativo compatible con cartuchos HP 17A (CF217A) y 217A (W2170A). Funciona con impresoras HP Laser MFP M102w, M130w, M130fn y M130f. Incluye chip para reconocimiento automático del cartucho. Rendimiento de hasta 1.600 páginas.",
-    precio: 8990,
     imagen: "/productos/Toner Alternativo 17a 217a Compatible M102w 130w 130f Cchip.webp",
     categoria: "Tintas y Consumibles",
     caracteristicas: [
@@ -398,7 +379,6 @@ export const productos: Producto[] = [
     id: 19,
     nombre: "Toner 12a Compatible Con Impresora Q2612a 1319a Oferta!!",
     descripcion: "Toner alternativo compatible con cartucho HP 12A (Q2612A). Funciona con impresoras HP LaserJet 1020, 1022, 3015, 3020, 3030, 3050, 3052, 3055 y M1319f. Rendimiento de hasta 2.000 páginas a 5% de cobertura.",
-    precio: 14290,
     imagen: "/productos/Toner 12a Compatible Con Impresora Q2612a 1319a Oferta!!.webp",
     categoria: "Tintas y Consumibles",
     caracteristicas: [
@@ -412,7 +392,6 @@ export const productos: Producto[] = [
     id: 20,
     nombre: "Sistema De Facturacion Electronica Y Gestion Comercial Egmm",
     descripcion: "Software de facturación electrónica y gestión comercial EGMM. Emisión de facturas A, B, C, notas de crédito y débito según AFIP. Control de stock, gestión de clientes y proveedores, reportes de ventas y utilidades. Soporte técnico incluido.",
-    precio: 793006,
     imagen: "/productos/Sistema De Facturacion Electronica Y Gestion Comercial Egmm.webp",
     categoria: "Accesorios IT",
     caracteristicas: [
@@ -426,7 +405,6 @@ export const productos: Producto[] = [
     id: 21,
     nombre: "Impresora Fiscal Epson Tmt900fa + 8 Rollos De Papel",
     descripcion: "Impresora fiscal Epson TM-T900FA con interfaz USB y compatible con interface Ethernet (opcional). Incluye 8 rollos de papel térmico de regalo. Velocidad de impresión de 350mm/seg, autocorte automático. Resolución de 180x180 dpi. Ideal para gastronomía, retail y locales comerciales. Compatible con sistemas de facturación electrónica AFIP.",
-    precio: 895000,
     imagen: "/productos/Impresora Fiscal Epson Tmt900fa + 8 Rollos De Papel.webp",
     categoria: "Impresoras",
     caracteristicas: [
@@ -441,7 +419,6 @@ export const productos: Producto[] = [
     id: 22,
     nombre: "ELEGOO Impresora 3D ORANGE STORM FDM (800X800X1000)mm",
     descripcion: "La ELEGOO OrangeStorm Giga redefine la impresión 3D de gran formato, ofreciendo un volumen de impresión excepcional sin renunciar a la velocidad y la precisión. Diseñada para proyectos de gran escala, permite fabricar piezas de gran tamaño en una sola impresión.",
-    precio: 8200900,
     imagen: "/productos/ELEGOO Impresora 3D ORANGE STORM FDM (800X800X1000)mm.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -456,7 +433,6 @@ export const productos: Producto[] = [
     id: 61,
     nombre: "IMPRESORA 3D CREALITY K2 PLUS COMBO",
     descripcion: "La Creality K2 Plus Combo combina un gran volumen de impresión con el sistema multicolor CFS, ofreciendo una solución completa para proyectos profesionales. Diseñada para maximizar la productividad, permite imprimir con múltiples materiales y colores de forma automática.",
-    precio: 3040999,
     imagen: "/productos/IMPRESORA 3D CREALITY K2 PLUS COMBO.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -471,7 +447,6 @@ export const productos: Producto[] = [
     id: 23,
     nombre: "Bambulab Impresora 3D A1",
     descripcion: "La Bambu Lab A1 combina alta velocidad, precisión y un funcionamiento intuitivo para ofrecer una experiencia de impresión 3D simple y confiable. Gracias a sus funciones inteligentes y su calibración automática, permite obtener resultados de gran calidad desde la primera impresión.",
-    precio: 919990,
     imagen: "/productos/BAMBULAB IMPRESORA 3D A1.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -486,7 +461,6 @@ export const productos: Producto[] = [
     id: 43,
     nombre: "Bambulab Impresora 3D A1 Combo",
     descripcion: "La Bambu Lab A1 Combo reúne velocidad, precisión e impresión multicolor en un solo equipo. Gracias al sistema AMS Lite incluido, permite imprimir con hasta 4 colores o materiales de forma automática, ampliando las posibilidades de cada proyecto.",
-    precio: 1363990,
     imagen: "/productos/BAMBULAB IMPRESORA 3D A1-COMBO.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -501,7 +475,6 @@ export const productos: Producto[] = [
     id: 24,
     nombre: "Bambulab Impresora 3D X1C Combo",
     descripcion: "La Bambu Lab X1 Carbon Combo ofrece un rendimiento profesional combinando alta velocidad, precisión e impresión multicolor. Gracias al AMS incluido y su compatibilidad con materiales de ingeniería, es una excelente opción para quienes buscan productividad y máxima calidad en cada impresión.",
-    precio: 2650000,
     imagen: "/productos/BAMBULAB IMPRESORA 3D X1C-COMBO.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -516,7 +489,6 @@ export const productos: Producto[] = [
     id: 25,
     nombre: "Impresora 3D Flashforge Adventurer 5M Pro",
     descripcion: "La Flashforge Adventurer 5M Pro brinda un rendimiento profesional gracias a su estructura completamente cerrada y su compatibilidad con materiales técnicos. Diseñada para ofrecer impresiones precisas y confiables, es una excelente opción para usuarios exigentes.",
-    precio: 858900,
     imagen: "/productos/IMPRESORA 3D FLASHFORGE ADVENTURER-5MPRO.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -531,7 +503,6 @@ export const productos: Producto[] = [
     id: 26,
     nombre: "ELEGOO Centauri Carbon FDM 3D Printer",
     descripcion: "La ELEGOO Centauri Carbon combina alta velocidad, precisión y compatibilidad con materiales de ingeniería para ofrecer un rendimiento excepcional. Diseñada para usuarios exigentes, permite fabricar piezas resistentes y de alta calidad de forma rápida y confiable.",
-    precio: 1012900,
     imagen: "/productos/ELEGOO Centauri Carbon FDM 3D Printer.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -546,7 +517,6 @@ export const productos: Producto[] = [
     id: 27,
     nombre: "Impresora 3D Flashforge Adventurer 5X",
     descripcion: "La Flashforge Adventurer 5X combina alta velocidad, precisión e impresión multicolor para ofrecer una experiencia de impresión 3D versátil y eficiente. Gracias a su sistema IFS y sus funciones inteligentes, permite crear proyectos con múltiples colores o materiales de forma automática.",
-    precio: 908900,
     imagen: "/productos/IMPRESORA 3D FLASHFORGE ADVENTURER-5X.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -561,7 +531,6 @@ export const productos: Producto[] = [
     id: 28,
     nombre: "Bambulab Impresora 3D H2D Combo",
     descripcion: "La Bambu Lab H2D Combo combina impresión 3D de alta velocidad con funciones inteligentes y el sistema AMS 2 Pro, ofreciendo una solución versátil para proyectos profesionales. Diseñada para maximizar la productividad, permite trabajar con múltiples materiales y colores de forma simple y eficiente.",
-    precio: 5999990,
     imagen: "/productos/BAMBULAB IMPRESORA 3D H2D COMBO.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -576,7 +545,6 @@ export const productos: Producto[] = [
     id: 31,
     nombre: "Prusa Core One +",
     descripcion: "La Prusa CORE One Plus combina velocidad, precisión y una estructura CoreXY completamente cerrada para ofrecer un rendimiento profesional en una amplia variedad de materiales. Diseñada para maximizar la confiabilidad y la calidad de impresión, es una excelente opción tanto para producción como para prototipado avanzado.",
-    precio: 2794900,
     imagen: "/productos/PRUSA CORE ONE +.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -591,7 +559,6 @@ export const productos: Producto[] = [
     id: 30,
     nombre: "Bambulab Impresora 3D H2S Full Combo",
     descripcion: "La Bambu Lab H2S Full Combo reúne todas las prestaciones de la línea H2S en su configuración más completa, ofreciendo máxima productividad y versatilidad para aplicaciones profesionales. Gracias a su sistema multicolor y funciones inteligentes, permite afrontar proyectos complejos con mayor eficiencia.",
-    precio: 6799990,
     imagen: "/productos/BAMBULAB IMPRESORA 3D H2S FULL COMBO.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -607,7 +574,6 @@ export const productos: Producto[] = [
     id: 29,
     nombre: "Bambulab Impresora 3D H2S AMS Combo",
     descripcion: "La Bambu Lab H2S AMS Combo combina alta velocidad, precisión y el sistema AMS 2 Pro para ofrecer una experiencia de impresión 3D eficiente y versátil. Diseñada para usuarios exigentes, permite trabajar con múltiples materiales y colores manteniendo un alto nivel de calidad en cada proyecto.",
-    precio: 4649990,
     imagen: "/productos/BAMBULAB IMPRESORA 3D H2S AMS COMBO.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -622,7 +588,6 @@ export const productos: Producto[] = [
     id: 33,
     nombre: "ELEGOO Impresora 3D Neptune-4MAX FDM",
     descripcion: "La ELEGOO Neptune 4 Max está diseñada para quienes necesitan imprimir piezas de gran tamaño sin renunciar a la velocidad y la precisión. Su amplio volumen de impresión y alto rendimiento la convierten en una excelente opción para proyectos exigentes.",
-    precio: 1028900,
     imagen: "/productos/ELEGOO Impresora 3D Neptune-4MAX FDM firmware Klipper extrusora directa (420X420X480)mm.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -637,7 +602,6 @@ export const productos: Producto[] = [
     id: 34,
     nombre: "ELEGOO Centauri Carbon 2 Combo FDM 3D Printer",
     descripcion: "La ELEGOO Centauri Carbon 2 ofrece un alto rendimiento para proyectos exigentes, combinando velocidad, precisión y compatibilidad con materiales técnicos. Su diseño optimizado permite fabricar piezas resistentes con una excelente calidad de impresión.",
-    precio: 1355900,
     imagen: "/productos/CENTAURI CARBON 2 COMBO FDM 3D PRINTER - AR PLUG.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -652,7 +616,6 @@ export const productos: Producto[] = [
     id: 35,
     nombre: "Bambulab Impresora 3D A2L",
     descripcion: "La Bambu Lab A2L combina un amplio volumen de impresión con la velocidad y precisión características de Bambu Lab. Diseñada para proyectos de mayor tamaño, ofrece una experiencia de impresión rápida, confiable e intuitiva.",
-    precio: 1205990,
     imagen: "/productos/BAMBULAB IMPRESORA 3D A2L.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -667,7 +630,6 @@ export const productos: Producto[] = [
     id: 36,
     nombre: "Bambulab Impresora 3D A2L Combo",
     descripcion: "La Bambu Lab A2L Combo ofrece un gran volumen de impresión junto con la posibilidad de imprimir en múltiples colores gracias al AMS 2 Pro incluido. Es una solución ideal para quienes buscan productividad, precisión y máxima versatilidad.",
-    precio: 1619990,
     imagen: "/productos/BAMBULAB IMPRESORA 3D A2L COMBO.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -682,7 +644,6 @@ export const productos: Producto[] = [
     id: 37,
     nombre: "Impresora 3D Creality Sermoon-D3",
     descripcion: "La serie Sermoon D está hecha a medida para el diseño industrial. Ya sea creación de prototipos, fabricación de plantillas y accesorios o verificación de diseño, los cubre todos. Incluso puede producir en masa algunas piezas o productos pequeños. Ofrece impresiones de alta calidad, precisión del modelo, estabilidad y rentabilidad.",
-    precio: 5107999,
     imagen: "/productos/IMPRESORA 3D CREALITY SERMOON-D3.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -698,7 +659,6 @@ export const productos: Producto[] = [
     id: 38,
     nombre: "Impresora 3D Creality Ender-3 V3 KE",
     descripcion: "La Creality Ender-3 V3 KE combina precisión, velocidad y conectividad para ofrecer una experiencia de impresión 3D avanzada y accesible. Incorpora un carril lineal preciso en el eje X que mejora la estabilidad y reduce las vibraciones durante la impresión. Además cuenta con sistema de calibración automática que simplifica la preparación, permitiendo resultados más consistentes sin ajustes manuales.",
-    precio: 511999,
     imagen: "/productos/IMPRESORA 3D CREALITY ENDER-3 V3 KE.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -713,7 +673,6 @@ export const productos: Producto[] = [
     id: 39,
     nombre: "Impresora 3D Creality K1C",
     descripcion: "La Creality K1C es la impresora 3D ideal para quienes buscan un equipo potente, rápido y listo para imprimir con materiales avanzados desde el primer día. Cuenta con una velocidad de impresión de hasta 600 mm/s y una aceleración de 30.000 mm/s². Su extrusor de doble engranaje con accionamiento directo y boquilla que alcanza hasta 350 °C la hacen compatible con una amplia gama de filamentos.",
-    precio: 955000,
     imagen: "/productos/IMPRESORA 3D CREALITY K1C.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -729,7 +688,6 @@ export const productos: Producto[] = [
     id: 40,
     nombre: "ELEGOO Impresora 3D Neptune-4 FDM",
     descripcion: "La Neptune 4 es una impresora 3D rápida, precisa y accesible, pensada tanto para principiantes como para usuarios avanzados. Con un volumen de impresión de 225×225×265 mm y una velocidad de hasta 500 mm/s, ofrece resultados detallados en menos tiempo.",
-    precio: 549900,
     imagen: "/productos/ELEGOO Impresora 3D Neptune-4 FDM firmware Klipper extrusora directa (225X225X265)mm.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -745,7 +703,6 @@ export const productos: Producto[] = [
     id: 41,
     nombre: "ELEGOO Impresora 3D Neptune-4PRO FDM",
     descripcion: "La Neptune 4 Pro combina velocidad, precisión y funciones avanzadas en un diseño robusto y optimizado. Con un volumen de impresión de 225×225×265 mm, alcanza velocidades de hasta 500 mm/s y cuenta con extrusor directo de alto rendimiento, ideal para imprimir con una amplia variedad de filamentos.",
-    precio: 651900,
     imagen: "/productos/ELEGOO Impresora 3D Neptune-4PRO FDM firmware Klipper extrusora directa (225X225X265)mm.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -761,7 +718,6 @@ export const productos: Producto[] = [
     id: 42,
     nombre: "Impresora 3D Creality Ender-3 V3 Plus",
     descripcion: "La impresora 3D Creality Ender-3 V3 Plus ofrece un volumen de construcción ampliado de 300 × 300 × 330 mm, ideal para modelos de gran tamaño sin sacrificar precisión. Su estructura robusta incorpora motores duales y varillas de soporte en el eje Y, garantizando una mayor estabilidad durante la impresión.",
-    precio: 921799,
     imagen: "/productos/IMPRESORA 3D CREALITY ENDER-3 V3PLUS.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -776,7 +732,6 @@ export const productos: Producto[] = [
     id: 44,
     nombre: "Bambulab Impresora 3D A1 Mini",
     descripcion: "La Bambu Lab A1 Mini ofrece toda la tecnología de Bambu Lab en un formato compacto. Su alta velocidad, facilidad de uso y calibración automática la convierten en una excelente opción para quienes buscan calidad y precisión en espacios reducidos.",
-    precio: 558080,
     imagen: "/productos/BAMBULAB IMPRESORA 3D A1-MINI.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -791,7 +746,6 @@ export const productos: Producto[] = [
     id: 45,
     nombre: "Bambulab Impresora 3D A1 Mini Combo",
     descripcion: "La Bambu Lab A1 Mini Combo combina un diseño compacto con la posibilidad de imprimir en múltiples colores gracias al AMS Lite incluido. Es la opción ideal para quienes buscan versatilidad, facilidad de uso y resultados de alta calidad en un equipo de tamaño reducido.",
-    precio: 986290,
     imagen: "/productos/BAMBULAB IMPRESORA 3D A1-MINI-COMBO.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -806,7 +760,6 @@ export const productos: Producto[] = [
     id: 46,
     nombre: "Bambulab Impresora 3D P1S",
     descripcion: "La Bambu Lab P1S combina alta velocidad, precisión y una estructura cerrada para ofrecer impresiones confiables en una amplia variedad de materiales. Diseñada para usuarios exigentes, brinda un excelente rendimiento tanto para proyectos personales como profesionales.",
-    precio: 1499990,
     imagen: "/productos/BAMBULAB IMPRESORA 3D P1S.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -821,7 +774,6 @@ export const productos: Producto[] = [
     id: 47,
     nombre: "Impresora 3D Flashforge Adventurer 5M",
     descripcion: "La Flashforge Adventurer 5M ofrece una excelente combinación de velocidad, precisión y facilidad de uso. Diseñada para usuarios que buscan resultados de alta calidad, incorpora funciones inteligentes que simplifican todo el proceso de impresión.",
-    precio: 579900,
     imagen: "/productos/IMPRESORA 3D FLASHFORGE ADVENTURER-5M.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -836,7 +788,6 @@ export const productos: Producto[] = [
     id: 48,
     nombre: "Prusa Core One L",
     descripcion: "La Prusa CORE One L es la evolución lógica de la popular impresora 3D CORE One. Con un enorme espacio de 300 x 300 x 330 mm, una cámara de calentamiento activo y la innovadora cama de calentamiento por convección AC, la CORE One L ofrece una calidad de impresión profesional en una carcasa compacta y fácil de mantener.",
-    precio: 4697900,
     imagen: "/productos/PRUSA CORE ONE L.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -850,7 +801,6 @@ export const productos: Producto[] = [
     id: 49,
     nombre: "Prusa Core One + Kit DIY",
     descripcion: "La Prusa CORE One Kit DIY ofrece las mismas prestaciones y calidad de impresión que la versión ensamblada, permitiendo al usuario realizar el montaje del equipo. Es una excelente opción para quienes desean conocer en profundidad el funcionamiento de su impresora y disfrutar de la experiencia de ensamblarla.",
-    precio: 2659900,
     imagen: "/productos/PRUSA CORE ONE + KIT DIY.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -866,7 +816,6 @@ export const productos: Producto[] = [
     id: 32,
     nombre: "Impresora 3D Creality SparkXI7 Combo",
     descripcion: "La Creality Spark XI7 combina velocidad, precisión y un diseño moderno para ofrecer una experiencia de impresión 3D ágil y eficiente. Pensada para usuarios que buscan productividad, permite fabricar piezas de alta calidad en menos tiempo.",
-    precio: 1194614,
     imagen: "/productos/IMPRESORA 3D CREALITY SPARKXI7 COMBO.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -881,7 +830,6 @@ export const productos: Producto[] = [
     id: 51,
     nombre: "Bambulab Impresora 3D X2D Combo",
     descripcion: "La Bambu Lab X2D Combo representa la nueva generación de impresión 3D profesional, ofreciendo máxima velocidad, precisión y compatibilidad con materiales avanzados. Gracias al AMS 2 Pro incluido y sus funciones inteligentes, permite afrontar proyectos exigentes con un flujo de trabajo más eficiente.",
-    precio: 3552990,
     imagen: "/productos/BAMBULAB IMPRESORA 3D X2D COMBO.png",
     categoria: "Impresión 3D",
     caracteristicas: [
@@ -896,7 +844,6 @@ export const productos: Producto[] = [
     id: 50,
     nombre: "Original Prusa XL 5 Cabezal",
     descripcion: "La Original Prusa XL deja muy atrás a las impresoras multimaterial convencionales de una sola boquilla. Con su revolucionario sistema de cambio de herramientas para hasta cinco cabezales, su impresionante precisión de impresión y su enorme volumen de impresión, abre la puerta a posibilidades creativas casi ilimitadas, sin desperdiciar material.",
-    precio: 9169900,
     imagen: "/productos/ORIGINAL PRUSA XL- 5 CABEZAL.png",
     categoria: "Impresión 3D",
     caracteristicas: [
