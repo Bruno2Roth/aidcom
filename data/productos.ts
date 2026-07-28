@@ -190,14 +190,6 @@ export const productos: Producto[] = [
   },
   {
     id: 23,
-    nombre: "Impresora 3D Creality K2 Plus Combo",
-    descripcion: "Impresora 3D Creality K2 Plus Combo con impresión ultra rápida y sistema de多材料. Área de impresión generosa, extrusora directa y cámara cerrada para materiales exigentes. Incluye kit completo de accesorios.",
-    precio: 3040999,
-    imagen: "/productos/IMPRESORA 3D CREALITY K2 PLUS COMBO.png",
-    categoria: "Impresión 3D",
-  },
-  {
-    id: 24,
     nombre: "Bambulab Impresora 3D A1",
     descripcion: "Impresora 3D Bambu Lab A1 con impresión de alta velocidad y calidad excepcional. Sistema de impresión multimaterial compatible, autoleveling automático y conectividad WiFi. Ideal para uso doméstico y de oficina.",
     precio: 919990,
@@ -205,7 +197,7 @@ export const productos: Producto[] = [
     categoria: "Impresión 3D",
   },
   {
-    id: 25,
+    id: 24,
     nombre: "Bambulab Impresora 3D X1C Combo",
     descripcion: "Impresora 3D Bambu Lab X1C Combo con cámara cerrada, impresión multimaterial con AMS. Lidar integrado, autoleveling y acabados de alta calidad. La más versátil de la gama Bambu Lab.",
     precio: 2650000,
@@ -213,7 +205,7 @@ export const productos: Producto[] = [
     categoria: "Impresión 3D",
   },
   {
-    id: 26,
+    id: 25,
     nombre: "Impresora 3D Flashforge Adventurer 5M Pro",
     descripcion: "Impresora 3D Flashforge Adventurer 5M Pro con cámara cerrada y filtración de aire. Velocidad de impresión de hasta 600mm/s, extrusora directa de alta temperatura y autoleveling automático.",
     precio: 858900,
@@ -221,7 +213,7 @@ export const productos: Producto[] = [
     categoria: "Impresión 3D",
   },
   {
-    id: 27,
+    id: 26,
     nombre: "ELEGOO Centauri Carbon FDM 3D Printer",
     descripcion: "Impresora 3D FDM ELEGOO Centauri Carbon con estructura de carbono ligera y robusta. Impresión silenciosa, autoleveling y pantalla táctil. Ideal para makers que buscan calidad y velocidad.",
     precio: 1012900,
@@ -229,7 +221,7 @@ export const productos: Producto[] = [
     categoria: "Impresión 3D",
   },
   {
-    id: 28,
+    id: 27,
     nombre: "Impresora 3D Flashforge Adventurer 5X",
     descripcion: "Impresora 3D Flashforge Adventurer 5X con extrusora directa de alta velocidad. Autoleveling, pantalla táctil y conectividad WiFi. Ideal para principiantes y entusiastas de la impresión 3D.",
     precio: 908900,
@@ -237,7 +229,7 @@ export const productos: Producto[] = [
     categoria: "Impresión 3D",
   },
   {
-    id: 29,
+    id: 28,
     nombre: "Bambulab Impresora 3D H2D Combo",
     descripcion: "Impresora 3D Bambu Lab H2D Combo de alto rendimiento con impresión multimaterial. Cámara cerrada, sistema AMS integrado y acabados profesionales. Diseñada para producción en volumen.",
     precio: 5999990,
@@ -245,7 +237,7 @@ export const productos: Producto[] = [
     categoria: "Impresión 3D",
   },
   {
-    id: 30,
+    id: 29,
     nombre: "Bambulab Impresora 3D H2S AMS Combo",
     descripcion: "Impresora 3D Bambu Lab H2S con sistema AMS de múltiples materiales. Impresión silenciosa y rápida, cámara cerrada y autoleveling. Ideal para producción profesional con múltiples filamentos.",
     precio: 4649990,
@@ -253,7 +245,7 @@ export const productos: Producto[] = [
     categoria: "Impresión 3D",
   },
   {
-    id: 31,
+    id: 30,
     nombre: "Bambulab Impresora 3D H2S Full Combo",
     descripcion: "Impresora 3D Bambu Lab H2S Full Combo con todo incluido. Sistema AMS, cámara cerrada, autoleveling y conectividad WiFi. Paquete completo para empezar a imprimir al momento.",
     precio: 6799990,
@@ -261,7 +253,7 @@ export const productos: Producto[] = [
     categoria: "Impresión 3D",
   },
   {
-    id: 32,
+    id: 31,
     nombre: "Prusa Core One +",
     descripcion: "Impresora 3D Prusa Core One+ con diseño CoreXY de alta velocidad. Cámara cerrada, autoleveling y compatibilidad con múltiples filamentos. Calidad de impresión excepcional y fiabilidad.",
     precio: 2794900,
@@ -269,7 +261,7 @@ export const productos: Producto[] = [
     categoria: "Impresión 3D",
   },
   {
-    id: 33,
+    id: 32,
     nombre: "Impresora 3D Creality SparkXI7 Combo",
     descripcion: "Impresora 3D Creality SparkXI7 Combo con impresión rápida y estable. Incluye accesorios completos, autoleveling y pantalla táctil. Ideal para principiantes y uso doméstico.",
     precio: 1194614,
@@ -277,7 +269,7 @@ export const productos: Producto[] = [
     categoria: "Impresión 3D",
   },
   {
-    id: 34,
+    id: 33,
     nombre: "ELEGOO Impresora 3D Neptune-4MAX FDM",
     descripcion: "Impresora 3D ELEGOO Neptune-4MAX con área de impresión de 420x420x480mm. Firmware Klipper, extrusora directa y autoleveling. Ideal para piezas grandes y producción en volumen.",
     precio: 1028900,
@@ -285,7 +277,7 @@ export const productos: Producto[] = [
     categoria: "Impresión 3D",
   },
   {
-    id: 35,
+    id: 34,
     nombre: "ELEGOO Centauri Carbon 2 Combo FDM 3D Printer",
     descripcion: "Impresora 3D ELEGOO Centauri Carbon 2 Combo con estructura de carbono. Incluye accesorios, filamento y herramientas. Impresión silenciosa y de alta calidad para todos los niveles.",
     precio: 1355900,
@@ -293,7 +285,7 @@ export const productos: Producto[] = [
     categoria: "Impresión 3D",
   },
   {
-    id: 36,
+    id: 35,
     nombre: "Bambulab Impresora 3D A2L",
     descripcion: "Impresora 3D Bambu Lab A2L con diseño compacto y alta velocidad. Autoleveling, conectividad WiFi y compatibilidad con múltiples filamentos. Ideal para espacios reducidos.",
     precio: 1205990,
@@ -301,7 +293,7 @@ export const productos: Producto[] = [
     categoria: "Impresión 3D",
   },
   {
-    id: 37,
+    id: 36,
     nombre: "Bambulab Impresora 3D A2L Combo",
     descripcion: "Impresora 3D Bambu Lab A2L Combo con sistema AMS de múltiples materiales. Diseño compacto, autoleveling y conectividad WiFi. Paquete completo para impresión multimaterial.",
     precio: 1619990,
@@ -309,7 +301,7 @@ export const productos: Producto[] = [
     categoria: "Impresión 3D",
   },
   {
-    id: 38,
+    id: 37,
     nombre: "Impresora 3D Creality Sermoon-D3",
     descripcion: "Impresora 3D Creality Sermoon-D3 con cámara cerrada y estructura metálica. Impresión silenciosa, autoleveling y extrusora directa. Ideal para uso profesional y educativo.",
     precio: 5107999,
@@ -318,7 +310,7 @@ export const productos: Producto[] = [
 
   },
   {
-    id: 39,
+    id: 38,
     nombre: "Impresora 3D Creality Ender-3 V3 KE",
     descripcion: "Impresora 3D Creality Ender-3 V3 KE con impresión rápida de hasta 500mm/s. Autoleveling, pantalla táctil y extrusora directa. Actualización premium de la popular serie Ender-3.",
     precio: 511999,
@@ -327,7 +319,7 @@ export const productos: Producto[] = [
 
   },
   {
-    id: 40,
+    id: 39,
     nombre: "Impresora 3D Creality K1C",
     descripcion: "Impresora 3D Creality K1C con carcasa cerrada y impresión ultra rápida de 600mm/s. Extrusora de carbono, autoleveling y cámara integrada. Rendimiento profesional en formato compacto.",
     precio: 955000,
@@ -336,7 +328,7 @@ export const productos: Producto[] = [
 
   },
   {
-    id: 41,
+    id: 40,
     nombre: "ELEGOO Impresora 3D Neptune-4 FDM",
     descripcion: "Impresora 3D ELEGOO Neptune-4 con firmware Klipper y extrusora directa. Área de impresión de 225x225x265mm. Impresión rápida y silenciosa, ideal para principiantes.",
     precio: 549900,
@@ -345,7 +337,7 @@ export const productos: Producto[] = [
 
   },
   {
-    id: 42,
+    id: 41,
     nombre: "ELEGOO Impresora 3D Neptune-4PRO FDM",
     descripcion: "Impresora 3D ELEGOO Neptune-4PRO con firmware Klipper, extrusora directa y cama caliente de alta temperatura. Área de 225x225x265mm. Versión mejorada con mejor rendimiento.",
     precio: 651900,
@@ -354,7 +346,7 @@ export const productos: Producto[] = [
 
   },
   {
-    id: 43,
+    id: 42,
     nombre: "Impresora 3D Creality Ender-3 V3 Plus",
     descripcion: "Impresora 3D Creality Ender-3 V3 Plus con área de impresión ampliada. Impresión rápida, autoleveling y pantalla táctil. Ideal para piezas más grandes sin sacrificar calidad.",
     precio: 921799,
@@ -363,7 +355,7 @@ export const productos: Producto[] = [
 
   },
   {
-    id: 44,
+    id: 43,
     nombre: "Bambulab Impresora 3D A1 Combo",
     descripcion: "Impresora 3D Bambu Lab A1 Combo con sistema AMS Lite de 4 colores. Autoleveling, conectividad WiFi y impresión de alta velocidad. Paquete ideal para impresión multimaterial.",
     precio: 1363990,
@@ -372,7 +364,7 @@ export const productos: Producto[] = [
 
   },
   {
-    id: 45,
+    id: 44,
     nombre: "Bambulab Impresora 3D A1 Mini",
     descripcion: "Impresora 3D Bambu Lab A1 Mini compacta y portátil. Impresión de alta velocidad, autoleveling y conectividad WiFi. Ideal para espacios reducidos y uso ocasional.",
     precio: 558080,
@@ -381,7 +373,7 @@ export const productos: Producto[] = [
 
   },
   {
-    id: 46,
+    id: 45,
     nombre: "Bambulab Impresora 3D A1 Mini Combo",
     descripcion: "Impresora 3D Bambu Lab A1 Mini Combo con sistema AMS Lite. Diseño compacto, autoleveling y múltiples colores. Perfecta para principiantes que quieren impresión multimaterial.",
     precio: 986290,
@@ -390,7 +382,7 @@ export const productos: Producto[] = [
 
   },
   {
-    id: 47,
+    id: 46,
     nombre: "Bambulab Impresora 3D P1S",
     descripcion: "Impresora 3D Bambu Lab P1S con cámara cerrada y impresión de alta velocidad. Compatible con sistema AMS, autoleveling y acabados profesionales. Ideal para uso intensivo.",
     precio: 1499990,
@@ -399,7 +391,7 @@ export const productos: Producto[] = [
 
   },
   {
-    id: 48,
+    id: 47,
     nombre: "Impresora 3D Flashforge Adventurer 5M",
     descripcion: "Impresora 3D Flashforge Adventurer 5M con extrusora directa y autoleveling automático. Velocidad de hasta 600mm/s, pantalla táctil y conectividad WiFi. Accesible y confiable.",
     precio: 579900,
@@ -408,7 +400,7 @@ export const productos: Producto[] = [
 
   },
   {
-    id: 49,
+    id: 48,
     nombre: "Prusa Core One L",
     descripcion: "Impresora 3D Prusa Core One L con área de impresión ampliada. Diseño CoreXY, cámara cerrada y autoleveling. Calidad Prusa con mayor capacidad para piezas grandes.",
     precio: 4697900,
@@ -417,7 +409,7 @@ export const productos: Producto[] = [
 
   },
   {
-    id: 50,
+    id: 49,
     nombre: "Prusa Core One + Kit DIY",
     descripcion: "Kit de ensamblaje de la impresora 3D Prusa Core One+. Incluye todas las piezas e instrucciones para armar tu propia impresora. Experiencia educativa con resultado profesional.",
     precio: 2659900,
@@ -426,7 +418,7 @@ export const productos: Producto[] = [
 
   },
   {
-    id: 51,
+    id: 50,
     nombre: "Original Prusa XL 5 Cabezal",
     descripcion: "Impresora 3D Original Prusa XL con 5 cabezales independientes. Tool changer automático, área de impresión de 360x360x360mm. La más versátil para producción multimaterial sin compromisos.",
     precio: 9169900,
@@ -435,7 +427,7 @@ export const productos: Producto[] = [
 
   },
   {
-    id: 52,
+    id: 51,
     nombre: "Bambulab Impresora 3D X2D Combo",
     descripcion: "Impresora 3D Bambu Lab X2D Combo con doble extrusora y sistema AMS. Cámara cerrada, autoleveling y acabados de alta calidad. La gama más alta de Bambu Lab para profesionales.",
     precio: 3552990,

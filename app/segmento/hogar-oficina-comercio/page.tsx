@@ -409,7 +409,7 @@ export default function HogarOficinaComercioPage() {
                   </div>
                   <div>
                     <p className="text-white font-semibold text-sm">Envío</p>
-                    <p className="text-white/60 text-xs">Compras +$100.000</p>
+                    <p className="text-white/60 text-xs">A todo el país</p>
                   </div>
                 </div>
               </div>
