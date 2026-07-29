@@ -430,20 +430,6 @@ export const productos: Producto[] = [
     ],
   },
   {
-    id: 61,
-    nombre: "IMPRESORA 3D CREALITY K2 PLUS COMBO",
-    descripcion: "La Creality K2 Plus Combo combina un gran volumen de impresión con el sistema multicolor CFS, ofreciendo una solución completa para proyectos profesionales. Diseñada para maximizar la productividad, permite imprimir con múltiples materiales y colores de forma automática.",
-    imagen: "/productos/IMPRESORA 3D CREALITY K2 PLUS COMBO.png",
-    categoria: "Impresión 3D",
-    caracteristicas: [
-      "CFS incluido",
-      "Impresión multicolor",
-      "Volumen de impresión de 350 × 350 × 350 mm",
-      "Velocidad de impresión de hasta 600 mm/s",
-      "Compatible con materiales de ingeniería",
-    ],
-  },
-  {
     id: 23,
     nombre: "Bambulab Impresora 3D A1",
     descripcion: "La Bambu Lab A1 combina alta velocidad, precisión y un funcionamiento intuitivo para ofrecer una experiencia de impresión 3D simple y confiable. Gracias a sus funciones inteligentes y su calibración automática, permite obtener resultados de gran calidad desde la primera impresión.",
