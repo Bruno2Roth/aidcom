@@ -27,13 +27,6 @@ import {
 } from "lucide-react"
 import { useScrollNavigation } from "@/hooks/use-scroll-navigation"
 
-const stats = [
-  { value: "500+", label: "Empresas atendidas" },
-  { value: "99.9%", label: "Uptime garantizado" },
-  { value: "24/7", label: "Soporte técnico" },
-  { value: "30+", label: "Años de experiencia" },
-]
-
 const categories = [
   { id: "mantenimiento", label: "Mantenimiento IT", icon: Wrench, gradient: "from-orange-500 to-amber-500" },
   { id: "redes", label: "Redes y Conexión", icon: Network, gradient: "from-orange-500 to-amber-500" },
@@ -272,22 +265,7 @@ export default function ServiciosInformaticosPage() {
             empresas y particulares.
           </p>
 
-          {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            {stats.map((stat, i) => (
-              <div
-                key={i}
-                className="group px-6 py-4 rounded-2xl bg-white/[0.03] border border-orange-500/20 backdrop-blur-sm transition-all duration-500 hover:bg-orange-500/10 hover:border-orange-400/40 hover:scale-105"
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-400 to-amber-300 bg-clip-text text-transparent">
-                  {stat.value}
-                </p>
-                <p className="text-sm text-white/40">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contacto"
