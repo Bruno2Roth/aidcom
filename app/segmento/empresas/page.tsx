@@ -579,7 +579,7 @@ export default function EmpresasPage() {
           >
             {[
               { value: 500, suffix: "+", label: "Empresas Confían", icon: Building2 },
-              { value: 15, suffix: "+", label: "Años de Experiencia", icon: Award },
+              { value: 30, suffix: "+", label: "Años de Experiencia", icon: Award },
               { value: 50, suffix: "+", label: "Técnicos Certificados", icon: Users },
               { value: 99, suffix: ".9%", label: "Uptime Garantizado", icon: Zap },
             ].map((stat, index) => {
@@ -656,7 +656,7 @@ export default function EmpresasPage() {
               {[
                 { icon: Clock, text: "Respuesta en 24hs" },
                 { icon: CheckCircle, text: "Sin compromiso" },
-                { icon: Award, text: "+15 años de experiencia" },
+                { icon: Award, text: "+30 años de experiencia" },
               ].map((badge, i) => {
                 const IconComponent = badge.icon
                 return (
