@@ -470,7 +470,7 @@ export default function MicrosoftPage() {
 
               <div className="space-y-4">
                 {[
-                  { icon: Headphones, text: "Soporte técnico local para clientes con contrato" },
+                  { icon: Headphones, text: "Soporte técnico local 24/7" },
                   { icon: TrendingUp, text: "Consultoría gratuita" },
                   { icon: Clock, text: "Activación inmediata" },
                   { icon: Shield, text: "Productos oficiales" },
