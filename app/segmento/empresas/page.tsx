@@ -330,16 +330,6 @@ export default function EmpresasPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
 
                 {/* Floating cards */}
-                <div className="absolute top-4 right-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-3 flex items-center gap-3 shadow-xl">
-                  <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center">
-                    <Shield className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-white font-semibold text-sm">ISO 27001</p>
-                    <p className="text-white/60 text-xs">Seguridad certificada</p>
-                  </div>
-                </div>
-
                 <div className="absolute bottom-4 left-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 p-3 flex items-center gap-3 shadow-xl">
                   <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
                     <CheckCircle className="h-5 w-5 text-white" />
@@ -579,7 +569,7 @@ export default function EmpresasPage() {
           <div className="rounded-3xl border border-violet-500/20 bg-violet-500/5 backdrop-blur-xl p-10 lg:p-16">
             <span className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-2 text-sm font-semibold text-violet-400 mb-6">
               <Sparkles className="h-4 w-4" />
-              Consultoría sin cargo
+              Consultá el alcance de tu proyecto
             </span>
 
             <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl mb-4">
