@@ -162,24 +162,7 @@ export default function HogarOficinaComercioPage() {
               </Link>
             </div>
 
-            {/* Stats */}
-            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {[
-                { value: "Según consumo", label: "Ahorro estimado" },
-                { value: "Por fabricante", label: "Garantía de equipos" },
-                { value: "Según proyecto", label: "Plazo de instalación" },
-                { value: "Consultar", label: "Financiación" },
-              ].map((stat, i) => (
-                <AnimatedSection key={i} delay={i * 150}>
-                  <div className="text-center p-4 rounded-xl bg-slate-900/50 border border-emerald-500/20">
-                    <div className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                      {stat.value}
-                    </div>
-                    <div className="text-sm text-slate-500 mt-1">{stat.label}</div>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
+
           </AnimatedSection>
         </div>
       </section>
