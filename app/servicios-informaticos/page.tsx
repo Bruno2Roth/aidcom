@@ -145,7 +145,7 @@ const products = [
   { icon: Shield, title: "Seguridad", description: "Protección integral", gradient: "from-rose-500 to-pink-500" },
   { icon: Cloud, title: "Cloud", description: "Soluciones en la nube", gradient: "from-sky-500 to-blue-500" },
   { icon: Laptop, title: "Notebooks", description: "Movilidad empresarial", gradient: "from-orange-500 to-amber-500" },
-  { icon: Settings, title: "Soporte", description: "Asistencia técnica 24/7", gradient: "from-teal-500 to-cyan-500" },
+  { icon: Settings, title: "Soporte", description: "Soporte para clientes con contrato", gradient: "from-teal-500 to-cyan-500" },
 ]
 
 export default function ServiciosInformaticosPage() {
@@ -425,7 +425,7 @@ export default function ServiciosInformaticosPage() {
             {[
               { icon: Zap, title: "Respuesta Rápida", description: "Atención inmediata garantizada" },
               { icon: Globe, title: "Cobertura Total", description: "Servicio en todo el país" },
-              { icon: Headphones, title: "Soporte 24/7", description: "Asistencia técnica continua" },
+              { icon: Headphones, title: "Soporte para clientes con contrato", description: "Asistencia según el servicio contratado" },
               { icon: Lock, title: "Seguridad", description: "Protección de datos certificada" },
             ].map((feature, index) => (
               <div
