@@ -1,5 +1,6 @@
 "use client"
 
+import { createWhatsAppUrl } from "@/lib/contact-info"
 import type React from "react"
 import Link from "next/link"
 import { ArrowRight, Factory, Shield, TrendingUp, Users, Award, MessageCircle, CheckCircle2 } from "lucide-react"
@@ -148,7 +149,7 @@ export default function EmpresasEnergiaSolarPage() {
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://wa.me/5491149988089?text=Hola%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20solar%20para%20mi%20empresa."
+                href={createWhatsAppUrl("Hola, quiero cotizar una solución solar para mi empresa.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-violet-500 to-purple-500 text-white font-semibold transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)]"
@@ -261,7 +262,7 @@ export default function EmpresasEnergiaSolarPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://wa.me/5491149988089?text=Hola%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20solar%20para%20mi%20empresa."
+                href={createWhatsAppUrl("Hola, quiero cotizar una solución solar para mi empresa.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-violet-500 to-purple-500 text-white font-semibold transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)]"

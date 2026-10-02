@@ -1,5 +1,6 @@
 ﻿"use client"
 
+import { createWhatsAppUrl } from "@/lib/contact-info"
 import type React from "react"
 import { useState, useEffect, useRef, useMemo } from "react"
 import { useSearchParams } from "next/navigation"
@@ -158,8 +159,8 @@ export default function TiendaPage() {
 
   const handleAgregarAlCarrito = (producto: Producto) => {
     const cantidad = cantidades[producto.id] || 1
-    const texto = encodeURIComponent(`Hola, quiero cotizar: ${producto.nombre} x${cantidad}`)
-    window.open(`https://wa.me/5491149988089?text=${texto}`, "_blank")
+    const texto = `Hola, quiero cotizar: ${producto.nombre} x${cantidad}`
+    window.open(createWhatsAppUrl(texto), "_blank")
   }
 
   // Filtrado de productos

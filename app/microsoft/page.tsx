@@ -1,5 +1,6 @@
 "use client"
 
+import { createWhatsAppUrl } from "@/lib/contact-info"
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import {
@@ -551,7 +552,7 @@ export default function MicrosoftPage() {
               className="border-sky-400/30 text-white hover:bg-sky-500/10 bg-transparent px-8 py-6"
             >
               <a
-                href="https://api.whatsapp.com/send/?phone=5491149988089&text=Hola,%20me%20interesa%20información%20sobre%20Microsoft%20365"
+                href={createWhatsAppUrl("Hola, me interesa información sobre Microsoft 365")}
                 target="_blank"
                 rel="noopener noreferrer"
               >

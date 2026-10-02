@@ -1,5 +1,6 @@
 "use client"
 
+import { createWhatsAppUrl } from "@/lib/contact-info"
 import type React from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -885,7 +886,7 @@ export default function HogarOficinaComercioPage() {
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
               <a
-                href="https://wa.me/5491149988089?text=Hola%20Aidcom%2C%20necesito%20asesoramiento%20para%20elegir%20el%20equipo%20ideal%20para%20mi%20hogar%2Foficina%2Fcomercio."
+                href={createWhatsAppUrl("Hola Aidcom, necesito asesoramiento para elegir el equipo ideal para mi hogar/oficina/comercio.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-3 rounded-2xl border-2 border-emerald-500/50 bg-emerald-500/10 px-10 py-5 font-semibold text-emerald-400 transition-all duration-300 hover:scale-105 hover:border-emerald-500 hover:bg-emerald-500/20"

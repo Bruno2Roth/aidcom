@@ -1,5 +1,6 @@
 "use client"
 
+import { createWhatsAppUrl } from "@/lib/contact-info"
 import type React from "react"
 import Link from "next/link"
 import { ArrowRight, Home, Wifi, Phone, CheckCircle2, DollarSign, Calendar, Shield, MessageCircle } from "lucide-react"
@@ -148,7 +149,7 @@ export default function HogarOficinaComercioPage() {
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://wa.me/5491149988089?text=Hola%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20solar%20para%20hogar%2C%20oficina%20o%20comercio."
+                href={createWhatsAppUrl("Hola, quiero cotizar una solución solar para hogar, oficina o comercio.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(16,185,129,0.4)]"
@@ -238,7 +239,7 @@ export default function HogarOficinaComercioPage() {
                   </div>
                   <div className="pt-6 border-t border-slate-800">
                     <a
-                      href={`https://wa.me/5491149988089?text=${encodeURIComponent(`Hola, quiero cotizar una solución solar: ${solucion.title}.`)}`}
+                      href={createWhatsAppUrl(`Hola, quiero cotizar una solución solar: ${solucion.title}.`)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-500 px-6 py-3 font-semibold text-white transition-colors hover:bg-emerald-600"
@@ -269,7 +270,7 @@ export default function HogarOficinaComercioPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://wa.me/5491149988089?text=Hola%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20solar%20para%20hogar%2C%20oficina%20o%20comercio."
+                href={createWhatsAppUrl("Hola, quiero cotizar una solución solar para hogar, oficina o comercio.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(16,185,129,0.4)]"

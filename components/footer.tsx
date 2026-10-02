@@ -1,3 +1,4 @@
+import { AIDCOM_CONTACT } from "@/lib/contact-info"
 import Link from "next/link"
 import { MapPin, Phone, Mail, Cpu, Sun, Shield, Settings, Clock } from "lucide-react"
 
@@ -96,22 +97,22 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+541149662431"
+                  href={AIDCOM_CONTACT.phoneHref}
                   className="flex items-center gap-3 text-sm text-hero-foreground/70 transition-colors hover:text-primary"
                 >
                   <Phone className="h-4 w-4 text-primary" />
-                  +54 11 4966-2431
+                  {AIDCOM_CONTACT.phoneDisplay}
                 </a>
               </li>
               <li>
                 <a
-                  href="https://api.whatsapp.com/send/?phone=5491149988089&text&type=phone_number&app_absent=0"
+                  href={AIDCOM_CONTACT.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-sm text-hero-foreground/70 transition-colors hover:text-primary"
                 >
                   <Phone className="h-4 w-4 text-primary" />
-                  +54 9 11 4998-8089 (WhatsApp)
+                  {AIDCOM_CONTACT.whatsappDisplay} (WhatsApp)
                 </a>
               </li>
               <li>

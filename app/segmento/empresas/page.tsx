@@ -1,5 +1,6 @@
 "use client"
 
+import { AIDCOM_CONTACT, createWhatsAppUrl } from "@/lib/contact-info"
 import type React from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -585,7 +586,7 @@ export default function EmpresasPage() {
 
             <div className="flex flex-wrap gap-4 justify-center mb-8">
               <a
-                href="https://wa.me/5493517410586?text=Hola!%20Quiero%20información%20sobre%20soluciones%20IT%20para%20empresas"
+                href={createWhatsAppUrl("Hola! Quiero información sobre soluciones IT para empresas")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-violet-500 to-purple-500 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-violet-500/25"
@@ -595,7 +596,7 @@ export default function EmpresasPage() {
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
               <a
-                href="tel:+5493517410586"
+                href={AIDCOM_CONTACT.phoneHref}
                 className="group inline-flex items-center gap-3 rounded-xl border border-white/20 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-white/40 hover:bg-white/10"
               >
                 <Phone className="h-5 w-5" />

@@ -1,5 +1,6 @@
 "use client"
 
+import { AIDCOM_CONTACT } from "@/lib/contact-info"
 import Link from "next/link"
 import { useState, useEffect, useRef } from "react"
 import {
@@ -407,7 +408,7 @@ export function Header() {
 
              
               <a
-                href="https://wa.me/5493518012565"
+                href={AIDCOM_CONTACT.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-5 py-2.5 text-sm font-medium text-emerald-600 transition-all duration-300 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white dark:text-emerald-400 dark:hover:text-white"
@@ -538,7 +539,7 @@ export function Header() {
 
                 <li className="mt-4 border-t border-border pt-4 sticky bottom-0 bg-background pb-2">
                   <a
-                    href="https://wa.me/5493518012565"
+                    href={AIDCOM_CONTACT.whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 px-4 py-3.5 font-semibold text-white shadow-lg shadow-emerald-500/25 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-emerald-500/40"

@@ -1,5 +1,6 @@
 "use client"
 
+import { AIDCOM_CONTACT, createWhatsAppUrl } from "@/lib/contact-info"
 import type React from "react"
 import { useState, useEffect, useRef, type FormEvent } from "react"
 import {
@@ -90,7 +91,7 @@ export default function ContactoPage() {
 *Mensaje:*
 ${formData.mensaje}`
 
-    const url = `https://api.whatsapp.com/send/?phone=5491149988089&text=${encodeURIComponent(texto)}&type=phone_number&app_absent=0`
+    const url = createWhatsAppUrl(texto)
     window.open(url, "_blank", "noopener,noreferrer")
     setSubmitted(true)
   }
@@ -110,7 +111,7 @@ ${formData.mensaje}`
     {
       icon: Phone,
       title: "Teléfonos",
-      description: "Oficina: +54 11 4966-2431 | WhatsApp: +54 9 11 4998-8089",
+      description: `Oficina: ${AIDCOM_CONTACT.phoneDisplay} | WhatsApp: ${AIDCOM_CONTACT.whatsappDisplay}`,
       gradient: "from-blue-500 to-cyan-500",
     },
     {

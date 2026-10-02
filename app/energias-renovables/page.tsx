@@ -1,5 +1,6 @@
 "use client"
 
+import { AIDCOM_CONTACT } from "@/lib/contact-info"
 import type React from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -364,7 +365,7 @@ export default function EnergiasRenovablesPage() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              href="https://wa.me/5491149988089"
+              href={AIDCOM_CONTACT.whatsappHref}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-slate-800 border border-slate-700 text-white font-semibold hover:bg-slate-700 hover:border-slate-600 transition-all"
             >
               Consultar por WhatsApp
