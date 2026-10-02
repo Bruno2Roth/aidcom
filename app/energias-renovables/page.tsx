@@ -43,7 +43,7 @@ const segmentos = [
     title: "Empresas",
     subtitle: "Soluciones fotovoltaicas industriales",
     description:
-      "Sistemas de gran escala para reducir costos operativos y aumentar la sustentabilidad corporativa. Proyectos de alta potencia con ROI garantizado.",
+      "Sistemas de gran escala para reducir costos operativos y aumentar la sustentabilidad corporativa. Proyectos de alta potencia con análisis de retorno de inversión según cada proyecto.",
     icon: Factory,
     color: "violet",
     href: "/energia-solar/empresas",
@@ -52,14 +52,14 @@ const segmentos = [
     borderColor: "border-violet-500/30",
     features: [
       { title: "Alta Potencia", desc: "Instalaciones de 50kW a varios MW", icon: Zap },
-      { title: "ROI Optimizado", desc: "Retorno de inversión en 3-5 años", icon: Shield },
+      { title: "ROI Optimizado", desc: "Evaluación del retorno según consumo y condiciones del proyecto", icon: Shield },
       { title: "Inyección a Red", desc: "Generá ingresos vendiendo energía", icon: Wifi },
     ],
     benefits: [
-      "Reducción de hasta 80% en costos energéticos",
+      "El ahorro depende del consumo y las características de cada instalación",
       "Beneficios fiscales",
       "Imagen sustentable",
-      "Soporte técnico 24/7",
+      "Soporte técnico para clientes con contrato",
     ],
   },
   {
@@ -75,11 +75,11 @@ const segmentos = [
     bgGradient: "from-emerald-500/20 to-cyan-500/20",
     borderColor: "border-emerald-500/30",
     features: [
-      { title: "Ahorro Mensual", desc: "Reducí tu factura de luz hasta 100%", icon: Zap },
-      { title: "Fácil Instalación", desc: "Instalación profesional en días", icon: Battery },
+      { title: "Ahorro Mensual", desc: "El nivel de ahorro depende del consumo y del sistema instalado", icon: Zap },
+      { title: "Fácil Instalación", desc: "Plazos de instalación según las características del proyecto", icon: Battery },
       { title: "Monitoreo Smart", desc: "Controlá todo desde tu celular", icon: Store },
     ],
-    benefits: ["Garantía de 25 años", "Instalación incluida", "Financiación disponible", "App de monitoreo"],
+    benefits: ["Garantías según equipo y fabricante", "Instalación detallada en el presupuesto", "Consultar opciones de financiación", "App de monitoreo"],
   },
 ]
 
