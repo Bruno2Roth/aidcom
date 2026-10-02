@@ -58,17 +58,17 @@ export default function HogarOficinaComercioPage() {
     {
       icon: DollarSign,
       title: "Ahorro Inmediato",
-      description: "Reducí hasta 100% tu factura de luz desde el primer mes de instalación",
+      description: "El ahorro depende del consumo, las tarifas vigentes y el diseño del sistema instalado.",
     },
     {
       icon: Calendar,
       title: "Instalación Rápida",
-      description: "Sistema funcionando en días con instalación profesional incluida",
+      description: "El alcance, el plazo y las tareas de instalación se definen según el proyecto y las condiciones del lugar.",
     },
     {
       icon: Shield,
-      title: "Garantía Total",
-      description: "25 años de garantía en paneles y 10 años en inversores",
+      title: "Garantías de los equipos",
+      description: "Las condiciones y los plazos de garantía dependen del fabricante y de cada componente.",
     },
     {
       icon: Wifi,
@@ -81,9 +81,9 @@ export default function HogarOficinaComercioPage() {
     {
       title: "Para tu Hogar",
       capacity: "3-10kW",
-      description: "Ideal para viviendas unifamiliares. Eliminá tu factura de luz y valorizá tu propiedad.",
+      description: "Sistemas para viviendas unifamiliares, dimensionados según el consumo y las características del lugar.",
       includes: ["6-20 paneles solares", "Inversor inteligente", "App de monitoreo", "Instalación profesional"],
-      price: "Desde $X.XXX.XXX",
+      price: "Consultar presupuesto",
     },
     {
       title: "Para tu Oficina",
@@ -95,8 +95,8 @@ export default function HogarOficinaComercioPage() {
     {
       title: "Para tu Comercio",
       capacity: "15-50kW",
-      description: "Optimizá tu rentabilidad con energía propia. ROI en menos de 5 años.",
-      includes: ["30-100 paneles solares", "Inversores múltiples", "Gestión inteligente", "Mantenimiento incluido"],
+      description: "El retorno se estima según el consumo, las tarifas y el diseño de cada sistema.",
+      includes: ["30-100 paneles solares", "Inversores múltiples", "Gestión inteligente", "Mantenimiento según presupuesto"],
       price: "Desde $X.XXX.XXX",
     },
   ]
@@ -146,8 +146,7 @@ export default function HogarOficinaComercioPage() {
             </h1>
 
             <p className="mt-6 text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
-              Paneles solares para hogares, oficinas y comercios. Reducí hasta 100% tu factura de luz con instalación
-              profesional y financiación disponible.
+              Paneles solares para hogares, oficinas y comercios. Diseñamos cada sistema según el consumo y las características del lugar. Consultá por opciones de financiación y condiciones vigentes.
             </p>
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
@@ -169,10 +168,10 @@ export default function HogarOficinaComercioPage() {
             {/* Stats */}
             <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {[
-                { value: "100%", label: "Ahorro posible" },
-                { value: "25 años", label: "Garantía" },
-                { value: "3-7 días", label: "Instalación" },
-                { value: "Medios de pago", label: "Financiación" },
+                { value: "Según consumo", label: "Ahorro estimado" },
+                { value: "Por fabricante", label: "Garantía de equipos" },
+                { value: "Según proyecto", label: "Plazo de instalación" },
+                { value: "Consultar", label: "Financiación" },
               ].map((stat, i) => (
                 <AnimatedSection key={i} delay={i * 150}>
                   <div className="text-center p-4 rounded-xl bg-slate-900/50 border border-emerald-500/20">
