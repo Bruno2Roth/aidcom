@@ -565,44 +565,6 @@ export default function EmpresasPage() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section
-        ref={statsRef.ref as React.RefObject<HTMLElement>}
-        className="relative px-4 py-20 sm:px-6 lg:px-8 overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-violet-950/20 to-slate-950" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-500/10 rounded-full blur-[150px]" />
-
-        <div className="relative mx-auto max-w-5xl">
-          <div
-            className={`grid grid-cols-2 lg:grid-cols-4 gap-6 ${statsRef.isInView ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"} transition-all duration-1000`}
-          >
-            {[
-              { value: 500, suffix: "+", label: "Empresas Confían", icon: Building2 },
-              { value: 30, suffix: "+", label: "Años de Experiencia", icon: Award },
-              { value: 50, suffix: "+", label: "Técnicos Certificados", icon: Users },
-              { value: 99, suffix: ".9%", label: "Uptime Garantizado", icon: Zap },
-            ].map((stat, index) => {
-              const IconComponent = stat.icon
-              return (
-                <div
-                  key={index}
-                  className="relative rounded-2xl border border-violet-500/20 bg-violet-500/5 p-6 text-center backdrop-blur-sm overflow-hidden group hover:border-violet-500/40 transition-all duration-300"
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <IconComponent className="h-8 w-8 text-violet-400 mx-auto mb-3" />
-                  <div className="text-3xl font-bold text-white mb-1">
-                    <AnimatedCounter end={stat.value} suffix={stat.suffix} />
-                  </div>
-                  <div className="text-sm text-white/50">{stat.label}</div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Final */}
       <section
         ref={ctaRef.ref as React.RefObject<HTMLElement>}
