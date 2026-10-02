@@ -103,10 +103,6 @@ export default function ReparacionesPage() {
 
       <section aria-labelledby="servicios-reparacion" className="px-4 pb-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <h2 id="servicios-reparacion" className="mb-8 text-center text-2xl font-bold sm:text-3xl">
-            Servicios de reparación
-          </h2>
-
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {servicios.map(({ icon: Icon, titulo, detalle }, index) => (
               <article
