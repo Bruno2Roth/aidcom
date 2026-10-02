@@ -278,7 +278,7 @@ export default function ReparacionesPage() {
                   className="border-white/20 text-white hover:bg-white/10 bg-transparent"
                   asChild
                 >
-                  <a href="tel:+5491149662431">
+                  <a href="tel:+541149662431">
                     <Phone className="mr-2 h-5 w-5" />
                     Llamar: (11) 4966-2431
                   </a>
