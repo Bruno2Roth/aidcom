@@ -145,8 +145,8 @@ export default function EmpresasPage() {
     },
     {
       icon: Headphones,
-      title: "Soporte 24/7",
-      desc: "Mesa de ayuda y soporte técnico continuo para garantizar la continuidad de tu negocio.",
+      title: "Soporte especializado",
+      desc: "Mesa de ayuda y soporte técnico según el servicio contratado para acompañar la continuidad de tu negocio.",
       gradient: "from-emerald-500 to-teal-500",
     },
   ]
@@ -218,7 +218,7 @@ export default function EmpresasPage() {
     { step: "01", title: "Diagnóstico", desc: "Analizamos tu infraestructura actual", icon: BarChart3 },
     { step: "02", title: "Propuesta", desc: "Diseñamos la solución ideal", icon: Cpu },
     { step: "03", title: "Implementación", desc: "Ejecutamos con mínimo impacto", icon: Zap },
-    { step: "04", title: "Soporte", desc: "Acompañamiento continuo 24/7", icon: Headphones },
+    { step: "04", title: "Soporte", desc: "Acompañamiento según el servicio contratado", icon: Headphones },
   ]
 
   return (
@@ -289,7 +289,7 @@ export default function EmpresasPage() {
                 </span>
               </h1>
               <p className="mt-6 text-xl text-white/60 max-w-xl leading-relaxed">
-                Infraestructura IT de alta disponibilidad, ciberseguridad avanzada y soporte especializado 24/7 para
+                Infraestructura IT de alta disponibilidad, ciberseguridad avanzada y soporte especializado según el servicio contratado para
                 operaciones críticas. Partner oficial de ManageEngine para Latinoamérica.
               </p>
 
