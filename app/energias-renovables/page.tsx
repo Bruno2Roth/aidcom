@@ -186,24 +186,7 @@ export default function EnergiasRenovablesPage() {
               Soluciones de energía inteligentes para un mundo sustentable
             </p>
 
-            {/* Stats */}
-            <div className="mt-12 grid grid-cols-3 gap-8 max-w-xl mx-auto">
-              {[
-                { value: "25+", label: "Años garantía" },
-                { value: "100%", label: "Ahorro posible" },
-                { value: "0", label: "Emisiones CO2" },
-              ].map((stat, i) => (
-                <AnimatedSection key={i} delay={i * 150}>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                      {stat.value}
-                    </div>
-                    <div className="text-sm text-slate-500 mt-1">{stat.label}</div>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </AnimatedSection>
+                      </AnimatedSection>
         </div>
       </section>
 
