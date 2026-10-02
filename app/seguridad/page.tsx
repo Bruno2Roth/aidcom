@@ -186,7 +186,7 @@ export default function SeguridadPage() {
   }, [])
 
   return (
-    <main className="overflow-hidden bg-[#030712]">
+    <div className="overflow-hidden bg-[#030712]">
       {/* Hero Section */}
       <section
         ref={heroRef}
@@ -487,6 +487,6 @@ export default function SeguridadPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

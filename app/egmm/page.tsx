@@ -254,7 +254,7 @@ export default function EGMMPage() {
   }, [])
 
   return (
-    <main className="overflow-hidden bg-[#030712]">
+    <div className="overflow-hidden bg-[#030712]">
       {/* Hero Section */}
       <section
         ref={heroRef}
@@ -670,6 +670,6 @@ export default function EGMMPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

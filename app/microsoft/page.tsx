@@ -178,7 +178,7 @@ export default function MicrosoftPage() {
   }
 
   return (
-    <main className="overflow-hidden bg-[#030712]">
+    <div className="overflow-hidden bg-[#030712]">
       {/* Hero Section - Same style as ESET */}
       <section
         ref={heroRef}
@@ -562,6 +562,6 @@ export default function MicrosoftPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

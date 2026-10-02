@@ -54,7 +54,7 @@ export default function ReparacionesPage() {
   }, [])
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#030712] text-white">
+    <div className="min-h-screen overflow-hidden bg-[#030712] text-white">
       <section className="relative px-4 pb-14 pt-24 sm:px-6 sm:pb-20 lg:px-8">
         <div className="pointer-events-none absolute inset-0">
           <div
@@ -122,6 +122,6 @@ export default function ReparacionesPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

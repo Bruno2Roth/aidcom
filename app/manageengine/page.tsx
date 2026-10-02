@@ -236,7 +236,7 @@ export default function ManageEnginePage() {
   }, [])
 
   return (
-    <main className="overflow-hidden bg-[#030712]">
+    <div className="overflow-hidden bg-[#030712]">
       {/* Hero Section */}
       <section
         ref={heroRef}
@@ -472,6 +472,6 @@ export default function ManageEnginePage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

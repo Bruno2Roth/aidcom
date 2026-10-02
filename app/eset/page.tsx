@@ -195,7 +195,7 @@ export default function ESETPage() {
   }, [])
 
   return (
-    <main className="overflow-hidden bg-[#030712]">
+    <div className="overflow-hidden bg-[#030712]">
       {/* Hero Section */}
       <section
         ref={heroRef}
@@ -587,6 +587,6 @@ export default function ESETPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
