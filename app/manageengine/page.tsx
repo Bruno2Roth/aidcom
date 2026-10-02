@@ -186,11 +186,6 @@ const domainContent: Record<string, { title: string; description: string; produc
   },
 }
 
-const stats = [
-  { value: "100+", label: "Clientes satisfechos" },
-  { value: "24/7", label: "Soporte disponible" },
-]
-
 function FloatingParticles({ count = 30, color = "red" }: { count?: number; color?: string }) {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -323,22 +318,7 @@ export default function ManageEnginePage() {
             Soluciones integrales de gestión y seguridad TI para empresas de todos los tamaños
           </p>
 
-          {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            {stats.map((stat, i) => (
-              <div
-                key={i}
-                className="group px-6 py-4 rounded-2xl bg-white/[0.03] border border-red-500/20 backdrop-blur-sm transition-all duration-500 hover:bg-red-500/10 hover:border-red-400/40 hover:scale-105"
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-                  {stat.value}
-                </p>
-                <p className="text-sm text-white/40">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contacto"

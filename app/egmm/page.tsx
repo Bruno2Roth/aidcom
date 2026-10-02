@@ -231,13 +231,6 @@ const faqs = [
   },
 ]
 
-const benefits = [
-  { icon: Zap, title: "Productividad", description: "Gestión integral en un solo sistema" },
-  { icon: Shield, title: "Seguridad", description: "Respaldos y auditoría completa" },
-  { icon: Award, title: "+25 Años", description: "Experiencia en gestión empresarial" },
-  { icon: Clock, title: "24/7", description: "Soporte técnico continuo" },
-]
-
 export default function EGMMPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [isVisible, setIsVisible] = useState(false)
@@ -368,24 +361,7 @@ export default function EGMMPage() {
             </Button>
           </div>
 
-          {/* Stats grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {benefits.map((item, i) => (
-              <div
-                key={i}
-                className="flex flex-col items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/10"
-              >
-                <div className="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center">
-                  <item.icon className="h-5 w-5 text-indigo-400" />
-                </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-white text-sm">{item.title}</h3>
-                  <p className="text-xs text-white/40">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+                  </div>
       </section>
 
       {/* Características Generales */}

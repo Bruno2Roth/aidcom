@@ -15,61 +15,17 @@ import {
   ArrowRight,
   ChevronDown,
   Star,
-  Zap,
-  Globe,
   Server,
-  Database,
   Headphones,
   Clock,
   TrendingUp,
   Award,
   ExternalLink,
-  ShieldCheck,
+  ShieldCheck
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useScrollNavigation } from "@/hooks/use-scroll-navigation"
 
-function AnimatedCounter({ end, suffix = "", duration = 2000 }: { end: number; suffix?: string; duration?: number }) {
-  const [count, setCount] = useState(0)
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLSpanElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.5 },
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [])
-
-  useEffect(() => {
-    if (!isVisible) return
-    let start = 0
-    const increment = end / (duration / 16)
-    const timer = setInterval(() => {
-      start += increment
-      if (start >= end) {
-        setCount(end)
-        clearInterval(timer)
-      } else {
-        setCount(Math.floor(start))
-      }
-    }, 16)
-    return () => clearInterval(timer)
-  }, [isVisible, end, duration])
-
-  return (
-    <span ref={ref}>
-      {count}
-      {suffix}
-    </span>
-  )
-}
 
 const products = [
   {
@@ -169,29 +125,6 @@ const segments = [
     description: "Licenciamiento académico para instituciones educativas.",
     href: "/contacto",
     stats: "Precios especiales",
-  },
-]
-
-const benefits = [
-  {
-    icon: Zap,
-    title: "Productividad",
-    description: "Acceso desde cualquier lugar",
-  },
-  {
-    icon: Shield,
-    title: "Seguridad",
-    description: "Defender integrado",
-  },
-  {
-    icon: Globe,
-    title: "Colaboración",
-    description: "Teams hasta 10,000 usuarios",
-  },
-  {
-    icon: Database,
-    title: "1TB Storage",
-    description: "OneDrive por usuario",
   },
 ]
 
@@ -381,24 +314,7 @@ export default function MicrosoftPage() {
             </Button>
           </div>
 
-          {/* Stats grid - same style as ESET */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {benefits.map((item, i) => (
-              <div
-                key={i}
-                className="flex flex-col items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/10"
-              >
-                <div className="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center">
-                  <item.icon className="h-5 w-5 text-sky-400" />
-                </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-white text-sm">{item.title}</h3>
-                  <p className="text-xs text-white/40">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+                  </div>
       </section>
 
       {/* Products Grid */}
@@ -569,22 +485,7 @@ export default function MicrosoftPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { value: 500, suffix: "+", label: "Empresas" },
-                { value: 15000, suffix: "+", label: "Licencias" },
-                { value: 98, suffix: "%", label: "Satisfacción" },
-                { value: 4, suffix: "h", label: "Respuesta" },
-              ].map((stat, index) => (
-                <div key={index} className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
-                  <div className="text-3xl font-bold text-sky-400 mb-1">
-                    <AnimatedCounter end={stat.value} suffix={stat.suffix} />
-                  </div>
-                  <div className="text-xs text-white/40">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+                      </div>
         </div>
       </section>
 

@@ -127,29 +127,6 @@ const solutions = [
   },
 ]
 
-const benefits = [
-  {
-    icon: Zap,
-    title: "Mínimo Impacto",
-    description: "Bajo consumo de recursos del sistema",
-  },
-  {
-    icon: Award,
-    title: "+30 Años",
-    description: "Experiencia en ciberseguridad",
-  },
-  {
-    icon: Globe,
-    title: "500K+ Clientes",
-    description: "Empresas en 178 países",
-  },
-  {
-    icon: Database,
-    title: "13 Centros I+D",
-    description: "Investigación global 24/7",
-  },
-]
-
 const segments = [
   {
     icon: Users,
@@ -313,23 +290,7 @@ export default function ESETPage() {
             ESET PROTECT, líder mundial en ciberseguridad.
           </p>
 
-          {/* Benefits */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto">
-            {benefits.map((benefit, i) => (
-              <div
-                key={i}
-                className="group px-4 py-4 rounded-2xl bg-white/[0.03] border border-lime-500/20 backdrop-blur-sm transition-all duration-500 hover:bg-lime-500/10 hover:border-lime-400/40 hover:scale-105"
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                <benefit.icon className="w-6 h-6 text-lime-400 mx-auto mb-2" />
-                <p className="text-base lg:text-lg font-bold bg-gradient-to-r from-lime-400 to-green-300 bg-clip-text text-transparent">
-                  {benefit.title}
-                </p>
-                <p className="text-xs lg:text-sm text-white/40">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contacto"
