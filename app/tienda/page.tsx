@@ -299,7 +299,11 @@ export default function TiendaPage() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
+        <div
+          className={`relative z-10 text-center px-4 max-w-6xl mx-auto transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 mb-6 backdrop-blur-sm">
             <ShoppingBag className="w-4 h-4 text-amber-400" />
             <span className="text-sm font-medium text-amber-300">Tienda Oficial Aidcom</span>
