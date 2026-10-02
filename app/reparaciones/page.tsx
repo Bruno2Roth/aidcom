@@ -112,7 +112,7 @@ export default function ReparacionesPage() {
               <article
                 key={titulo}
                 style={{ transitionDelay: isVisible ? `${index * 80}ms` : "0ms" }}
-                className={`rounded-2xl border border-orange-500/20 bg-white/[0.03] p-6 transition-all duration-500 ease-out hover:-translate-y-1 hover:border-orange-400/40 hover:bg-orange-500/[0.06] motion-reduce:transform-none motion-reduce:transition-none ${
+                className={`group rounded-2xl border border-orange-500/20 bg-white/[0.03] p-6 transition-all duration-500 ease-out hover:-translate-y-1 hover:border-orange-400/40 hover:bg-orange-500/[0.06] motion-reduce:transform-none motion-reduce:transition-none ${
                   isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                 }`}
               >
