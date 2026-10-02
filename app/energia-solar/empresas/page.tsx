@@ -57,13 +57,13 @@ export default function EmpresasEnergiaSolarPage() {
   const beneficios = [
     {
       icon: TrendingUp,
-      title: "ROI Garantizado",
-      description: "Retorno de inversión en 3-5 años con ahorros de hasta 80% en costos energéticos",
+      title: "Evaluación económica del proyecto",
+      description: "Estimamos el ahorro y el retorno según el consumo, las tarifas y el diseño de cada sistema.",
     },
     {
       icon: Shield,
       title: "Estabilidad Energética",
-      description: "Protección contra aumentos tarifarios y garantía de suministro continuo",
+      description: "La configuración y el nivel de autonomía dependen del sistema elegido y las condiciones del sitio.",
     },
     {
       icon: Award,
@@ -73,7 +73,7 @@ export default function EmpresasEnergiaSolarPage() {
     {
       icon: Users,
       title: "Soporte Dedicado",
-      description: "Equipo técnico especializado disponible 24/7 para tu empresa",
+      description: "Acompañamiento técnico de acuerdo con el alcance definido para cada proyecto.",
     },
   ]
 
@@ -143,8 +143,7 @@ export default function EmpresasEnergiaSolarPage() {
             </h1>
 
             <p className="mt-6 text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
-              Reducí hasta 80% tus costos energéticos con sistemas fotovoltaicos de alta potencia. ROI garantizado en
-              3-5 años con soporte técnico especializado.
+              Diseñamos sistemas fotovoltaicos de alta potencia. El ahorro y el retorno se estiman según el consumo y las condiciones de cada proyecto.
             </p>
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
@@ -166,10 +165,10 @@ export default function EmpresasEnergiaSolarPage() {
             {/* Stats */}
             <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {[
-                { value: "50kW-2MW", label: "Capacidad" },
-                { value: "3-5 años", label: "ROI" },
-                { value: "80%", label: "Ahorro" },
-                { value: "24/7", label: "Soporte" },
+                { value: "A medida", label: "Diseño del sistema" },
+                { value: "Según consumo", label: "Ahorro estimado" },
+                { value: "Según proyecto", label: "Retorno de inversión" },
+                { value: "Según contrato", label: "Soporte técnico" },
               ].map((stat, i) => (
                 <AnimatedSection key={i} delay={i * 150}>
                   <div className="text-center p-4 rounded-xl bg-slate-900/50 border border-violet-500/20">
