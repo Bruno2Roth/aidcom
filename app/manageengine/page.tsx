@@ -139,13 +139,13 @@ const domainContent: Record<string, { title: string; description: string; produc
   identidades: {
     title: "Gestión de Identidades y Accesos (IAM)",
     description:
-      "Soluciones completas para administrar identidades, controlar accesos y garantizar el cumplimiento de políticas de seguridad en toda la organización.",
+      "Herramientas para administrar identidades, controlar accesos y gestionar políticas de seguridad en la organización.",
     products: domains.find((d) => d.id === "identidades")?.products || [],
   },
   servicios: {
     title: "Gestión de Servicios Empresariales (ITSM)",
     description:
-      "Plataformas de mesa de ayuda y gestión de servicios que mejoran la eficiencia operativa y la satisfacción del usuario final.",
+      "Plataformas de mesa de ayuda y gestión de servicios para organizar solicitudes y flujos de trabajo.",
     products: domains.find((d) => d.id === "servicios")?.products || [],
   },
   endpoints: {
@@ -157,7 +157,7 @@ const domainContent: Record<string, { title: string; description: string; produc
   operaciones: {
     title: "Gestión de Operaciones de TI (ITOM)",
     description:
-      "Monitoreo proactivo y gestión de la infraestructura de TI para garantizar disponibilidad, rendimiento y continuidad del negocio.",
+      "Herramientas de monitoreo y gestión para observar disponibilidad y rendimiento de la infraestructura TI.",
     products: domains.find((d) => d.id === "operaciones")?.products || [],
   },
   seguridad: {
@@ -305,7 +305,7 @@ export default function ManageEnginePage() {
         >
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-400/30 backdrop-blur-sm mb-8">
             <Sparkles className="w-4 h-4 text-red-400" />
-            <span className="text-sm font-medium text-red-300">Partner Oficial en Argentina</span>
+            <span className="text-sm font-medium text-red-300">Soluciones ManageEngine</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight leading-none">
@@ -459,13 +459,13 @@ export default function ManageEnginePage() {
                 ¿Listo para optimizar tu gestión de TI?
               </h2>
               <p className="text-white/50 mb-8 max-w-xl mx-auto">
-                Contactanos para una demostración gratuita y descubrí cómo ManageEngine puede transformar tu operación.
+                Contactanos para solicitar una demostración y revisar qué solución de ManageEngine se ajusta a tu operación.
               </p>
               <Link
                 href="/contacto"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-rose-500 rounded-xl font-semibold text-white transition-all duration-500 hover:scale-105 hover:shadow-[0_0_50px_rgba(239,68,68,0.5)]"
               >
-                Solicitar demo gratuita
+                Solicitar demo
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>

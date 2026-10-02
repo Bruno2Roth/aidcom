@@ -117,7 +117,7 @@ const segments = [
     title: "Empresas Medianas",
     description: "Microsoft 365 Enterprise con seguridad y cumplimiento.",
     href: "/contacto",
-    stats: "Escalable sin límites",
+    stats: "Opciones escalables según el plan",
   },
   {
     icon: GraduationCap,
@@ -147,7 +147,7 @@ const faqs = [
   {
     question: "¿Ofrecen soporte técnico para productos Microsoft?",
     answer:
-      "Sí, como partners de Microsoft brindamos soporte técnico completo: configuración, resolución de problemas, actualizaciones y optimización de la plataforma.",
+      "Podemos orientar sobre configuración, resolución de problemas y uso de los servicios Microsoft, según el alcance acordado.",
   },
 ]
 
@@ -269,7 +269,7 @@ export default function MicrosoftPage() {
         <div
           className={`relative z-10 max-w-6xl mx-auto text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
-          {/* Partner badge */}
+          {/* Brand badge */}
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-sky-500/20 to-blue-500/20 border border-sky-400/30 backdrop-blur-sm mb-8">
             <ShieldCheck className="w-4 h-4 text-sky-400" />
             <span className="text-sm font-medium text-sky-300">Partner Autorizado Microsoft</span>
@@ -461,19 +461,19 @@ export default function MicrosoftPage() {
                 ¿Por qué elegirnos?
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Partner Oficial con +20 años de experiencia
+                Servicios Microsoft para empresas
               </h2>
               <p className="text-white/40 mb-8 leading-relaxed">
-                Como partners autorizados de Microsoft en Argentina, ofrecemos licenciamiento oficial, soporte técnico
-                especializado y precios competitivos.
+                Consultá opciones de licenciamiento, configuración y soporte para Microsoft 365 y Azure según las condiciones
+                vigentes.
               </p>
 
               <div className="space-y-4">
                 {[
-                  { icon: Headphones, text: "Soporte técnico local 24/7" },
-                  { icon: TrendingUp, text: "Consultoría gratuita" },
-                  { icon: Clock, text: "Activación inmediata" },
-                  { icon: Shield, text: "Productos oficiales" },
+                  { icon: Headphones, text: "Soporte técnico según el servicio" },
+                  { icon: TrendingUp, text: "Asesoramiento sobre soluciones disponibles" },
+                  { icon: Clock, text: "Orientación para la activación" },
+                  { icon: Shield, text: "Condiciones según licenciamiento" },
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center">

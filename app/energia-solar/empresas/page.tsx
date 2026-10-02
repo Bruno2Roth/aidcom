@@ -254,7 +254,7 @@ export default function EmpresasEnergiaSolarPage() {
             </h2>
 
             <p className="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
-              Contactanos hoy para una evaluación técnica gratuita y descubrí cuánto puede ahorrar tu empresa.
+              Contactanos para evaluar el consumo y las condiciones de tu proyecto y preparar una propuesta.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

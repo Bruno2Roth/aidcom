@@ -321,10 +321,8 @@ export default function TiendaPage() {
             Hardware, software y soluciones tecnologícas para impulsar tu empresa
           </p>
           <p className="text-base text-white/60 mb-6 max-w-2xl mx-auto">
-            Notebooks, computadoras, servidores, equipamiento de red, perifericos y energia solar.
-            <br />
-            <span className="text-amber-400 font-semibold">Mas de 500 productos</span> con entrega en 24hs y garantía
-            oficial.
+            Notebooks, computadoras, servidores, equipamiento de red, periféricos y energía solar. Las condiciones de
+            entrega, pago y garantía dependen de cada producto.
           </p>
 
           {/* CTA Buttons */}
@@ -346,35 +344,7 @@ export default function TiendaPage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
-            <div className="group flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-amber-500/30 transition-all">
-              <div className="p-2 rounded-lg bg-amber-500/10">
-                <Truck className="w-5 h-5 text-amber-400" />
-              </div>
-              <div className="text-left">
-                <p className="text-xs text-white/50">Envío</p>
-                <p className="text-sm font-semibold text-white/90">A todo el país</p>
-              </div>
-            </div>
-            <div className="group flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-amber-500/30 transition-all">
-              <div className="p-2 rounded-lg bg-amber-500/10">
-                <Shield className="w-5 h-5 text-amber-400" />
-              </div>
-              <div className="text-left">
-                <p className="text-xs text-white/50">Garantía oficial</p>
-                <p className="text-sm font-semibold text-white/90">Todos los productos</p>
-              </div>
-            </div>
-            <div className="group flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-amber-500/30 transition-all">
-              <div className="p-2 rounded-lg bg-amber-500/10">
-                <CreditCard className="w-5 h-5 text-amber-400" />
-              </div>
-              <div className="text-left">
-                <p className="text-xs text-white/50">Medios de pago</p>
-                <p className="text-sm font-semibold text-white/90">Todas las tarjetas</p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 
@@ -774,7 +744,7 @@ export default function TiendaPage() {
                 <div className="mt-4 p-3 rounded-lg bg-[#f8f9fb] border border-[#e3e8ee]">
                   <div className="flex items-center gap-2 text-[#666] text-sm">
                     <Truck className="w-4 h-4" />
-                    <span>Llega en 24 a 48 horas</span>
+                    <span>Consultar plazo de entrega</span>
                   </div>
                 </div>
 

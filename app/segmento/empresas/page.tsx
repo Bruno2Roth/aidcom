@@ -145,8 +145,8 @@ export default function EmpresasPage() {
     },
     {
       icon: Headphones,
-      title: "Soporte 24/7",
-      desc: "Mesa de ayuda y soporte técnico continuo para garantizar la continuidad de tu negocio.",
+      title: "Soporte técnico",
+      desc: "Mesa de ayuda y asistencia técnica según el alcance acordado para cada servicio.",
       gradient: "from-emerald-500 to-teal-500",
     },
   ]
@@ -184,7 +184,7 @@ export default function EmpresasPage() {
       icon: Factory,
       title: "Industria",
       desc: "Automatización, control de procesos y sistemas SCADA para plantas industriales.",
-      features: ["Redes industriales", "Servidores críticos", "Backup 24/7"],
+      features: ["Redes industriales", "Servidores críticos", "Respaldos planificados"],
       gradient: "from-orange-500 to-amber-600",
       image: "/industrial-factory-tech.jpg",
     },
@@ -200,7 +200,7 @@ export default function EmpresasPage() {
       icon: Stethoscope,
       title: "Salud",
       desc: "Sistemas de historia clínica, conectividad hospitalaria y telemedicina.",
-      features: ["HIPAA compliant", "Redes seguras", "Backup médico"],
+      features: ["Protección de información sensible", "Redes seguras", "Backup médico"],
       gradient: "from-sky-500 to-blue-600",
       image: "/healthcare-technology.jpg",
     },
@@ -218,7 +218,7 @@ export default function EmpresasPage() {
     { step: "01", title: "Diagnóstico", desc: "Analizamos tu infraestructura actual", icon: BarChart3 },
     { step: "02", title: "Propuesta", desc: "Diseñamos la solución ideal", icon: Cpu },
     { step: "03", title: "Implementación", desc: "Ejecutamos con mínimo impacto", icon: Zap },
-    { step: "04", title: "Soporte", desc: "Acompañamiento continuo 24/7", icon: Headphones },
+    { step: "04", title: "Soporte", desc: "Acompañamiento según el alcance acordado", icon: Headphones },
   ]
 
   return (
@@ -289,8 +289,8 @@ export default function EmpresasPage() {
                 </span>
               </h1>
               <p className="mt-6 text-xl text-white/60 max-w-xl leading-relaxed">
-                Infraestructura IT de alta disponibilidad, ciberseguridad avanzada y soporte especializado 24/7 para
-                operaciones críticas. Partner oficial de ManageEngine para Latinoamérica.
+                Infraestructura IT, seguridad informática y servicios en la nube para organizaciones. Evaluamos cada entorno
+                y definimos el alcance de trabajo según las necesidades de la operación.
               </p>
 
               
@@ -345,8 +345,8 @@ export default function EmpresasPage() {
                     <CheckCircle className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-white font-semibold text-sm">Partner Oficial</p>
-                    <p className="text-white/60 text-xs">ManageEngine LATAM</p>
+                    <p className="text-white font-semibold text-sm">ManageEngine</p>
+                    <p className="text-white/60 text-xs">Gestión de servicios IT</p>
                   </div>
                 </div>
               </div>
@@ -613,22 +613,7 @@ export default function EmpresasPage() {
               </a>
             </div>
 
-            {/* Badges de confianza */}
-            <div className="flex flex-wrap justify-center gap-4">
-              {[
-                { icon: Clock, text: "Respuesta en 24hs" },
-                { icon: CheckCircle, text: "Sin compromiso" },
-                { icon: Award, text: "+30 años de experiencia" },
-              ].map((badge, i) => {
-                const IconComponent = badge.icon
-                return (
-                  <div key={i} className="flex items-center gap-2 text-sm text-white/50">
-                    <IconComponent className="h-4 w-4 text-violet-400" />
-                    {badge.text}
-                  </div>
-                )
-              })}
-            </div>
+
           </div>
         </div>
       </section>

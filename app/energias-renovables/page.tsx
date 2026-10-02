@@ -172,7 +172,7 @@ export default function EnergiasRenovablesPage() {
           <AnimatedSection className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-8">
               <Sun className="w-4 h-4" />
-              <span>Partner Oficial Huawei FusionSolar</span>
+              <span>Tecnología Huawei FusionSolar</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
@@ -296,7 +296,7 @@ export default function EnergiasRenovablesPage() {
         </div>
       </section>
 
-      {/* Huawei Partner Section */}
+      {/* Huawei FusionSolar Section */}
       <section className="relative px-4 py-20 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-amber-950/10 to-slate-950" />
 
@@ -311,10 +311,10 @@ export default function EnergiasRenovablesPage() {
                 className="object-contain"
               />
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">Partner Oficial Huawei FusionSolar</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">Soluciones con Huawei FusionSolar</h3>
             <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-              Más de 30 años de experiencia en tecnologías digitales. Soluciones fotovoltaicas inteligentes con garantía
-              oficial y soporte técnico especializado.
+              Soluciones fotovoltaicas para distintos tipos de proyectos. Las condiciones de equipamiento, instalación y
+              garantía se detallan en cada presupuesto.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               {["Residential Smart PV", "Commercial Smart PV", "Utility-Scale Solutions"].map((item, i) => (
@@ -348,11 +348,11 @@ export default function EnergiasRenovablesPage() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Empezá a ahorrar con energías renovables
+            Evaluemos tu proyecto de energía solar
           </h2>
 
           <p className="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
-            Contactanos hoy para una evaluación gratuita de tu proyecto y descubrí cuánto podés ahorrar.
+            Contanos qué espacio querés abastecer y coordinamos una evaluación según el alcance del proyecto.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -102,12 +102,6 @@ ${formData.mensaje}`
 
   const contactInfo = [
     {
-      icon: Clock,
-      title: "Horario de Atención",
-      description: "Lunes a Viernes de 9:00 a 18:00 hs. Respondemos en un plazo máximo de 24 horas hábiles.",
-      gradient: "from-amber-500 to-orange-500",
-    },
-    {
       icon: MapPin,
       title: "Dirección",
       description: "Av. Paraná 552, Piso 7, oficina 74°, Ciudad Autónoma de Buenos Aires, Argentina",
@@ -196,28 +190,10 @@ ${formData.mensaje}`
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-400">
-              Nuestro equipo de expertos está listo para responder tus consultas y brindarte la mejor solución para tu
-              empresa.
+              Enviá tu consulta e indicá qué servicio o producto te interesa para orientarnos mejor.
             </p>
 
-            {/* Quick stats */}
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-8">
-              {[
-                { icon: Zap, label: "Respuesta en 24hs", value: "Garantizada" },
-                { icon: MessageSquare, label: "Soporte", value: "Personalizado" },
-                { icon: CheckCircle2, label: "Satisfacción", value: "100%" },
-              ].map((stat, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm">
-                    <stat.icon className="h-5 w-5 text-blue-400" />
-                  </div>
-                  <div className="text-left">
-                    <p className="text-xs text-gray-500">{stat.label}</p>
-                    <p className="font-semibold text-white">{stat.value}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+
           </div>
         </div>
       </section>

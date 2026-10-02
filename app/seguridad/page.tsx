@@ -86,7 +86,7 @@ const categoryContent: Record<string, { title: string; description: string; feat
   identidades: {
     title: "Gestión de Identidades",
     description:
-      "Control de acceso y autenticación para garantizar que solo usuarios autorizados accedan a los recursos de la empresa.",
+      "Control de acceso y autenticación para gestionar permisos y reducir accesos no autorizados a los recursos de la empresa.",
     features: [
       "Autenticación multifactor (MFA)",
       "Single Sign-On (SSO)",
@@ -124,7 +124,7 @@ const categoryContent: Record<string, { title: string; description: string; feat
   cloud: {
     title: "Seguridad en la Nube",
     description:
-      "Protección para infraestructuras cloud y aplicaciones SaaS, garantizando la seguridad de sus datos en cualquier lugar.",
+      "Herramientas de protección para infraestructuras cloud y aplicaciones SaaS, configuradas según las necesidades de la organización.",
     features: [
       "Protección para Microsoft 365 y Google Workspace",
       "Seguridad para AWS, Azure y GCP",
@@ -264,7 +264,7 @@ export default function SeguridadPage() {
         >
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-400/30 backdrop-blur-sm mb-8">
             <ShieldCheck className="w-4 h-4 text-blue-400" />
-            <span className="text-sm font-medium text-blue-300">Partner Oficial ESET & ManageEngine</span>
+            <span className="text-sm font-medium text-blue-300">Tecnologías ESET y ManageEngine</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
@@ -474,13 +474,13 @@ export default function SeguridadPage() {
             <div className="relative">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">¿Listo para proteger tu empresa?</h2>
               <p className="text-white/50 mb-8 max-w-xl mx-auto">
-                Contactanos para una evaluación gratuita de seguridad y descubrí cómo podemos ayudarte.
+                Contactanos para consultar una evaluación de seguridad y definir el alcance de lo que necesitás.
               </p>
               <Link
                 href="/contacto"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl font-semibold text-white transition-all duration-500 hover:scale-105 hover:shadow-[0_0_50px_rgba(59,130,246,0.5)]"
               >
-                Solicitar evaluación gratuita
+                Consultar evaluación
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>

@@ -40,14 +40,14 @@ const categoryContent: Record<string, { title: string; description: string; feat
   mantenimiento: {
     title: "Mantenimiento Informático",
     description:
-      "Garantizamos que todos los equipos de tu empresa funcionen de manera óptima y sin interrupciones, con planes personalizados de mantenimiento preventivo y correctivo.",
+      "Planes de mantenimiento preventivo y correctivo para los equipos de tu empresa, según el alcance acordado.",
     features: [
       "Limpieza de hardware y optimización de software",
       "Actualización de sistemas operativos y drivers",
       "Diagnóstico y reemplazo de componentes",
       "Recuperación de datos en caso de fallas",
       "Planes de mantenimiento mensuales y anuales",
-      "Tiempo de respuesta garantizado",
+      "Modalidad de atención definida según cada servicio",
     ],
   },
   redes: {
@@ -92,7 +92,7 @@ const categoryContent: Record<string, { title: string; description: string; feat
   backup: {
     title: "Backup y Recuperación",
     description:
-      "Soluciones robustas de respaldo que garantizan la protección y recuperación rápida de tu información crítica.",
+      "Opciones de respaldo y recuperación adaptadas a la infraestructura y los requisitos de tu organización.",
     features: [
       "Backup local en dispositivos NAS",
       "Backup en la nube con encriptación",
@@ -145,7 +145,7 @@ const products = [
   { icon: Shield, title: "Seguridad", description: "Protección integral", gradient: "from-rose-500 to-pink-500" },
   { icon: Cloud, title: "Cloud", description: "Soluciones en la nube", gradient: "from-sky-500 to-blue-500" },
   { icon: Laptop, title: "Notebooks", description: "Movilidad empresarial", gradient: "from-orange-500 to-amber-500" },
-  { icon: Settings, title: "Soporte", description: "Asistencia técnica 24/7", gradient: "from-teal-500 to-cyan-500" },
+  { icon: Settings, title: "Soporte", description: "Atención según el alcance del servicio", gradient: "from-teal-500 to-cyan-500" },
 ]
 
 export default function ServiciosInformaticosPage() {
@@ -261,8 +261,8 @@ export default function ServiciosInformaticosPage() {
           </h1>
 
           <p className="text-xl md:text-2xl text-white/50 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Equipo de profesionales certificados en reparación, mantenimiento y soporte de equipos informáticos para
-            empresas y particulares.
+            Mantenimiento, redes, servidores, seguridad y copias de respaldo para empresas y particulares. Elegí un servicio
+            para consultar su alcance.
           </p>
 
           
@@ -345,8 +345,7 @@ export default function ServiciosInformaticosPage() {
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-3">Bienvenido a Soporte Técnico</h3>
                     <p className="text-white/40 max-w-md">
-                      Más de 30 años brindando soluciones tecnológicas integrales. Selecciona un servicio del menú para
-                      conocer más.
+                      Seleccioná un servicio del menú para conocer las tareas incluidas y consultar su alcance.
                     </p>
                   </div>
                 ) : (
@@ -412,55 +411,6 @@ export default function ServiciosInformaticosPage() {
 
                 <h3 className="relative text-lg font-bold text-white mb-2">{product.title}</h3>
                 <p className="relative text-sm text-white/50">{product.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { icon: Zap, title: "Respuesta Rápida", description: "Atención inmediata garantizada" },
-              { icon: Globe, title: "Cobertura Total", description: "Servicio en todo el país" },
-              { icon: Headphones, title: "Soporte 24/7", description: "Asistencia técnica continua" },
-              { icon: Lock, title: "Seguridad", description: "Protección de datos certificada" },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="group text-center p-8 rounded-2xl bg-white/[0.02] border border-orange-500/10 transition-all duration-500 hover:bg-orange-500/10 hover:border-orange-400/30 hover:-translate-y-1"
-              >
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500/20 to-amber-500/20 mb-4 group-hover:scale-110 transition-transform duration-500">
-                  <feature.icon className="w-7 h-7 text-orange-400" />
-                </div>
-                <h3 className="relative text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="relative text-sm text-white/40">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Partners Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-y border-orange-500/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Trabajamos con las mejores marcas</h2>
-            <p className="text-white/40">Partners tecnológicos de primer nivel</p>
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
-            {["Adobe", "HP", "Microsoft", "ESET", "Manage Engine", "Ubiquiti", "Canon", "Lenovo"].map((brand, index) => (
-              <div
-                key={brand}
-                className="group px-6 py-3 rounded-lg bg-white/[0.02] border border-orange-500/10 transition-all duration-300 hover:bg-orange-500/10 hover:border-orange-400/30 hover:scale-105"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <span className="text-lg font-semibold text-white/40 group-hover:text-white/80 transition-colors">
-                  {brand}
-                </span>
               </div>
             ))}
           </div>

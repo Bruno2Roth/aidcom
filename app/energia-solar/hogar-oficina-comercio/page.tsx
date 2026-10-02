@@ -57,12 +57,12 @@ export default function HogarOficinaComercioPage() {
   const beneficios = [
     {
       icon: DollarSign,
-      title: "Ahorro Inmediato",
+      title: "Ahorro según el proyecto",
       description: "El ahorro depende del consumo, las tarifas vigentes y el diseño del sistema instalado.",
     },
     {
       icon: Calendar,
-      title: "Instalación Rápida",
+      title: "Plan de instalación",
       description: "El alcance, el plazo y las tareas de instalación se definen según el proyecto y las condiciones del lugar.",
     },
     {
@@ -148,10 +148,12 @@ export default function HogarOficinaComercioPage() {
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contacto"
+                href="https://wa.me/5491149988089?text=Hola%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20solar%20para%20hogar%2C%20oficina%20o%20comercio."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(16,185,129,0.4)]"
               >
-                <span>Calcular Mi Ahorro</span>
+                <span>Cotizar por WhatsApp</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -259,19 +261,21 @@ export default function HogarOficinaComercioPage() {
 
         <AnimatedSection className="relative mx-auto max-w-4xl text-center z-10">
           <div className="p-12 rounded-3xl bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 border border-emerald-500/30">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Empezá a ahorrar hoy mismo</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Hablemos de tu proyecto solar</h2>
 
             <p className="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
-              Calculá tu ahorro y descubrí cuánto podés dejar de pagar en energía eléctrica.
+              Contanos el tipo de espacio y el consumo estimado para preparar una cotización acorde al proyecto.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contacto"
+                href="https://wa.me/5491149988089?text=Hola%2C%20quiero%20cotizar%20una%20soluci%C3%B3n%20solar%20para%20hogar%2C%20oficina%20o%20comercio."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(16,185,129,0.4)]"
               >
                 <Phone className="w-5 h-5" />
-                <span>Solicitar Presupuesto</span>
+                <span>Enviar consulta por WhatsApp</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

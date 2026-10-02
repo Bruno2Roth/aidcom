@@ -18,8 +18,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="mt-6 text-sm leading-relaxed text-hero-foreground/70">
-              Soluciones digitales avanzadas, transformando el futuro de nuestros clientes a través de la innovación.
-              Más de 30 años de experiencia en informática a su servicio.
+              Servicios informáticos y equipamiento para empresas, comercios y hogares.
             </p>
 
             <div className="mt-6">

@@ -148,8 +148,8 @@ export default function HogarOficinaComercioPage() {
   ]
 
   const beneficios = [
-    { icon: Shield, title: "Garantía oficial", desc: "Todos nuestros productos con garantía" },
-    { icon: Zap, title: "Entrega rápida", desc: "Envíos a todo el país" },
+    { icon: Shield, title: "Garantía", desc: "Condiciones según fabricante y producto" },
+    { icon: Zap, title: "Envíos", desc: "Consultá cobertura y plazos al comprar" },
     { icon: Wrench, title: "Soporte técnico", desc: "Atención personalizada" },
     { icon: Lightbulb, title: "Asesoramiento", desc: "Te ayudamos a elegir" },
   ]
@@ -248,7 +248,7 @@ export default function HogarOficinaComercioPage() {
       icon: MessageCircle,
     },
     { step: "03", title: "Pagá", desc: "Medios de pago", icon: CreditCard },
-    { step: "04", title: "Recibí", desc: "Envío en 24-48hs o retirá en nuestro local", icon: Truck },
+    { step: "04", title: "Recibí", desc: "Coordiná el envío o retiro según disponibilidad", icon: Truck },
   ]
 
   const productosDestacados: {
@@ -338,24 +338,10 @@ export default function HogarOficinaComercioPage() {
                 </span>
               </h1>
               <p className="text-xl text-white/70 max-w-2xl leading-relaxed mb-8">
-                Equipamiento de calidad para el hogar, oficina y comercio. Computadoras, notebooks, impresoras y
-                accesorios con garantía oficial y soporte técnico especializado.
+                Computadoras, notebooks, impresoras y accesorios para el hogar, la oficina y el comercio, con opciones de asistencia técnica.
               </p>
 
-              <div className="grid grid-cols-3 gap-4 mb-8">
-                <div className="text-center p-4 rounded-xl border border-white/10 bg-white/5">
-                  <div className="text-2xl font-bold text-sky-400">500+</div>
-                  <div className="text-xs text-white/60">Productos</div>
-                </div>
-                <div className="text-center p-4 rounded-xl border border-white/10 bg-white/5">
-                  <div className="text-2xl font-bold text-sky-400">24hs</div>
-                  <div className="text-xs text-white/60">Entrega</div>
-                </div>
-                <div className="text-center p-4 rounded-xl border border-white/10 bg-white/5">
-                  <div className="text-2xl font-bold text-sky-400">12</div>
-                  <div className="text-xs text-white/60">Cuotas s/int</div>
-                </div>
-              </div>
+
 
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -874,7 +860,7 @@ export default function HogarOficinaComercioPage() {
           <div className="text-center p-12 rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.02] backdrop-blur-xl">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-400">
               <Sparkles className="h-4 w-4" />
-              Asesoramiento gratuito
+              Asesoramiento para elegir
             </div>
             <h2 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl mb-6">
               ¿Necesitás ayuda para{" "}
@@ -909,20 +895,6 @@ export default function HogarOficinaComercioPage() {
               </a>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-8 pt-8 border-t border-white/10">
-              <div className="flex items-center gap-2 text-white/60">
-                <Clock className="h-5 w-5 text-sky-400" />
-                <span>Respuesta en menos de 1 hora</span>
-              </div>
-              <div className="flex items-center gap-2 text-white/60">
-                <ThumbsUp className="h-5 w-5 text-sky-400" />
-                <span>Sin compromiso de compra</span>
-              </div>
-              <div className="flex items-center gap-2 text-white/60">
-                <Award className="h-5 w-5 text-sky-400" />
-                <span>+30 años de experiencia</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>

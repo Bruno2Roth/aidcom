@@ -49,7 +49,7 @@ const protectPlans = [
       "Defensa contra amenazas móviles",
       "Cifrado de disco completo",
       "Defensa avanzada contra amenazas",
-      "Protección gratuita para móviles",
+      "Protección móvil",
       "Sandbox en la nube",
     ],
     recommended: true,
@@ -69,11 +69,11 @@ const protectPlans = [
   },
   {
     name: "ESET PROTECT MDR",
-    description: "Protección todo en uno con servicio MDR 24/7",
+    description: "Protección todo en uno con servicios de detección y respuesta gestionada (MDR)",
     features: [
       "Todo lo de Complete",
       "Detección y Respuesta Extendida (XDR)",
-      "Servicio MDR 24/7",
+      "Servicio MDR",
       "Soporte Premium incluido",
       "Threat Intelligence",
       "ESET AI Advisor",
@@ -144,7 +144,7 @@ const segments = [
     icon: Globe,
     title: "Grandes Corporaciones",
     description: "Seguridad empresarial con servicios MDR para +250 dispositivos",
-    features: ["XDR avanzado", "Servicio MDR 24/7", "Threat Intelligence"],
+    features: ["XDR avanzado", "Servicio MDR", "Threat Intelligence"],
   },
 ]
 
@@ -152,12 +152,12 @@ const faqs = [
   {
     question: "¿Puedo probar las soluciones ESET antes de comprarlas?",
     answer:
-      "Sí, ofrecemos una prueba gratuita de 30 días de todas nuestras soluciones empresariales sin compromiso. Contacta con AIDCOM para solicitar tu demo.",
+      "La disponibilidad y duración de las pruebas dependen de cada solución y de las condiciones vigentes de ESET. Contactá a Aidcom para consultar las opciones actuales.",
   },
   {
     question: "¿Cuál es la diferencia entre los niveles de ESET PROTECT?",
     answer:
-      "Cada nivel incluye más capas de protección. Entry ofrece protección básica de endpoints, Advanced agrega cifrado y defensa móvil, Complete incluye protección de correo y nube, y MDR agrega servicios gestionados 24/7.",
+      "Cada nivel incluye distintas capas de protección. Entry ofrece protección de endpoints, Advanced agrega cifrado y defensa móvil, Complete incluye protección de correo y nube, y MDR incorpora servicios gestionados de detección y respuesta. La disponibilidad depende de la oferta vigente.",
   },
   {
     question: "¿ESET protege dispositivos móviles?",
@@ -464,7 +464,7 @@ export default function ESETPage() {
             </div>
             <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-white/[0.03] border border-white/10">
               <Zap className="w-5 h-5 text-lime-400" />
-              <span className="text-sm text-white/60">Prueba gratuita 30 días</span>
+              <span className="text-sm text-white/60">Consultá opciones de prueba</span>
             </div>
           </div>
         </div>
@@ -573,14 +573,14 @@ export default function ESETPage() {
             <div className="relative p-8 md:p-12 text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Protege tu empresa con ESET</h2>
               <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
-                Contáctanos para una evaluación gratuita y descubre cómo ESET puede proteger tu negocio contra las
+                Contactanos para consultar una evaluación y conocer las opciones de seguridad de ESET para tu negocio frente a las
                 amenazas modernas.
               </p>
               <Link
                 href="/contacto"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-lime-500 to-green-500 rounded-xl font-semibold text-white transition-all duration-500 hover:scale-105 hover:shadow-[0_0_50px_rgba(132,204,22,0.6)]"
               >
-                Solicitar demo gratuita
+                Consultar demo
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>

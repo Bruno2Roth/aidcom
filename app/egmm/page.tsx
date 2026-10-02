@@ -73,7 +73,7 @@ const caracteristicasGenerales = [
   {
     icon: Layers,
     title: "Sistema Abierto",
-    desc: "Arquitectura modular que permite desarrollos específicos sin límites. Integraciones con APIs externas disponibles",
+    desc: "Arquitectura modular para incorporar desarrollos e integraciones según el alcance acordado",
   },
 ]
 
@@ -187,7 +187,7 @@ const serviciosAdicionales = [
   {
     icon: Headphones,
     title: "Soporte Continuo",
-    desc: "Asistencia técnica por teléfono, email y acceso remoto. Actualizaciones gratuitas del sistema y asesoramiento en el uso de funcionalidades avanzadas",
+    desc: "Asistencia técnica por teléfono, email y acceso remoto. Actualizaciones del sistema y orientación sobre sus funcionalidades, según el servicio contratado",
   },
   {
     icon: Layers,
@@ -207,7 +207,7 @@ const funcionesListados = [
 const faqs = [
   {
     q: "¿Qué ventaja tiene un sistema 'abierto' vs uno 'enlatado'?",
-    a: "Un sistema abierto como EGMM está diseñado con arquitectura modular que permite agregar funcionalidades específicas sin límites. Por ejemplo, si necesita integración con un e-commerce, un sistema de picking por código de barras, o reportes especiales para su industria, podemos desarrollarlo. Los sistemas enlatados vienen cerrados y solo puede usar las funciones que trae de fábrica, sin posibilidad de adaptación a procesos únicos de su negocio.",
+    a: "EGMM usa una arquitectura modular que permite evaluar funcionalidades específicas para cada negocio. Si necesitás una integración con e-commerce, picking por código de barras o reportes especiales, se revisan la viabilidad y el alcance del desarrollo. Las opciones dependen de los requisitos del proyecto.",
   },
   {
     q: "¿Cómo funciona la integración entre Gestión Comercial y Contabilidad?",
@@ -215,7 +215,7 @@ const faqs = [
   },
   {
     q: "¿Pueden migrar los datos de mi sistema actual?",
-    a: "Sí, realizamos migraciones desde cualquier sistema (Tango, Bejerman, SAP, sistemas propios, planillas Excel, etc.). Importamos clientes, proveedores, productos con sus precios y costos, saldos de cuentas corrientes actualizados, stock valorizado y movimientos históricos de los últimos 12 meses (o más si lo necesita).",
+    a: "Se pueden evaluar migraciones desde distintas plataformas y planillas. La viabilidad y el alcance dependen del formato, la calidad y el volumen de los datos disponibles.",
   },
   {
     q: "¿El sistema soporta facturación electrónica AFIP?",
@@ -370,7 +370,7 @@ export default function EGMMPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Características Generales</h2>
             <p className="text-white/40 max-w-xl mx-auto">
-              Todos nuestros sistemas comparten estas características que garantizan flexibilidad, seguridad y facilidad de uso
+              Los sistemas incluyen opciones de configuración, seguridad y herramientas para facilitar el uso
             </p>
           </div>
 
@@ -505,17 +505,17 @@ export default function EGMMPage() {
                 ¿Por qué elegirnos?
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                +25 años implementando sistemas de gestión
+                Implementación de sistemas de gestión
               </h2>
               <p className="text-white/40 mb-8 leading-relaxed">
                 Brindamos implementación completa, capacitación y soporte continuo para que su empresa opere el sistema eficientemente desde el primer día.
               </p>
               <div className="space-y-4">
                 {[
-                  { icon: Headphones, text: "Soporte técnico local 24/7" },
+                  { icon: Headphones, text: "Soporte según las condiciones del servicio" },
                   { icon: TrendingUp, text: "Consultoría de gestión incluida" },
                   { icon: LucideDatabase, text: "Migración de datos desde cualquier sistema" },
-                  { icon: Layers, text: "Desarrollos a medida sin límites" },
+                  { icon: Layers, text: "Desarrollos a medida según el alcance" },
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center">
@@ -643,7 +643,7 @@ export default function EGMMPage() {
             ¿Listo para optimizar la gestión de su empresa?
           </h2>
           <p className="text-white/40 mb-10 max-w-xl mx-auto">
-            Contáctenos para una demostración gratuita y descubra cómo podemos mejorar sus procesos de gestión.
+            Contáctenos para solicitar una demostración y conocer las opciones disponibles para su proceso de gestión.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -119,7 +119,7 @@ const segmentosPrincipales = [
       { title: "Conectividad", desc: "Redes WiFi profesionales", icon: Settings },
       { title: "Soporte Smart", desc: "Asistencia técnica remota", icon: Home },
     ],
-    benefits: ["Envío a todo el país", "Garantía oficial", "Financiación disponible", "Soporte técnico 24/7"],
+    benefits: ["Computadoras y periféricos", "Redes y conectividad", "Asistencia técnica"],
     // </CHANGE>
   },
   {
@@ -141,10 +141,10 @@ const segmentosPrincipales = [
       { title: "Cloud Computing", desc: "Soluciones en la nube enterprise", icon: Wifi },
     ],
     benefits: [
-      "Reducción de hasta 40% en costos IT",
-      "Consultoría especializada",
-      "Proyectos llave en mano",
-      "Soporte técnico 24/7",
+      "Infraestructura IT",
+      "Seguridad informática",
+      "Servicios en la nube",
+      "Soporte para empresas",
     ],
     // </CHANGE>
   },
@@ -157,7 +157,6 @@ export default function HomePage() {
 
   const contactoRef = useInView()
   const segmentosRef = useInView()
-  const partnersRef = useInView()
 
   useEffect(() => {
     setIsVisible(true)
@@ -432,31 +431,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative py-12 bg-slate-950 border-y border-white/5">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: Truck, title: "Envío nacional", desc: "A toda Argentina" },
-              { icon: Clock, title: "Soporte 24/7", desc: "Siempre disponibles" },
-              { icon: ThumbsUp, title: "Garantía oficial", desc: "Respaldo total" },
-              { icon: TrendingUp, title: "+30 años", desc: "De experiencia" },
-            ].map((item, i) => {
-              const IconComponent = item.icon
-              return (
-                <div key={i} className="flex items-center gap-3 p-3">
-                  <div className="w-11 h-11 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center flex-shrink-0">
-                    <IconComponent className="w-5 h-5 text-cyan-400" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white text-sm">{item.title}</h4>
-                    <p className="text-white/50 text-xs">{item.desc}</p>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
+
 
       {/* Por qué elegirnos Section */}
       <section
@@ -478,98 +453,13 @@ export default function HomePage() {
               <span className="text-xs font-medium text-blue-400 uppercase tracking-wider">Nosotros</span>
             </div>
             <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-              Quiénes{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Somos</span>
+              Conocé{" "}
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Aidcom</span>
             </h2>
             <p className="mt-6 text-lg text-white/60 max-w-3xl mx-auto leading-relaxed">
-              Con más de 30 años de experiencia en el mercado argentino, somos líderes en soluciones tecnológicas
-              integrales. Nuestro compromiso es brindar servicios de excelencia que impulsen el crecimiento de nuestros
-              clientes.
+              Servicios informáticos, equipamiento y energía solar para empresas, comercios y hogares. Explorá cada área
+              para conocer su alcance y consultar por una propuesta.
             </p>
-          </div>
-
-          {/* Benefits grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Experiencia Comprobada",
-                description:
-                  "Más de tres décadas en el mercado tecnológico argentino nos respaldan con miles de clientes satisfechos.",
-                stat: "+30 años",
-                color: "from-amber-400 to-yellow-400",
-              },
-              {
-                title: "Soporte Técnico Real",
-                description:
-                  "Equipo técnico propio disponible para resolver cualquier inconveniente de forma rápida y efectiva.",
-                stat: "24/7",
-                color: "from-cyan-400 to-blue-400",
-              },
-              {
-                title: "Garantía Oficial",
-                description:
-                  "Todos nuestros productos cuentan con garantía oficial del fabricante y respaldo de Aidcom.",
-                stat: "100%",
-                color: "from-emerald-400 to-teal-400",
-              },
-              {
-                title: "Envío a Todo el País",
-                description:
-                  "Llegamos a cada rincón de Argentina con envíos seguros y tiempos de entrega garantizados.",
-                stat: "Nacional",
-                color: "from-orange-400 to-amber-400",
-              },
-              {
-                title: "Partners Certificados",
-                description: "Distribuidor autorizado de Microsoft, Adobe, ESET, Manage Engine, Canon, Toshiba y otras marcas líderes mundiales.",
-                stat: "+10 marcas",
-                color: "from-blue-400 to-cyan-400",
-              },
-              {
-                title: "Soluciones Integrales",
-                description:
-                  "Desde hardware hasta energías renovables, cubrimos todas las necesidades tecnológicas de tu empresa.",
-                stat: "360°",
-                color: "from-yellow-400 to-amber-400",
-              },
-            ].map((benefit, i) => (
-              <div
-                key={i}
-                className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800/60 to-slate-900/80 border border-slate-700/50 hover:border-slate-600 transition-all duration-500 hover:scale-105 hover:shadow-2xl ${segmentosRef.isInView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
-                style={{ transitionDelay: `${0.1 + i * 0.08}s` }}
-              >
-                <div className="p-6 relative z-10">
-                  {/* Stat badge at top */}
-                  <div className="mb-4">
-                    <span
-                      className={`inline-block text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r ${benefit.color}`}
-                    >
-                      {benefit.stat}
-                    </span>
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-100 transition-colors">
-                    {benefit.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
-                    {benefit.description}
-                  </p>
-                </div>
-
-                {/* Gradient overlay on hover */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
-                />
-
-                {/* Bottom accent line */}
-                <div
-                  className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${benefit.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}
-                />
-              </div>
-            ))}
           </div>
 
           {/* CTA */}
@@ -587,83 +477,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section
-        ref={partnersRef.ref as React.RefObject<HTMLElement>}
-        id="partners"
-        className="relative py-24 bg-slate-900 overflow-hidden"
-      >
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
-          <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[150px]" />
-        </div>
 
-        <div className="relative mx-auto max-w-7xl">
-          {/* Section header */}
-          <div
-            className={`text-center mb-16 transition-all duration-700 ${partnersRef.isInView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 mb-6">
-              <div className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
-              <span className="text-sm font-medium text-teal-400">Partners Oficiales</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Trabajamos con los{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400">mejores</span>
-            </h2>
-            <p className="text-white/50 text-lg max-w-2xl mx-auto">
-              Alianzas estratégicas con líderes mundiales en tecnología
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                name: "Lenovo",
-                desc: "Hardware & Servidores",
-                badge: "Partner",
-                color: "text-red-400",
-              },
-              {
-                name: "Microsoft",
-                desc: "365 & Azure",
-                badge: "Distribuidor",
-                color: "text-blue-400",
-              },
-              {
-                name: "ESET",
-                desc: "Ciberseguridad",
-                badge: "Partner Silver",
-                color: "text-emerald-400",
-              },
-              {
-                name: "EGMM",
-                desc: "Sistemas de Gestión - Facturación Electrónica",
-                badge: "Distribuidor",
-                color: "text-amber-400",
-              },
-            ].map((partner, i) => (
-              <div
-                key={i}
-                className="relative p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50"
-              >
-                <div className="relative">
-                  {/* Badge */}
-                  <span className={`text-[10px] uppercase tracking-wider ${partner.color} font-medium`}>
-                    {partner.badge}
-                  </span>
-
-                  {/* Name & Description */}
-                  <h4 className="text-xl font-bold text-white mt-3 mb-1">
-                    {partner.name}
-                  </h4>
-                  <p className="text-white/40 text-sm">{partner.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
 
     </>
