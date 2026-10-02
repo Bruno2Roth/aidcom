@@ -512,7 +512,7 @@ export default function EGMMPage() {
               </p>
               <div className="space-y-4">
                 {[
-                  { icon: Headphones, text: "Soporte técnico local 24/7" },
+                  { icon: Headphones, text: "Soporte técnico local para clientes con contrato" },
                   { icon: TrendingUp, text: "Consultoría de gestión incluida" },
                   { icon: LucideDatabase, text: "Migración de datos desde cualquier sistema" },
                   { icon: Layers, text: "Desarrollos a medida sin límites" },
