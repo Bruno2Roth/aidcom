@@ -293,23 +293,7 @@ export default function EmpresasPage() {
                 operaciones críticas. Partner oficial de ManageEngine para Latinoamérica.
               </p>
 
-              {/* Mini stats */}
-              <div className="mt-8 grid grid-cols-3 gap-4 max-w-md">
-                {[
-                  { value: "500+", label: "Empresas" },
-                  { value: "24/7", label: "Soporte" },
-                  { value: "99.9%", label: "Uptime" },
-                ].map((stat, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl border border-violet-500/20 bg-violet-500/5 p-3 text-center backdrop-blur-sm"
-                  >
-                    <div className="text-xl font-bold text-violet-400">{stat.value}</div>
-                    <div className="text-xs text-white/50">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-
+              
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/servicios-informaticos"
