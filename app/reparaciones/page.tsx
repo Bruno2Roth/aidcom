@@ -13,25 +13,15 @@ import {
   Cpu,
   CheckCircle2,
   Clock,
-  Shield,
   Phone,
   Mail,
   MapPin,
   ChevronRight,
   Zap,
   Settings,
-  AlertTriangle,
-  ThumbsUp,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useScrollNavigation } from "@/hooks/use-scroll-navigation"
-
-const stats = [
-  { value: "10,000+", label: "Equipos reparados" },
-  { value: "98%", label: "Tasa de éxito" },
-  { value: "24-48hs", label: "Tiempo promedio" },
-  { value: "6 meses", label: "Garantía" },
-]
 
 const servicios = [
   {
@@ -79,7 +69,7 @@ const servicios = [
   {
     icon: HardDrive,
     title: "Recuperación de Datos",
-    description: "Recuperamos información de discos dañados",
+    description: "Evaluación de discos, SSD y pendrives.",
     problemas: [
       "Disco no detectado",
       "Archivos eliminados",
@@ -93,7 +83,7 @@ const servicios = [
   {
     icon: Settings,
     title: "Mantenimiento Preventivo",
-    description: "Limpieza y optimización para evitar fallas",
+    description: "Limpieza interna y optimización del equipo.",
     problemas: [
       "Limpieza interna de polvo",
       "Cambio de pasta térmica",
@@ -117,33 +107,6 @@ const servicios = [
       "Cambio de fuente",
     ],
     gradient: "from-amber-500 to-orange-500",
-  },
-]
-
-const proceso = [
-  {
-    paso: 1,
-    titulo: "Recepción",
-    descripcion: "Recibimos tu equipo y realizamos un diagnóstico inicial gratuito",
-    icon: Laptop,
-  },
-  {
-    paso: 2,
-    titulo: "Diagnóstico",
-    descripcion: "Identificamos el problema exacto y te enviamos un presupuesto detallado",
-    icon: AlertTriangle,
-  },
-  {
-    paso: 3,
-    titulo: "Reparación",
-    descripcion: "Una vez aprobado, procedemos con la reparación utilizando repuestos de calidad",
-    icon: Wrench,
-  },
-  {
-    paso: 4,
-    titulo: "Entrega",
-    descripcion: "Te entregamos el equipo funcionando con garantía escrita",
-    icon: ThumbsUp,
   },
 ]
 
@@ -197,19 +160,8 @@ export default function ReparacionesPage() {
               </h1>
 
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Servicio técnico profesional para notebooks, PCs, impresoras y más. Diagnóstico gratuito y garantía en
-                todas nuestras reparaciones.
+                Servicio técnico para notebooks, PC e impresoras. Consultanos por reparación y mantenimiento de equipos.
               </p>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center p-4 rounded-xl bg-white/5 border border-white/10">
-                    <div className="text-2xl font-bold text-cyan-400">{stat.value}</div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -218,20 +170,9 @@ export default function ReparacionesPage() {
                   asChild
                 >
                   <Link href="/contacto">
-                    Solicitar Diagnóstico
+                    Consultar reparación
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white/20 text-white hover:bg-white/10 bg-transparent"
-                  asChild
-                >
-                  <a href="https://wa.me/5491112345678" target="_blank" rel="noopener noreferrer">
-                    <Phone className="mr-2 h-5 w-5" />
-                    WhatsApp
-                  </a>
                 </Button>
               </div>
             </div>
@@ -255,8 +196,8 @@ export default function ReparacionesPage() {
                     <CheckCircle2 className="w-6 h-6 text-green-400" />
                   </div>
                   <div>
-                    <div className="text-white font-semibold">Diagnóstico Gratuito</div>
-                    <div className="text-sm text-gray-400">Sin compromiso</div>
+                    <div className="text-white font-semibold">Evaluación del equipo</div>
+                    <div className="text-sm text-gray-400">Consultá por tu caso</div>
                   </div>
                 </div>
               </div>
@@ -271,7 +212,7 @@ export default function ReparacionesPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Nuestros Servicios de Reparación</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Reparamos todo tipo de equipos informáticos con repuestos originales y garantía
+              Reparación de notebooks, PC, impresoras y otros equipos informáticos.
             </p>
           </div>
 
@@ -307,34 +248,6 @@ export default function ReparacionesPage() {
         </div>
       </section>
 
-      {/* Proceso Section */}
-      <section className="py-20 relative bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">¿Cómo Funciona?</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">Proceso simple y transparente para reparar tu equipo</p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-6">
-            {proceso.map((item, index) => (
-              <div key={index} className="relative">
-                {index < proceso.length - 1 && (
-                  <div className="hidden md:block absolute top-12 left-1/2 w-full h-0.5 bg-gradient-to-r from-cyan-500/50 to-transparent" />
-                )}
-
-                <div className="relative p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg mb-4">
-                    {item.paso}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{item.titulo}</h3>
-                  <p className="text-gray-400 text-sm">{item.descripcion}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
@@ -345,7 +258,7 @@ export default function ReparacionesPage() {
               <Zap className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">¿Tu equipo tiene problemas?</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Traelo para un diagnóstico gratuito. Te contactamos en menos de 24 horas con la solución.
+                Consultanos por el problema de tu equipo y el servicio que necesita.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -375,15 +288,11 @@ export default function ReparacionesPage() {
               <div className="flex flex-wrap items-center justify-center gap-6 mt-8 text-sm text-gray-400">
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-cyan-400" />
-                  Lun-Vie: 9:00 - 18:00
+                  Atención telefónica: lun-vie, 9:00 a 18:00
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-cyan-400" />
                   Buenos Aires, Argentina
-                </div>
-                <div className="flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-cyan-400" />
-                  Garantía escrita
                 </div>
               </div>
             </div>
