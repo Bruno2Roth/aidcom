@@ -2,7 +2,7 @@
 
 import type React from "react"
 import Link from "next/link"
-import { ArrowRight, Home, Wifi, Phone, CheckCircle2, DollarSign, Calendar, Shield } from "lucide-react"
+import { ArrowRight, Home, Wifi, Phone, CheckCircle2, DollarSign, Calendar, Shield, MessageCircle } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 function AnimatedSection({
@@ -83,21 +83,18 @@ export default function HogarOficinaComercioPage() {
       capacity: "3-10kW",
       description: "Sistemas para viviendas unifamiliares, dimensionados según el consumo y las características del lugar.",
       includes: ["6-20 paneles solares", "Inversor inteligente", "App de monitoreo", "Instalación profesional"],
-      price: "Consultar presupuesto",
     },
     {
       title: "Para tu Oficina",
       capacity: "10-30kW",
       description: "Reducí costos operativos y demostrá compromiso ambiental a tus clientes.",
       includes: ["20-60 paneles solares", "Inversor trifásico", "Sistema de monitoreo", "Soporte técnico"],
-      price: "Desde $X.XXX.XXX",
     },
     {
       title: "Para tu Comercio",
       capacity: "15-50kW",
       description: "El retorno se estima según el consumo, las tarifas y el diseño de cada sistema.",
       includes: ["30-100 paneles solares", "Inversores múltiples", "Gestión inteligente", "Mantenimiento según presupuesto"],
-      price: "Desde $X.XXX.XXX",
     },
   ]
 
@@ -255,9 +252,16 @@ export default function HogarOficinaComercioPage() {
                     ))}
                   </div>
                   <div className="pt-6 border-t border-slate-800">
-                    <p className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                      {solucion.price}
-                    </p>
+                    <a
+                      href={`https://wa.me/5491149988089?text=${encodeURIComponent(`Hola, quiero cotizar una solución solar: ${solucion.title}.`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-500 px-6 py-3 font-semibold text-white transition-colors hover:bg-emerald-600"
+                    >
+                      <MessageCircle className="h-5 w-5" />
+                      Cotizar
+                      <ArrowRight className="h-5 w-5" />
+                    </a>
                   </div>
                 </div>
               </AnimatedSection>
