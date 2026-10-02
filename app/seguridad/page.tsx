@@ -163,13 +163,6 @@ const products = [
   },
 ]
 
-const stats = [
-  { value: "99.9%", label: "Tasa de detección" },
-  { value: "24/7", label: "Monitoreo activo" },
-  { value: "+500", label: "Empresas protegidas" },
-  { value: "<1min", label: "Tiempo de respuesta" },
-]
-
 export default function SeguridadPage() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -285,22 +278,7 @@ export default function SeguridadPage() {
             Protección integral para empresas y usuarios con las mejores soluciones del mercado
           </p>
 
-          {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            {stats.map((stat, i) => (
-              <div
-                key={i}
-                className="group px-6 py-4 rounded-2xl bg-white/[0.03] border border-blue-500/20 backdrop-blur-sm transition-all duration-500 hover:bg-blue-500/10 hover:border-blue-400/40 hover:scale-105"
-                style={{ animationDelay: `${i * 100}ms` }}
-              >
-                <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-                  {stat.value}
-                </p>
-                <p className="text-sm text-white/40">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contacto"
