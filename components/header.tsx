@@ -182,7 +182,7 @@ export function Header() {
       <LoginModal isOpen={loginModalOpen} onClose={() => setLoginModalOpen(false)} />
 
       <header
-        className={`sticky top-0 ${mobileMenuOpen ? "z-[70]" : "z-50"} transition-all duration-300 ${
+        className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled ? "border-b border-border bg-background/95 shadow-lg backdrop-blur-md" : "bg-background"
         }`}
       >
@@ -446,135 +446,135 @@ export function Header() {
             </button>
           </div>
 
-          <div
-            id="mobile-navigation"
-            aria-hidden={!mobileMenuOpen}
-            className={`fixed inset-x-0 bottom-0 z-[60] ${tieneInfoCompleta && cliente ? "top-24" : "top-16"} overscroll-contain overflow-y-auto border-t border-border bg-background px-4 py-4 shadow-2xl transition-all duration-200 lg:hidden ${
-              mobileMenuOpen ? "visible translate-y-0 opacity-100" : "invisible pointer-events-none -translate-y-2 opacity-0"
-            }`}
-          >
-            <div className="mx-auto min-h-full max-w-7xl sm:px-2">
-              <ul className="flex flex-col gap-1 pb-4">
-                {tieneInfoCompleta && cliente && (
-                  <li className="mb-3 rounded-xl border border-border bg-gradient-to-r from-muted/50 to-muted/30 p-4">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div
-                          className={`flex h-10 w-10 items-center justify-center rounded-full ${cliente.isAdmin ? "bg-amber-500/20" : "bg-emerald-500/20"}`}
-                        >
-                          {cliente.isAdmin ? (
-                            <Crown className="h-5 w-5 text-amber-500" />
-                          ) : (
-                            <User className="h-5 w-5 text-emerald-500" />
-                          )}
-                        </div>
-                        <div>
-                          <div className="font-medium text-foreground">{cliente.nombre}</div>
-                          {cliente.isAdmin && <div className="text-xs text-amber-500 font-medium">Administrador</div>}
-                        </div>
-                      </div>
-                      <button
-                        onClick={handleLogout}
-                        className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm text-destructive transition-colors hover:bg-destructive/10"
-                      >
-                        <LogOut className="h-4 w-4" />
-                      </button>
-                    </div>
-                  </li>
-                )}
-
-                <li>
-                  <Link
-                    href="/"
-                    onClick={handleNavClick}
-                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-foreground/80 transition-all duration-200 hover:bg-muted"
-                  >
-                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
-                      <Home className="h-5 w-5 text-primary" />
-                    </div>
-                    <span className="font-medium">Inicio</span>
-                  </Link>
-                </li>
-
-                <li className="border-t border-border pt-3 mt-2">
-                  <span className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                    <div className="h-px flex-1 bg-border" />
-                    Nuestros Servicios
-                    <div className="h-px flex-1 bg-border" />
-                  </span>
-                  <ul className="mt-2 flex flex-col gap-1">
-                    {serviciosSubmenu.map((item) => (
-                      <li key={item.href}>
-                        <Link
-                          href={item.href}
-                          onClick={handleNavClick}
-                          className="flex items-center gap-3 rounded-xl px-4 py-3 text-foreground/80 transition-all duration-200 hover:bg-muted"
-                        >
-                          <div>
-                            <div className="font-medium">{item.label}</div>
-                            <div className="text-xs text-muted-foreground">{item.desc}</div>
-                          </div>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-
-                <li className="border-t border-border pt-3 mt-2">
-                  <span className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-                    <div className="h-px flex-1 bg-border" />
-                    Partners y Marcas
-                    <div className="h-px flex-1 bg-border" />
-                  </span>
-                  <ul className="mt-2 grid grid-cols-2 gap-1">
-                    {partnersSubmenu.map((item) => (
-                      <li key={item.href}>
-                        <Link
-                          href={item.href}
-                          onClick={handleNavClick}
-                          className="flex flex-col items-center gap-2 rounded-xl px-3 py-4 text-center text-foreground/80 transition-all duration-200 hover:bg-muted"
-                        >
-                          <div className="text-sm font-medium">{item.label}</div>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-
-                <li>
-                  <Link
-                    href="/tienda"
-                    onClick={handleNavClick}
-                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-foreground/80 transition-all duration-200 hover:bg-muted"
-                  >
-                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10">
-                      <Store className="h-5 w-5 text-emerald-500" />
-                    </div>
-                    <div>
-                      <div className="font-medium">Catálogo</div>
-                      {totalItems > 0 && (
-                        <span className="text-xs text-emerald-500 font-medium">{totalItems} items en carrito</span>
-                      )}
-                    </div>
-                  </Link>
-                </li>
-
-                <li className="mt-4 border-t border-border pt-4 sticky bottom-0 bg-background pb-2">
-                  <a
-                    href={AIDCOM_CONTACT.whatsappHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 px-4 py-3.5 font-semibold text-white shadow-lg shadow-emerald-500/25 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-emerald-500/40"
-                  >
-                    <MessageCircle className="h-5 w-5" />
-                    Contactar por WhatsApp
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
         </nav>
       </header>
+      <div
+        id="mobile-navigation"
+        aria-hidden={!mobileMenuOpen}
+        className={`fixed inset-x-0 bottom-0 z-[60] ${tieneInfoCompleta && cliente ? "top-24" : "top-16"} overscroll-contain overflow-y-auto border-t border-border bg-background px-4 py-4 shadow-2xl transition-all duration-200 lg:hidden ${
+          mobileMenuOpen ? "visible translate-y-0 opacity-100" : "invisible pointer-events-none -translate-y-2 opacity-0"
+        }`}
+      >
+        <div className="mx-auto min-h-full max-w-7xl sm:px-2">
+          <ul className="flex flex-col gap-1 pb-4">
+            {tieneInfoCompleta && cliente && (
+              <li className="mb-3 rounded-xl border border-border bg-gradient-to-r from-muted/50 to-muted/30 p-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div
+                      className={`flex h-10 w-10 items-center justify-center rounded-full ${cliente.isAdmin ? "bg-amber-500/20" : "bg-emerald-500/20"}`}
+                    >
+                      {cliente.isAdmin ? (
+                        <Crown className="h-5 w-5 text-amber-500" />
+                      ) : (
+                        <User className="h-5 w-5 text-emerald-500" />
+                      )}
+                    </div>
+                    <div>
+                      <div className="font-medium text-foreground">{cliente.nombre}</div>
+                      {cliente.isAdmin && <div className="text-xs text-amber-500 font-medium">Administrador</div>}
+                    </div>
+                  </div>
+                  <button
+                    onClick={handleLogout}
+                    className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm text-destructive transition-colors hover:bg-destructive/10"
+                  >
+                    <LogOut className="h-4 w-4" />
+                  </button>
+                </div>
+              </li>
+            )}
+
+            <li>
+              <Link
+                href="/"
+                onClick={handleNavClick}
+                className="flex items-center gap-3 rounded-xl px-4 py-3 text-foreground/80 transition-all duration-200 hover:bg-muted"
+              >
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
+                  <Home className="h-5 w-5 text-primary" />
+                </div>
+                <span className="font-medium">Inicio</span>
+              </Link>
+            </li>
+
+            <li className="border-t border-border pt-3 mt-2">
+              <span className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
+                <div className="h-px flex-1 bg-border" />
+                Nuestros Servicios
+                <div className="h-px flex-1 bg-border" />
+              </span>
+              <ul className="mt-2 flex flex-col gap-1">
+                {serviciosSubmenu.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      onClick={handleNavClick}
+                      className="flex items-center gap-3 rounded-xl px-4 py-3 text-foreground/80 transition-all duration-200 hover:bg-muted"
+                    >
+                      <div>
+                        <div className="font-medium">{item.label}</div>
+                        <div className="text-xs text-muted-foreground">{item.desc}</div>
+                      </div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+
+            <li className="border-t border-border pt-3 mt-2">
+              <span className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
+                <div className="h-px flex-1 bg-border" />
+                Partners y Marcas
+                <div className="h-px flex-1 bg-border" />
+              </span>
+              <ul className="mt-2 grid grid-cols-2 gap-1">
+                {partnersSubmenu.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      onClick={handleNavClick}
+                      className="flex flex-col items-center gap-2 rounded-xl px-3 py-4 text-center text-foreground/80 transition-all duration-200 hover:bg-muted"
+                    >
+                      <div className="text-sm font-medium">{item.label}</div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+
+            <li>
+              <Link
+                href="/tienda"
+                onClick={handleNavClick}
+                className="flex items-center gap-3 rounded-xl px-4 py-3 text-foreground/80 transition-all duration-200 hover:bg-muted"
+              >
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/10">
+                  <Store className="h-5 w-5 text-emerald-500" />
+                </div>
+                <div>
+                  <div className="font-medium">Catálogo</div>
+                  {totalItems > 0 && (
+                    <span className="text-xs text-emerald-500 font-medium">{totalItems} items en carrito</span>
+                  )}
+                </div>
+              </Link>
+            </li>
+
+            <li className="mt-4 border-t border-border pt-4 sticky bottom-0 bg-background pb-2">
+              <a
+                href={AIDCOM_CONTACT.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 px-4 py-3.5 font-semibold text-white shadow-lg shadow-emerald-500/25 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-emerald-500/40"
+              >
+                <MessageCircle className="h-5 w-5" />
+                Contactar por WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </>
   )
 }
