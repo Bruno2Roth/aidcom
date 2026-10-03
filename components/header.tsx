@@ -52,6 +52,23 @@ export function Header() {
   }, [])
 
   useEffect(() => {
+    if (!mobileMenuOpen) return
+
+    const previousOverflow = document.body.style.overflow
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMobileMenuOpen(false)
+    }
+
+    document.body.style.overflow = "hidden"
+    document.addEventListener("keydown", closeOnEscape)
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+      document.removeEventListener("keydown", closeOnEscape)
+    }
+  }, [mobileMenuOpen])
+
+  useEffect(() => {
     if (scrolled) {
       setServicesOpen(false)
       setPartnersOpen(false)
@@ -165,7 +182,7 @@ export function Header() {
       <LoginModal isOpen={loginModalOpen} onClose={() => setLoginModalOpen(false)} />
 
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
+        className={`sticky top-0 ${mobileMenuOpen ? "z-[70]" : "z-50"} transition-all duration-300 ${
           scrolled ? "border-b border-border bg-background/95 shadow-lg backdrop-blur-md" : "bg-background"
         }`}
       >
@@ -420,6 +437,9 @@ export function Header() {
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
               className="flex h-10 w-10 items-center justify-center rounded-lg hover:bg-muted lg:hidden"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -427,11 +447,13 @@ export function Header() {
           </div>
 
           <div
-            className={`overflow-hidden transition-all duration-300 lg:hidden ${
-              mobileMenuOpen ? "max-h-[calc(100vh-80px)] opacity-100" : "max-h-0 opacity-0"
+            id="mobile-navigation"
+            aria-hidden={!mobileMenuOpen}
+            className={`fixed inset-x-0 bottom-0 z-[60] ${tieneInfoCompleta && cliente ? "top-24" : "top-16"} overscroll-contain overflow-y-auto border-t border-border bg-background px-4 py-4 shadow-2xl transition-all duration-200 lg:hidden ${
+              mobileMenuOpen ? "visible translate-y-0 opacity-100" : "invisible pointer-events-none -translate-y-2 opacity-0"
             }`}
           >
-            <div className="border-t border-border py-4 max-h-[calc(100vh-100px)] overflow-y-auto scrollbar-thin scrollbar-thumb-muted-foreground/20 scrollbar-track-transparent">
+            <div className="mx-auto min-h-full max-w-7xl sm:px-2">
               <ul className="flex flex-col gap-1 pb-4">
                 {tieneInfoCompleta && cliente && (
                   <li className="mb-3 rounded-xl border border-border bg-gradient-to-r from-muted/50 to-muted/30 p-4">
