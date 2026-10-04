@@ -252,16 +252,6 @@ export default function HogarOficinaComercioPage() {
     { step: "04", title: "Recibí", desc: "Coordiná el envío o retiro según disponibilidad", icon: Truck },
   ]
 
-  const productosDestacados: {
-    name: string
-    category: string
-    price: string
-    image: string
-    badge: string
-  }[] = [
-    // Agregar productos aquí
-  ]
-
   return (
     <div className="overflow-hidden bg-slate-950">
       {/* Hero Section - Enhanced with better layout */}
@@ -520,75 +510,25 @@ export default function HogarOficinaComercioPage() {
         </div>
       </section>
 
-      <section className="relative px-4 py-24 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/50 to-slate-950" />
-
-        <div className="relative mx-auto max-w-7xl">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-400 mb-4">
-                <Star className="h-4 w-4" />
-                Lo más buscado
-              </span>
-              <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-                Productos{" "}
-                <span className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
-                  destacados
-                </span>
+      <section className="bg-[#f4f5f2] px-4 py-14 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col gap-7 rounded-2xl border border-slate-200 bg-white p-7 shadow-sm sm:p-9 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-2xl">
+              <p className="mb-2 text-sm font-semibold text-slate-500">Catálogo</p>
+              <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+                Buscá el equipo que necesitás
               </h2>
+              <p className="mt-3 text-base leading-7 text-slate-600">
+                Computadoras y notebooks, impresión, redes y accesorios. Explorá los productos y pedí una cotización.
+              </p>
             </div>
             <Link
-              href="/contacto"
-              className="inline-flex items-center gap-2 text-sky-400 font-semibold hover:text-sky-300 transition-colors group"
+              href="/tienda/"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-slate-900 px-5 py-3 font-semibold text-white transition-colors hover:bg-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2"
             >
-              Ver todo el catálogo
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              
+              Ver catálogo
+              <ArrowRight className="h-4 w-4" />
             </Link>
-          </div>
-
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {productosDestacados.map((producto, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] transition-all duration-500 hover:border-sky-500/30 hover:-translate-y-2 hover:shadow-xl hover:shadow-sky-500/10"
-              >
-                {producto.badge && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <span
-                      className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                        producto.badge === "Más vendido"
-                          ? "bg-amber-500 text-black"
-                          : producto.badge === "Nuevo"
-                            ? "bg-sky-500 text-white"
-                            : "bg-emerald-500 text-white"
-                      }`}
-                    >
-                      {producto.badge}
-                    </span>
-                  </div>
-                )}
-                <div className="relative h-48 bg-gradient-to-b from-white/5 to-transparent flex items-center justify-center p-6">
-                  <Image
-                    src={producto.image || "/placeholder.svg"}
-                    alt={producto.name}
-                    width={150}
-                    height={150}
-                    className="object-contain transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-                <div className="p-6 pt-0">
-                  <p className="text-sky-400 text-sm font-medium mb-1">{producto.category}</p>
-                  <h3 className="text-lg font-bold text-white mb-3">{producto.name}</h3>
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-white">{producto.price}</span>
-                    <button className="p-3 rounded-xl bg-sky-500/10 text-sky-400 hover:bg-sky-500 hover:text-white transition-all duration-300">
-                      <ShoppingCart className="h-5 w-5" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
